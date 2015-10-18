@@ -2,8 +2,8 @@
 
 require './vendor/autoload.php';
 
-// Turn off all error reporting
-error_reporting(0);
+// Only report errors.
+error_reporting(E_ERROR | E_PARSE);
 
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
@@ -175,4 +175,59 @@ $readme .= "\nAs of " . date("F j, Y") . ".\n";
 $client = new \Github\Client();
 $client->authenticate($_ENV['GITHUB_TOKEN'], null, Github\Client::AUTH_HTTP_TOKEN);
 
+// Write the README.md with the latest data.
 updateFile($client, 'README.md', $readme, 'The latest data.');
+
+function updateCSV(Logger $log, \Github\Client $client, string $csv, Map<string, int> $map) {
+  $date = date("Y-m-d");
+  $file = "";
+  if (($handle = fopen($csv, "r")) !== false) {
+    $columns = 0;
+    // Read header...
+    if (($data = fgetcsv($handle)) !== false) {
+      $columns = count($data);
+      array_push($data, $date);
+      $file .= implode(",", $data) . "\n";
+    } else {
+      $log->addError("Couldn't find header row in {$csv}.");
+    }
+
+    while (($data = fgetcsv($handle)) !== false) {
+      if ($columns != count($data)) {
+        $log->addError("Row in {$csv} doesn't have the right number of columns.");
+        return;
+      }
+      $s = $data[0];
+      if ($map->get($s)) {
+        $value = $map[$s];
+        array_push($data, $value);
+        $map->remove($s);
+      }
+      $file .= implode(",", $data) . "\n";
+    }
+
+    foreach ($map as $s => $value) {
+      $data = array($s, '');
+      for ($i = 0; $i < $columns - 2; $i++) {
+        array_push($data, '');
+      }
+      array_push($data, $value);
+      $file .= implode(",", $data) . "\n";
+    }
+
+    updateFile($client, $csv, $file, 'The latest data.');
+  } else {
+    $log->addError("Cannot open {$csv} file.");
+  }
+}
+
+// Now, read in CSVs and add to them.
+updateCSV($log, $client, 'data/total.csv', $statsMap->map(function (Stats $s) : int {
+  return $s->count;
+}));
+updateCSV($log, $client, 'data/mau.csv', $statsMap->map(function (Stats $s) : int {
+  return $s->mau;
+}));
+updateCSV($log, $client, 'data/dau.csv', $statsMap->map(function (Stats $s) : int {
+  return $s->dau;
+}));
