@@ -1,0 +1,9 @@
+{
+  "require" : {
+    "monolog/monolog": "~1.17",
+    "knplabs/github-api": "~1.4"
+  },
+  "require-dev": {
+    "heroku/heroku-buildpack-php": "*"
+  }
+}
