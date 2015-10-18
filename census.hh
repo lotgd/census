@@ -173,5 +173,6 @@ foreach ($statsArray as $s => $stats) {
 $readme .= "\nAs of " . date("F j, Y") . ".\n";
 
 $client = new \Github\Client();
+$client->authenticate($_ENV['GITHUB_TOKEN'], null, Github\Client::AUTH_HTTP_TOKEN);
 
 updateFile($client, 'README.md', $readme, 'The latest data.');
