@@ -5,5 +5,7 @@ Want to add your site? Put up a pull request or contact @austenmc on [DragonPrim
 
 Site | Total | MAU | DAU
 --- | ---:| ---:| ---:
+site2|50|3|2
+site1|10|5|1
 
 As of October 18, 2015.
