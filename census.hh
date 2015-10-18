@@ -136,20 +136,6 @@ foreach ($sites as $s) {
   $statsMap[$s] = $stats;
 }
 
-$stats = new Stats();
-$stats->count = 10;
-$stats->mau = 5;
-$stats->dau = 1;
-$stats->valid = true;
-$statsMap['site1'] = $stats;
-
-$stats = new Stats();
-$stats->count = 50;
-$stats->mau = 3;
-$stats->dau = 2;
-$stats->valid = true;
-$statsMap['site2'] = $stats;
-
 // Sort the map by total user count.
 $statsArray = $statsMap->toArray();
 uasort($statsArray, 'statsCmp');
