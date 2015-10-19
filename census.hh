@@ -89,6 +89,12 @@ function collectStats(Logger $log, string $url, DOMDocument $doc, Stats $stats) 
   return true;
 }
 
+function getRepoFile(\Github\Client $client, string $path) : string {
+  $user = 'lotgd';
+  $repo = 'census';
+  return $client->api('repo')->contents()->download($user, $repo, $path);
+}
+
 function updateFile(\Github\Client $client, string $path, string $content, string $commitMessage) {
   $committer = array('name' => 'Census Bot', 'email' => 'austen.mcdonald@gmail.com');
   $user = 'lotgd';
@@ -112,6 +118,26 @@ if ($handle) {
 }
 
 $statsMap = Map {};
+
+if ($argc >= 2) {
+  if ($argv[1] == '--fake-data') {
+    $sites = Vector {};
+
+    $stats = new Stats();
+    $stats->count = 50;
+    $stats->dau = 10;
+    $stats->mau = 20;
+    $stats->valid = true;
+    $statsMap['site1'] = $stats;
+
+    $stats = new Stats();
+    $stats->count = 103;
+    $stats->dau = 12;
+    $stats->mau = 23;
+    $stats->valid = true;
+    $statsMap['site3'] = $stats;
+  }
+}
 
 foreach ($sites as $s) {
   $doc = new DOMDocument();
@@ -167,44 +193,53 @@ updateFile($client, 'README.md', $readme, 'The latest data.');
 function updateCSV(Logger $log, \Github\Client $client, string $csv, Map<string, int> $map) {
   $date = date("Y-m-d");
   $file = "";
-  if (($handle = fopen($csv, "r")) !== false) {
-    $columns = 0;
-    // Read header...
-    if (($data = fgetcsv($handle)) !== false) {
-      $columns = count($data);
-      array_push($data, $date);
-      $file .= implode(",", $data) . "\n";
-    } else {
-      $log->addError("Couldn't find header row in {$csv}.");
-    }
-
-    while (($data = fgetcsv($handle)) !== false) {
-      if ($columns != count($data)) {
-        $log->addError("Row in {$csv} doesn't have the right number of columns.");
-        return;
-      }
-      $s = $data[0];
-      if ($map->get($s)) {
-        $value = $map[$s];
-        array_push($data, $value);
-        $map->remove($s);
-      }
-      $file .= implode(",", $data) . "\n";
-    }
-
-    foreach ($map as $s => $value) {
-      $data = array($s, '');
-      for ($i = 0; $i < $columns - 2; $i++) {
-        array_push($data, '');
-      }
-      array_push($data, $value);
-      $file .= implode(",", $data) . "\n";
-    }
-
-    updateFile($client, $csv, $file, 'The latest data.');
-  } else {
-    $log->addError("Cannot open {$csv} file.");
+  $contents = getRepoFile($client, $csv);
+  if ($contents === null) {
+    $log->addError("Couldn't get {$csv} from the repo.");
+    return;
   }
+  $lines = explode(PHP_EOL, $contents);
+  $data = array_map('str_getcsv', $lines);
+
+  // Process header...
+  $i = 0;
+  if (count($data) == 0) {
+    $log->addError("Couldn't find header row in {$csv}.");
+    return;
+  }
+  $row = $data[$i];
+  $columns = count($row);
+  array_push($row, $date);
+  $file .= implode(",", $row) . "\n";
+  $i++;
+
+  for (; $i < count($data) - 1; $i++) { // skip the last row
+    $row = $data[$i];
+    if ($columns != count($row)) {
+      $log->addError("Row in {$csv} doesn't have the right number of columns.");
+      return;
+    }
+    $s = $row[0];
+    if ($map->get($s)) {
+      $value = $map[$s];
+      array_push($row, $value);
+      $map->remove($s);
+    } else {
+      array_push($row, '');
+    }
+    $file .= implode(",", $row) . "\n";
+  }
+
+  foreach ($map as $s => $value) {
+    $row = array($s, '');
+    for ($i = 0; $i < $columns - 2; $i++) {
+      array_push($row, '');
+    }
+    array_push($row, $value);
+    $file .= implode(",", $row) . "\n";
+  }
+
+  updateFile($client, $csv, $file, 'The latest data.');
 }
 
 // Now, read in CSVs and add to them.
