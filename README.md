@@ -3,16 +3,17 @@ A regular accounting of the usage on Legend of Green Dragon servers around the i
 
 Want to add your site? Put up a pull request or contact @austenmc on [DragonPrime](http://dragonprime.net).
 
+
 Site | Total | MAU | DAU
 --- | ---:| ---:| ---:
-www.dragonsofmyth.com|599|135|30
-forbiddenrealm.rpglink.in|575|273|73
-www.lotgd.net|501|399|140
-lotgd4adults2.com|395|212|72
-stormvalley.rpglink.in|268|27|7
-enchantedland.rpglink.in|93|43|1
-deathstar.rpglink.in|47|47|25
-ess.rpglink.in|30|7|2
+www.dragonsofmyth.com|601|136|24
+forbiddenrealm.rpglink.in|575|270|65
+www.lotgd.net|503|401|164
+lotgd4adults2.com|400|217|74
+stormvalley.rpglink.in|268|26|6
+enchantedland.rpglink.in|93|42|7
+deathstar.rpglink.in|48|48|25
+ess.rpglink.in|30|7|1
 golden-empire.com|20|6|2
 twx.rpglink.in|7|0|0
 dragonprimelogd.net|-|-|-
