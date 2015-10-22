@@ -104,18 +104,33 @@ function updateFile(\Github\Client $client, string $path, string $content, strin
   $fileInfo = $client->api('repo')->contents()->update($user, $repo, $path, $content, $commitMessage, $oldFile['sha'], $branch, $committer);
 }
 
+$client = new \Github\Client();
+$client->authenticate($_ENV['GITHUB_TOKEN'], null, Github\Client::AUTH_HTTP_TOKEN);
+
 $sites = Vector {};
 
-$handle = fopen('./sites', 'r');
-if ($handle) {
-  while (($line = fgets($handle)) !== false) {
-    $sites->add(trim($line));
-  }
-  fclose($handle);
-} else {
-  $log->addError("Cannot open sites file.");
+try {
+  $sitesFile = getRepoFile($client, 'sites');
+} catch (Exception $e) {
+  $log->addError("Cannot find sites file.");
   exit(1);
 }
+
+if (!$sitesFile) {
+  $log->addError("Could not read from sites file.");
+  exit(1);
+}
+
+$fp = fopen("php://memory", 'r+');
+fputs($fp, $sitesFile);
+rewind($fp);
+while ($line = fgets($fp)) {
+  $line = trim($line);
+  if (strlen($line) > 0) {
+    $sites->add(trim($line));
+  }
+}
+fclose($fp);
 
 $statsMap = Map {};
 
@@ -124,11 +139,11 @@ if ($argc >= 2) {
     $sites = Vector {};
 
     $stats = new Stats();
-    $stats->count = 50;
-    $stats->dau = 10;
-    $stats->mau = 20;
+    $stats->count = 0;
+    $stats->dau = 0;
+    $stats->mau = 0;
     $stats->valid = true;
-    $statsMap['site1'] = $stats;
+    $statsMap['twx.rpglink.in'] = $stats;
 
     $stats = new Stats();
     $stats->count = 103;
@@ -184,9 +199,6 @@ foreach ($statsArray as $s => $stats) {
 
 $readme .= "\nAs of " . date("F j, Y") . ".\n";
 
-$client = new \Github\Client();
-$client->authenticate($_ENV['GITHUB_TOKEN'], null, Github\Client::AUTH_HTTP_TOKEN);
-
 // Write the README.md with the latest data.
 updateFile($client, 'README.md', $readme, 'The latest data.');
 
@@ -220,7 +232,7 @@ function updateCSV(Logger $log, \Github\Client $client, string $csv, Map<string,
       return;
     }
     $s = $row[0];
-    if ($map->get($s)) {
+    if ($map->containsKey($s)) {
       $value = $map[$s];
       array_push($row, $value);
       $map->remove($s);
