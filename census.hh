@@ -50,8 +50,8 @@ function collectStats(Logger $log, string $url, DOMDocument $doc, Stats $stats) 
     return false;
   }
   $lastColumn = $trhead->childNodes->item($trhead->childNodes->length - 1);
-  if (strpos($lastColumn->nodeValue, 'Last') === false) {
-    $log->addWarning("{$url} last column in header doesn't contain 'Last'.");
+  if (strpos($lastColumn->nodeValue, 'Last') === false && strpos($lastColumn->nodeValue, 'Lebt') === false) {
+    $log->addWarning("{$url} last column in header doesn't contain 'Last' or 'Lebt'.");
     return false;
   }
 
