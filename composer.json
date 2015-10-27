@@ -4,6 +4,11 @@
     "knplabs/github-api": "~1.4",
     "hhvm": "~3.5"
   },
+  "autoload": {
+    "psr-4": {
+        "LotGD\\": "src/"
+    }
+  },
   "require-dev": {
     "heroku/heroku-buildpack-php": "*"
   }
