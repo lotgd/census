@@ -47,9 +47,9 @@ class Census {
       $sites = Vector {};
 
       $stats = new Stats();
-      $stats->count = 0;
-      $stats->dau = 0;
-      $stats->mau = 0;
+      $stats->count = 123;
+      $stats->dau = 3;
+      $stats->mau = 13;
       $statsMap['twx.rpglink.in'] = $stats;
 
       $stats = new Stats();
