@@ -2,7 +2,7 @@
 
 namespace LotGD\Census;
 
-use WarriorsPageState;
+use LotGD\Census\WarriorsPageState;
 
 class Census {
   public bool $debugFakeData = false;
