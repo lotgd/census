@@ -12,6 +12,11 @@ class CSV {
     $this->filename = $filename;
     $lines = explode(PHP_EOL, $contents);
     $this->data = array_map(fun('str_getcsv'), $lines);
+
+    $end = count($this->data) - 1;
+    if ($end >= 0 && count($this->data[$end]) == 1 && $this->data[$end][0] == null) {
+      array_pop($this->data);
+    }
   }
 
   public function contents() : string {
@@ -41,10 +46,6 @@ class CSV {
     for (; $i < count($this->data); $i++) {
       $row = $this->data[$i];
       if ($columns != count($row)) {
-        if (count($row) == 1 && $row[0] == null) {
-          // Just an empty row.
-          continue;
-        }
         $this->logger->addError("Row in {$csv} doesn't have the right number of columns.");
         return;
       }

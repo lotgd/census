@@ -24,15 +24,15 @@ class CSVTest extends \PHPUnit_Framework_TestCase {
   public function testReadBack() {
     $contents = "";
     $csv = new CSV($this->logger, 'filename', $contents);
-    $this->assertEquals($contents . "\n", $csv->contents());
+    $this->assertEquals($contents, $csv->contents());
 
-    $contents = "a,b\nc,d";
+    $contents = "a,b\nc,d\n";
     $csv = new CSV($this->logger, 'filename', $contents);
-    $this->assertEquals($contents . "\n", $csv->contents());
+    $this->assertEquals($contents, $csv->contents());
   }
 
   public function testAppendToRows() {
-    $contents = "a,b\ns1,d";
+    $contents = "a,b\ns1,d\n";
     $date = date("Y-m-d");
     $expectedContents = "a,b,{$date}\ns1,d,1\ns2,,2\n";
 

@@ -6,7 +6,7 @@ use LotGD\Census\WarriorsPageState;
 
 class Census {
   public bool $debugFakeData = false;
-  public bool $debugNoWrites = false;
+  public bool $debugLocalOnly = false;
   public Repository $repo;
 
   public Logger $logger;
@@ -17,16 +17,24 @@ class Census {
   }
 
   public function readCommandLineArguments(array $argv, int $argc) {
-    foreach ($argv as $a) {
+    for ($i = 1; $i < $argc; $i++) {
+      $a = $argv[$i];
+
+      if ($a == '--local-only') {
+        $this->debugLocalOnly = true;
+        continue;
+      }
       if ($a == '--fake-data') {
         $this->debugFakeData = true;
-      }
-      if ($a == '--no-writes') {
-        $this->debugNoWrites = true;
+        continue;
       }
       if ($a == '--debug') {
         $this->logger->setHandlers(array(new \Monolog\Handler\StreamHandler('php://stderr', \Monolog\Logger::DEBUG)));
+        continue;
       }
+
+      echo "Invalid argument: {$a}", PHP_EOL;
+      exit(1);
     }
   }
 
@@ -39,12 +47,16 @@ class Census {
     $c = new Census($l);
     $c->readCommandLineArguments($argv, $argc);
 
-    $sites = $c->repo->getSites();
-
     $statsMap = Map {};
 
     if ($c->debugFakeData) {
       $sites = Vector {};
+
+      $stats = new Stats();
+      $stats->count = 103;
+      $stats->dau = 12;
+      $stats->mau = 23;
+      $statsMap['site3'] = $stats;
 
       $stats = new Stats();
       $stats->count = 123;
@@ -53,14 +65,91 @@ class Census {
       $statsMap['twx.rpglink.in'] = $stats;
 
       $stats = new Stats();
-      $stats->count = 103;
-      $stats->dau = 12;
-      $stats->mau = 23;
-      $statsMap['site3'] = $stats;
+      $stats->count = 400;
+      $stats->dau = 126;
+      $stats->mau = 316;
+      $statsMap['www.lotgd.net'] = $stats;
 
-      $c->logger->addDebug("Using fake data:");
-      $c->logger->addDebug(var_export($statsMap, true));
+      $stats = new Stats();
+      $stats->count = 594;
+      $stats->dau = 33;
+      $stats->mau = 135;
+      $statsMap['www.dragonsofmyth.com'] = $stats;
+
+      $stats = new Stats();
+      $stats->count = 270;
+      $stats->dau = 8;
+      $stats->mau = 25;
+      $statsMap['stormvalley.rpglink.in'] = $stats;
+
+      $stats = new Stats();
+      $stats->count = 29;
+      $stats->dau = 1;
+      $stats->mau = 10;
+      $statsMap['dragonprimelogd.net'] = $stats;
+
+      $stats = new Stats();
+      $stats->count = 586;
+      $stats->dau = 80;
+      $stats->mau = 274;
+      $statsMap['forbiddenrealm.rpglink.in'] = $stats;
+
+      $stats = new Stats();
+      $stats->count = 94;
+      $stats->dau = 6;
+      $stats->mau = 36;
+      $statsMap['enchantedland.rpglink.in'] = $stats;
+
+      $stats = new Stats();
+      $stats->count = 7;
+      $stats->dau = 0;
+      $stats->mau = 0;
+      $statsMap['twx.rpglink.in'] = $stats;
+
+      $stats = new Stats();
+      $stats->count = 30;
+      $stats->dau = 3;
+      $stats->mau = 7;
+      $statsMap['ess.rpglink.in'] = $stats;
+
+      $stats = new Stats();
+      $stats->count = 395;
+      $stats->dau = 66;
+      $stats->mau = 214;
+      $statsMap['lotgd4adults2.com'] = $stats;
+
+      $stats = new Stats();
+      $stats->count = 43;
+      $stats->dau = 19;
+      $stats->mau = 43;
+      $statsMap['deathstar.rpglink.in'] = $stats;
+
+      $stats = new Stats();
+      $stats->count = 20;
+      $stats->dau = 0;
+      $stats->mau = 6;
+      $statsMap['golden-empire.com'] = $stats;
+
+      $stats = new Stats();
+      $stats->count = 632;
+      $stats->dau = 191;
+      $stats->mau = 444;
+      $statsMap['the-complex.net'] = $stats;
+
+      $stats = new Stats();
+      $stats->count = 54;
+      $stats->dau = 12;
+      $stats->mau = 38;
+      $statsMap['tynastera2.com'] = $stats;
+
+      $stats = new Stats();
+      $stats->count = 1494;
+      $stats->dau = 308;
+      $stats->mau = 705;
+      $statsMap['www.lotgd.de'] = $stats;
     } else {
+      $sites = $c->repo->getSites();
+
       foreach ($sites as $site) {
         $stats = new Stats();
 
@@ -88,6 +177,9 @@ class Census {
       }
     }
 
+    $c->logger->addDebug('Sites data:');
+    $c->logger->addDebug(var_export($statsMap, true));
+
     $c->updateReadme($statsMap);
 
     $c->updateCSV('data/total.csv', $statsMap->map(function (Stats $s) : int {
@@ -104,7 +196,13 @@ class Census {
   }
 
   private function updateCSV(string $file, Map<string, int> $map) {
-    $contents = $this->repo->getFile($file);
+    $localFilePath = __DIR__ . '/../../' . $file;
+    if ($this->debugLocalOnly) {
+      $contents = file_get_contents($localFilePath);
+    } else {
+      $contents = $this->repo->getFile($file);
+    }
+
     if ($contents === null) {
       $this->logger->addError("Couldn't get {file} from the repo.");
       return;
@@ -114,22 +212,28 @@ class Census {
     $csv->appendToRows($map);
     $result = $csv->contents();
 
-    if ($this->debugNoWrites) {
-      $this->logger->addDebug("Would be writing {$file}:");
-      $this->logger->addDebug($result);
+    $this->logger->addDebug("Writing {$file}:");
+    $this->logger->addDebug($result);
+    if ($this->debugLocalOnly) {
+      file_put_contents($localFilePath, $result);
     } else {
-      $this->logger->addDebug("Writing {$file}:");
-      $this->logger->addDebug($result);
       $this->repo->updateFile($file, $contents, 'The latest data.');
     }
   }
 
   private function updateReadme(Map<string, Stats> $statsMap) {
+    $localTemplateFilePath = __DIR__ . '/../../templates/README.md';
+    $localReadmeFilePath = __DIR__ . '/../../README.md';
+
     // Sort the map by total user count.
     $statsArray = $statsMap->toArray();
     uasort($statsArray, 'Stats::compare');
 
-    $readme = $this->repo->getFile('templates/README.md');
+    if ($this->debugLocalOnly) {
+      $readme = file_get_contents($localTemplateFilePath);
+    } else {
+      $readme = $this->repo->getFile('templates/README.md');
+    }
 
     $readme .= "Site | Total | MAU | DAU\n";
     $readme .= "--- | ---:| ---:| ---:\n";
@@ -138,22 +242,17 @@ class Census {
       $count = $stats->count;
       $mau = $stats->mau;
       $dau = $stats->dau;
-      if ($stats->valid) {
-        $readme .= "[$s]({$s})|{$count}|{$mau}|{$dau}\n";
-      } else {
-        $readme .= "[$s]({$s})|-|-|-\n";
-      }
+      $readme .= "[$s]({$s})|{$count}|{$mau}|{$dau}\n";
     }
 
     $readme .= "\nAs of " . date("F j, Y") . ".\n";
 
     // Write the README.md with the latest data.
-    if ($this->debugNoWrites) {
-      $this->logger->addDebug("Would be writing README.md:");
-      $this->logger->addDebug($readme);
+    $this->logger->addDebug("Writing README.md:");
+    $this->logger->addDebug($readme);
+    if ($this->debugLocalOnly) {
+      file_put_contents($localReadmeFilePath, $readme);
     } else {
-      $this->logger->addDebug("Writing README.md:");
-      $this->logger->addDebug($readme);
       $this->repo->updateFile('README.md', $readme, 'The latest data.');
     }
   }
