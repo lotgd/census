@@ -6,19 +6,19 @@ Want to add your site? Put up a pull request or contact @austenmc on [DragonPrim
 
 Site | Total | MAU | DAU
 --- | ---:| ---:| ---:
-www.lotgd.de|1390|1390|1390
-the-complex.net|636|450|193
-www.dragonsofmyth.com|595|135|24
-forbiddenrealm.rpglink.in|587|259|84
-www.lotgd.net|519|414|145
-lotgd4adults2.com|404|219|74
-stormvalley.rpglink.in|271|25|8
-enchantedland.rpglink.in|95|36|7
-tynastera2.com|54|39|11
-deathstar.rpglink.in|42|41|14
-ess.rpglink.in|30|7|1
-dragonprimelogd.net|28|10|2
+www.lotgd.de|800|800|800
+the-complex.net|638|450|166
+www.dragonsofmyth.com|603|142|23
+forbiddenrealm.rpglink.in|587|256|79
+www.lotgd.net|510|404|132
+lotgd4adults2.com|405|219|66
+stormvalley.rpglink.in|271|25|7
+enchantedland.rpglink.in|95|35|6
+tynastera2.com|54|39|10
+deathstar.rpglink.in|41|40|15
+ess.rpglink.in|30|6|1
+dragonprimelogd.net|29|10|2
 golden-empire.com|20|7|1
 twx.rpglink.in|7|0|0
 
-As of October 30, 2015.
+As of October 31, 2015.
