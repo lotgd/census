@@ -204,7 +204,7 @@ class Census {
     }
 
     if ($contents === null) {
-      $this->logger->addError("Couldn't get {file} from the repo.");
+      $this->logger->addError("Couldn't get {$file} from the repo.");
       return;
     }
 
