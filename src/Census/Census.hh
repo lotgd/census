@@ -242,7 +242,7 @@ class Census {
       $count = $stats->count;
       $mau = $stats->mau;
       $dau = $stats->dau;
-      $readme .= "[$s]({$s})|{$count}|{$mau}|{$dau}\n";
+      $readme .= "[$s](http://{$s})|{$count}|{$mau}|{$dau}\n";
     }
 
     $readme .= "\nAs of " . date("F j, Y") . ".\n";
