@@ -217,7 +217,7 @@ class Census {
     if ($this->debugLocalOnly) {
       file_put_contents($localFilePath, $result);
     } else {
-      $this->repo->updateFile($file, $contents, 'The latest data.');
+      $this->repo->updateFile($file, $result, 'The latest data.');
     }
   }
 
