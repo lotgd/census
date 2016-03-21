@@ -6,20 +6,20 @@ Want to add your site? Put up a pull request or contact @austenmc on [DragonPrim
 
 Site | Total | MAU | DAU
 --- | ---:| ---:| ---:
-[www.lotgd.net](http://www.lotgd.net)|461|360|122
-[www.dragonsofmyth.com](http://www.dragonsofmyth.com)|618|136|14
-[stormvalley.rpglink.in](http://stormvalley.rpglink.in)|278|21|5
-[dragonprimelogd.net](http://dragonprimelogd.net)|24|5|0
-[forbiddenrealm.rpglink.in](http://forbiddenrealm.rpglink.in)|757|220|50
+[www.lotgd.net](http://www.lotgd.net)|457|358|142
+[www.dragonsofmyth.com](http://www.dragonsofmyth.com)|618|135|17
+[stormvalley.rpglink.in](http://stormvalley.rpglink.in)|278|22|7
+[dragonprimelogd.net](http://dragonprimelogd.net)|25|6|1
+[forbiddenrealm.rpglink.in](http://forbiddenrealm.rpglink.in)|757|218|49
 [enchantedland.rpglink.in](http://enchantedland.rpglink.in)|113|23|1
-[twx.rpglink.in](http://twx.rpglink.in)|7|2|1
+[twx.rpglink.in](http://twx.rpglink.in)|7|2|0
 [ess.rpglink.in](http://ess.rpglink.in)|30|3|0
-[lotgd4adults2.com](http://lotgd4adults2.com)|389|219|64
-[deathstar.rpglink.in](http://deathstar.rpglink.in)|88|43|5
+[lotgd4adults2.com](http://lotgd4adults2.com)|385|216|66
+[deathstar.rpglink.in](http://deathstar.rpglink.in)|87|41|3
 [golden-empire.com](http://golden-empire.com)|22|5|0
-[the-complex.net](http://the-complex.net)|683|528|208
-[tynastera2.com](http://tynastera2.com)|56|35|11
-[www.lotgd.de](http://www.lotgd.de)|1509|731|297
-[www.hogwartslive.com](http://www.hogwartslive.com)|2011|1176|308
+[the-complex.net](http://the-complex.net)|683|525|221
+[tynastera2.com](http://tynastera2.com)|56|34|10
+[www.lotgd.de](http://www.lotgd.de)|1515|739|330
+[www.hogwartslive.com](http://www.hogwartslive.com)|2013|1178|319
 
-As of March 20, 2016.
+As of March 21, 2016.
