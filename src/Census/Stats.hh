@@ -13,7 +13,14 @@ class Stats {
     $this->mau += $s->mau;
   }
 
-  public static function compare(Stats $a, Stats $b) : int {
+  public static function compare(Stats $a, Stats $b): int {
     return $b->count - $a->count;
+  }
+
+  public static function isEqual(Stats $a, Stats $b): bool {
+    return
+      $a->count == $b->count &&
+      $a->dau == $b->dau &&
+      $a->mau == $b->mau;
   }
 }

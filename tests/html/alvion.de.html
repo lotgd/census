@@ -1,0 +1,2284 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//DE">
+<html>
+<head>
+<meta http-equiv='content-type' content='text/html; charset=ISO-8859-1'></meta>
+<title>Kämpferliste</title>
+<link href='templates/yar2dark.css' rel='stylesheet' type='text/css'>
+<script language="JavaScript" type="text/javascript">
+	<!--
+	document.onkeypress=keyevent;
+	function keyevent(e){
+		var c;
+		var target;
+		var altKey;
+		var ctrlKey;
+		if (window.event != null) {
+			c=String.fromCharCode(window.event.keyCode).toUpperCase();
+			altKey=window.event.altKey;
+			ctrlKey=window.event.ctrlKey;
+		}else{
+			c=String.fromCharCode(e.charCode).toUpperCase();
+			altKey=e.altKey;
+			ctrlKey=e.ctrlKey;
+		}
+		if (window.event != null)
+			target=window.event.srcElement;
+		else
+			target=e.originalTarget;
+		if (target.nodeName.toUpperCase()=='INPUT' || target.nodeName.toUpperCase()=='TEXTAREA' || altKey || ctrlKey){
+		}else{
+			if (c == 'L') { window.location='index.php?c=1-073218';; return false; }
+			if (c == 'G') { window.location='list.php?c=1-073218';; return false; }
+			if (c == 'S') { window.location='list.php?page=1&c=1-073218';; return false; }
+			if (c == 'E') { window.location='list.php?page=2&c=1-073218';; return false; }
+			if (c == 'I') { window.location='list.php?page=3&c=1-073218';; return false; }
+			if (c == 'T') { window.location='list.php?page=4&c=1-073218';; return false; }
+			if (c == '5') { window.location='list.php?page=5&c=1-073218';; return false; }
+			if (c == '6') { window.location='list.php?page=6&c=1-073218';; return false; }
+			if (c == '7') { window.location='list.php?page=7&c=1-073218';; return false; }
+			if (c == '8') { window.location='list.php?page=8&c=1-073218';; return false; }
+		}
+	}
+	//-->
+	</script><script language="JavaScript" type="text/javascript"> 
+		<!--
+		function appoencode(data) {
+			var Fundstelle = -1;
+			var tag = '';
+			var append = '';
+			var output = '<br />Vorschau: ';
+			var openspan = false;
+			while ((Fundstelle = data.search(/`/)) != -1) {
+				tag = data.substr(Fundstelle+1, 1);
+				append = data.substr(0,Fundstelle);
+				append = append.replace(/</,'&lt;');
+				append = append.replace(/>/,'&gt;');
+				output = output+ append;
+				if (data.length >= Fundstelle+2) data = data.substring(Fundstelle+2,data.length);
+				else data = '';
+				switch (tag) {
+					case '0':
+						if (openspan) output= output+'</span>';
+						openspan = false;
+					break;
+					 
+				case "1":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #0000B0;'>";
+
+				break;
+    
+				case "2":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #00B000;'>";
+
+				break;
+    
+				case "3":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #00B0B0;'>";
+
+				break;
+    
+				case "4":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #B00000;'>";
+
+				break;
+    
+				case "5":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #B000CC;'>";
+
+				break;
+    
+				case "6":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #B0B000;'>";
+
+				break;
+    
+				case "7":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #B0B0B0;'>";
+
+				break;
+    
+				case "8":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #DDFFBB;'>";
+
+				break;
+    
+				case "9":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #0070FF;'>";
+
+				break;
+    
+				case "!":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #0000FF;'>";
+
+				break;
+    
+				case "@":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #00FF00;'>";
+
+				break;
+    
+				case "#":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #00FFFF;'>";
+
+				break;
+    
+				case "$":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #FF0000;'>";
+
+				break;
+    
+				case "%":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #FF00FF;'>";
+
+				break;
+    
+				case "^":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #FFFF00;'>";
+
+				break;
+    
+				case "&":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #FFFFFF;'>";
+
+				break;
+    
+				case ")":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #999999;'>";
+
+				break;
+    
+				case "~":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #444444;'>";
+
+				break;
+    
+				case "Q":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #FF6600;'>";
+
+				break;
+    
+				case "q":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #FF9900;'>";
+
+				break;
+    
+				case "r":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #FF88EE;'>";
+
+				break;
+    
+				case "R":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #EEBBEE;'>";
+
+				break;
+    
+				case "V":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #9A5BEE;'>";
+
+				break;
+    
+				case "v":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #AABBEE;'>";
+
+				break;
+    
+				case "g":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #77EE77;'>";
+
+				break;
+    
+				case "G":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #aaff99;'>";
+
+				break;
+    
+				case "T":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #6b563f;'>";
+
+				break;
+    
+				case "t":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #F8DB83;'>";
+
+				break;
+    
+//c darf hier nicht benutzt werden!
+ 
+//H darf hier nicht benutzt werden!
+ 
+//b darf hier nicht benutzt werden!
+ 
+//¬ darf hier nicht benutzt werden!
+ 
+//i darf hier nicht benutzt werden!
+ 
+//n darf hier nicht benutzt werden!
+ 
+				case "M":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #330066;'>";
+
+				break;
+    
+				case "m":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #003399;'>";
+
+				break;
+    
+				case "f":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #E500B2;'>";
+
+				break;
+    
+				case "F":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #99B2B2;'>";
+
+				break;
+    
+				case "u":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #4C4C4C;'>";
+
+				break;
+    
+				case "U":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #FF997F;'>";
+
+				break;
+    
+				case "s":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #9F00CC;'>";
+
+				break;
+    
+				case "S":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #7F7F99;'>";
+
+				break;
+    
+				case "j":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #4C4C66;'>";
+
+				break;
+    
+				case "J":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #FF334D;'>";
+
+				break;
+    
+				case "k":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #E50033;'>";
+
+				break;
+    
+				case "K":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #99B200;'>";
+
+				break;
+    
+				case "o":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #00CC33;'>";
+
+				break;
+    
+				case "O":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #FFFF99;'>";
+
+				break;
+    
+				case "w":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #E5FF00;'>";
+
+				break;
+    
+				case "W":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #00F0CC;'>";
+
+				break;
+    
+				case "a":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #FFB299;'>";
+
+				break;
+    
+				case "A":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #FF00CC;'>";
+
+				break;
+    
+				case "e":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #B2FF7F;'>";
+
+				break;
+    
+				case "E":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #7F997F;'>";
+
+				break;
+    
+				case "p":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #4C664C;'>";
+
+				break;
+    
+				case "P":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #B299B2;'>";
+
+				break;
+    
+				case "y":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #99B299;'>";
+
+				break;
+    
+				case "Y":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #CCE5FF;'>";
+
+				break;
+    
+				case "l":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #FFB2B2;'>";
+
+				break;
+    
+				case "L":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #99B2FF;'>";
+
+				break;
+    
+				case "x":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #7F33E5;'>";
+
+				break;
+    
+				case "X":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #FFB266;'>";
+
+				break;
+    
+				case "d":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #66E5FF;'>";
+
+				break;
+    
+				case "D":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #99FFFF;'>";
+
+				break;
+    
+				case "Z":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #CC99FF;'>";
+
+				break;
+    
+				case "+":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #993300;'>";
+
+				break;
+    
+				case "(":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #63B8FF;'>";
+
+				break;
+    
+				case ",":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #87CEFF;'>";
+
+				break;
+    
+				case "€":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #8B1C62;'>";
+
+				break;
+    
+				case ":":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #B03060;'>";
+
+				break;
+    
+				case ";":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #CD2990;'>";
+
+				break;
+    
+				case "*":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #458B74;'>";
+
+				break;
+    
+				case "{":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #76EEC6;'>";
+
+				break;
+    
+				case "}":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #7FFFD4;'>";
+
+				break;
+    
+				case "[":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #BC8F8F;'>";
+
+				break;
+    
+				case "]":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #FFC1C1;'>";
+
+				break;
+    
+				case ".":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #8B6969;'>";
+
+				break;
+    
+				case "B":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #8B7355;'>";
+
+				break;
+    
+				case "C":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #DEB887;'>";
+
+				break;
+    
+				case "h":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #FFD39B;'>";
+
+				break;
+    
+				case "I":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #F08080;'>";
+
+				break;
+    
+				case "N":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #FF7256;'>";
+
+				break;
+    
+				case "|":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #8B3E2F;'>";
+
+				break;
+    
+				case "z":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #FDD69D;'>";
+
+				break;
+    
+				case "=":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #D0D0D0;'>";
+
+				break;
+    
+				case "à":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #676767;'>";
+
+				break;
+    
+				case "è":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #898989;'>";
+
+				break;
+    
+				case "ì":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #FEE676;'>";
+
+				break;
+    
+				case "ò":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #880000;'>";
+
+				break;
+    
+				case "ù":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #C90000;'>";
+
+				break;
+    
+				case "À":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #DF0000;'>";
+
+				break;
+    
+				case "È":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #66CDAA;'>";
+
+				break;
+    
+				case "Ì":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #8B668B;'>";
+
+				break;
+    
+				case "Ò":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #CD96CD;'>";
+
+				break;
+    
+				case "Ù":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #DDA0DD;'>";
+
+				break;
+    
+				case "â":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #EEAEEE;'>";
+
+				break;
+    
+				case "ê":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #FFBBFF;'>";
+
+				break;
+    
+				case "î":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #8B7B8B;'>";
+
+				break;
+    
+				case "ô":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #CDB5CD;'>";
+
+				break;
+    
+				case "û":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #D8BFD8;'>";
+
+				break;
+    
+				case "Â":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #EED2EE;'>";
+
+				break;
+    
+				case "Ê":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #FFE1FF;'>";
+
+				break;
+    
+				case "Î":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #A020F0;'>";
+
+				break;
+    
+				case "Ô":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #9B30FF;'>";
+
+				break;
+    
+				case "Û":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #912CEE;'>";
+
+				break;
+    
+				case "á":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #7D26CD;'>";
+
+				break;
+    
+				case "é":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #551A8B;'>";
+
+				break;
+    
+				case "í":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #EEEE00;'>";
+
+				break;
+    
+				case "ó":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #CDCD00;'>";
+
+				break;
+    
+				case "ú":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #8B8B00;'>";
+
+				break;
+    
+				case "Á":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #C6E2FF;'>";
+
+				break;
+    
+				case "É":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #B9D3EE;'>";
+
+				break;
+    
+				case "Í":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #9FB6CD;'>";
+
+				break;
+    
+				case "Ó":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #708090;'>";
+
+				break;
+    
+				case "Ú":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #617080;'>";
+
+				break;
+    
+				case "_":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #FFFFCC;'>";
+
+				break;
+    
+				case "°":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #FF1F00;'>";
+
+				break;
+    
+				case "ß":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #D48561;'>";
+
+				break;
+    
+				case "´":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #B56642;'>";
+
+				break;
+    
+				case "§":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #FFC49E;'>";
+
+				break;
+    
+				case "²":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #038A00;'>";
+
+				break;
+    
+				case "µ":
+
+					if (openspan) output= output+"</span>"; else openspan = true;
+
+					output= output+"<span style='color: #035900;'>";
+
+				break;
+    
+					default:
+						output= output+'`'+tag;
+				}
+			}
+			output += data;
+			if (openspan) output += '</span>';
+			if (output.length > 4098)  output = output.substring(0,4098+16);
+			return output;
+		}
+		//-->
+	</script>
+</head>
+<body bgcolor='#000000' text='#CCCCCC'>
+<table border="0" cellpadding="4" cellspacing="0" width="100%">
+  <tr>
+    <td colspan="2" class='pageheader' valign='bottom'>
+      <img src='images/title.gif' align='right'>
+      <span class='pagetitle'><br>Kämpferliste</span><br />
+      <a href='motd.php' target='_blank'  style='color:#FFFFFF' onClick="window.open('motd.php','motdphp','scrollbars=yes,resizable=yes,width=800,height=600');return false;" class='motd'><b>MoTD</b></a> &#149;  &#149; <a href='petition.php'  style='color:#FFFFFF' onClick="window.open('petition.php','petitionphp','scrollbars=yes,resizable=yes,width=800,height=600');return false;" target='_blank' align='right' style='color:#FFFFFF' class='motd'>Hilfe anfordern</a> &#149; <a href='http://alvionforum.de/phpbb/' target='_blank'  style='color:#FFFFFF' class='motd'>Forum</a> &#149; 
+    </td>
+  </tr>
+  <tr>
+    <td width="170" bgcolor='#000000' valign='top'>
+
+      <td width='100%' rowspan=2 valign='top' bgcolor='#000000'>
+        <table border="0" cellpadding="0" cellspacing="0" align="right">
+          <tr><td><img src='images/uscroll.GIF' width='100%' height='22' alt=''></td></tr>
+          <tr>
+            <td align="center">
+              <table cellspacing='0' cellpadding='0' class='nav' width="121" border="0">
+                <tr><td bgcolor="#000033" align="center"><span style='color: #00FF00;'>0 Spieler online:<br />
+</span><i >Keine Spieler online</i><br />
+<br />
+<span style='color: #FF0000;'>0 Teammitglieder online:<br />
+</span><i >Keine Teammitglieder online</i><br />
+</td></tr>
+              </table>
+            </td>
+          </tr>
+          <tr><td><img src='images/lscroll.GIF' width='100%' height='22' alt=''></td></tr><tr><td><br></td></tr>
+        <tr><td></td></tr><tr><td><br></td></tr>
+        <tr><td><table align="center"><tr><td><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+	<input type="hidden" name="cmd" value="_xclick">
+	<input type="hidden" name="business" value="nahdude81@hotmail.com">
+	<input type="hidden" name="item_name" value="Legend of the Green Dragon Author Donation from ">
+	<input type="hidden" name="item_number" value=":www.alvion-logd.de//logd/list.php?op=bypage&page=1">
+	<input type="hidden" name="no_shipping" value="1">
+	<input type="hidden" name="cn" value="Your Character Name">
+	<input type="hidden" name="cs" value="1">
+	<input type="hidden" name="currency_code" value="USD">
+	<input type="hidden" name="tax" value="0">
+	<input type="image" src="images/paypal1.gif" border="0" name="submit" alt="Donate!">
+	</form></td><td><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+		<input type="hidden" name="cmd" value="_xclick">
+		<input type="hidden" name="business" value="mail@uwe-sahmel.de">
+		<input type="hidden" name="item_name" value="Legend of the Green Dragon Server-Spende von ">
+		<input type="hidden" name="item_number" value=":www.alvion-logd.de//logd/list.php?op=bypage&page=1">
+		<input type="hidden" name="no_shipping" value="1">
+		<input type="hidden" name="cn" value="Your Character Name">
+		<input type="hidden" name="cs" value="1">
+		<input type="hidden" name="currency_code" value="EUR">
+		<input type="hidden" name="tax" value="0">
+		<input type="image" src="images/paypal2.gif" border="0" name="submit" alt="Donate!">
+		</form></td></tr></table></td></tr>
+        </table>
+      <center ><strong >Krieger in dieser Welt (Seite 1: 1-50 von 363)</strong></center>
+<table border=0 cellpadding=2 cellspacing=1 bgcolor='#999999'>
+<tr class='trdark'><td><b>Level</b></td><td><b>Name</b></td><td><b>Rang</b></td>
+<td><b>Char</b></td><td><b>Rasse</b></td>
+<td><b>Kampfart</b></td>
+<td><b><img src="images/female.gif">/<img src="images/male.gif"></b></td>
+<td><b>Ort</b></td>
+<td><b>Status</b></td><td><b>Zuletzt da</b></td><td><b>RP-Status</b></td>
+</tr>
+<tr class='trlight'><td>
+<span style='color: #FFFF00;'>15</span>
+</td><td>
+<span style='color: #FFFFFF;'></span><span style='color: #4C4C66;'>Se</span><span style='color: #617080;'>mp</span><span style='color: #708090;'>er </span><span style='color: #7F7F99;'>Idem </span><span style='color: #708090;'>Sl</span><span style='color: #617080;'>ev</span><span style='color: #4C4C66;'>yn</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #FFFFFF;'>Mensch
+</td><td>
+Schwertkampf
+</td><td align="center">
+<img src="images/male.gif" alt="männlich">
+</td><td>
+</span><span style='color: #00B0B0;'>Die Felder</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+2 Tage
+</td><td align="center">
+<img src="images/gruen.jpg"  alt="RP bereit">
+</td></tr>
+<tr class='trdark'><td>
+<span style='color: #FFFF00;'>15</span>
+</td><td>
+<span style='color: #FFFFFF;'></span><span style='color: #444444;'>M</span><span style='color: #4C4C4C;'>ä</span><span style='color: #676767;'>ä</span><span style='color: #898989;'>r</span><span style='color: #999999;'>î</span><span style='color: #B0B0B0;'>t</span><span style='color: #FFFFCC;'>ýs </span><span style='color: #FFFFCC;'>R</span><span style='color: #77EE77;'>i</span><span style='color: #00F0CC;'>h</span><span style='color: #00FFFF;'>y</span><span style='color: #66E5FF;'>a</span><span style='color: #99FFFF;'>e</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #D0D0D0;'>Hayllier
+</td><td>
+Schwertkampf
+</td><td align="center">
+<img src="images/female.gif" alt="weiblich">
+</td><td>
+</span><span style='color: #00B0B0;'>Im Haus</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+29 Tage
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trlight'><td>
+<span style='color: #FFFF00;'>15</span>
+</td><td>
+<span style='color: #FFFFFF;'></span><span style='color: #4C4C66;'>Ja</span><span style='color: #551A8B;'>bress </span><span style='color: #4C4C66;'>Ta</span><span style='color: #4C664C;'>hi</span><span style='color: #617080;'>ra </span><span style='color: #551A8B;'>Sha</span><span style='color: #7F33E5;'>dow</span><span style='color: #7D26CD;'>maw</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #6b563f;'>Dunkelelf/in
+</td><td>
+Schwertkampf
+</td><td align="center">
+<img src="images/female.gif" alt="weiblich">
+</td><td>
+</span><span style='color: #00B0B0;'>Im Haus</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+4 Tage
+</td><td align="center">
+<img src="images/gruen.jpg"  alt="RP bereit">
+</td></tr>
+<tr class='trdark'><td>
+<span style='color: #FFFF00;'>15</span>
+</td><td>
+<span style='color: #FFFFFF;'></span><span style='color: #FFFF00;'>S</span><span style='color: #CDCD00;'>c</span><span style='color: #99B200;'>h</span><span style='color: #B0B000;'>l</span><span style='color: #8B8B00;'>i</span><span style='color: #4C664C;'>tzohr </span><span style='color: #FFFF00;'>J</span><span style='color: #CDCD00;'>a</span><span style='color: #99B200;'>n</span><span style='color: #8B8B00;'>n</span><span style='color: #4C664C;'>ah</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #993300;'>Lycantroph
+</td><td>
+Axtkampf
+</td><td align="center">
+<img src="images/female.gif" alt="weiblich">
+</td><td>
+</span><span style='color: #00B0B0;'>Die Felder</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+2 Tage
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trlight'><td>
+<span style='color: #FFFF00;'>15</span>
+</td><td>
+<span style='color: #FFFFFF;'></span><span style='color: #FFFFFF;'>I</span><span style='color: #FFFFCC;'>n</span><span style='color: #FFFF99;'>t</span><span style='color: #DEB887;'>r</span><span style='color: #8B7355;'>é</span><span style='color: #6b563f;'>p</span><span style='color: #444444;'>ido  </span><span style='color: #6b563f;'>F</span><span style='color: #8B7355;'>r</span><span style='color: #DEB887;'>e</span><span style='color: #FFFF99;'>y</span><span style='color: #FFFFFF;'>a</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #DDFFBB;'>Elf/in
+</td><td>
+Schwertkampf
+</td><td align="center">
+<img src="images/female.gif" alt="weiblich">
+</td><td>
+</span><span style='color: #00B0B0;'>In der Gilde</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+Gestern
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trdark'><td>
+<span style='color: #FFFF00;'>15</span>
+</td><td>
+<span style='color: #FFFFFF;'></span><span style='color: #00FFFF;'></span><span style='color: #898989;'>O</span><span style='color: #676767;'>d</span><span style='color: #4C4C4C;'>e</span><span style='color: #444444;'>m d</span><span style='color: #8B7B8B;'>er </span><span style='color: #898989;'>St</span><span style='color: #676767;'>er</span><span style='color: #4C4C4C;'>be</span><span style='color: #444444;'>nd</span><span style='color: #8B7B8B;'>en </span><span style='color: #B00000;'>A</span><span style='color: #7F7F99;'>r</span><span style='color: #4C4C66;'>t</span><span style='color: #617080;'>a</span><span style='color: #708090;'>n</span><span style='color: #9FB6CD;'>o</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #DF0000;'>Vampir/Vampiress
+</td><td>
+Schwarze Magie
+</td><td align="center">
+<img src="images/male.gif" alt="männlich">
+</td><td>
+</span><span style='color: #00B0B0;'>Im Haus</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+69 Tage
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trlight'><td>
+<span style='color: #FFFF00;'>15</span>
+</td><td>
+<span style='color: #FFFFFF;'></span><span style='color: #444444;'>M</span><span style='color: #4C4C4C;'>o</span><span style='color: #676767;'>n</span><span style='color: #898989;'>d</span><span style='color: #999999;'>s</span><span style='color: #B0B0B0;'>c</span><span style='color: #D0D0D0;'>h</span><span style='color: #FFFFFF;'>atte</span><span style='color: #D0D0D0;'>n </span><span style='color: #B0B0B0;'>L</span><span style='color: #999999;'>i</span><span style='color: #898989;'>l</span><span style='color: #676767;'>l</span><span style='color: #4C4C4C;'>i</span><span style='color: #444444;'>e</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #DF0000;'>Vampir/Vampiress
+</td><td>
+Schwertkampf
+</td><td align="center">
+<img src="images/female.gif" alt="weiblich">
+</td><td>
+</span><span style='color: #00B0B0;'>Im Haus</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+4 Tage
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trdark'><td>
+<span style='color: #FFFF00;'>15</span>
+</td><td>
+<span style='color: #FFFFFF;'></span><span style='color: #FF334D;'>C</span><span style='color: #B03060;'>l</span><span style='color: #8B1C62;'>a</span><span style='color: #4C4C66;'>p</span><span style='color: #617080;'>s</span><span style='color: #458B74;'>h</span><span style='color: #66CDAA;'>o</span><span style='color: #aaff99;'>las </span><span style='color: #aaff99;'>M</span><span style='color: #66CDAA;'>é</span><span style='color: #458B74;'>l</span><span style='color: #617080;'>u</span><span style='color: #4C4C66;'>s</span><span style='color: #8B1C62;'>y</span><span style='color: #B03060;'>n</span><span style='color: #FF334D;'>e</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #B00000;'>Dämon/in
+</td><td>
+Schwarze Magie
+</td><td align="center">
+<img src="images/female.gif" alt="weiblich">
+</td><td>
+</span><span style='color: #00B0B0;'>Die Felder</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+13 Tage
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trlight'><td>
+<span style='color: #FFFF00;'>15</span>
+</td><td>
+<span style='color: #FFFFFF;'></span><span style='color: #B00000;'>S</span><span style='color: #E50033;'>üß</span><span style='color: #FF334D;'>e </span><span style='color: #FF997F;'>S</span><span style='color: #FFB2B2;'>ü</span><span style='color: #DDFFBB;'>n</span><span style='color: #B2FF7F;'>d</span><span style='color: #77EE77;'>e </span><span style='color: #77EE77;'>E</span><span style='color: #00FF00;'>st</span><span style='color: #00CC33;'>e</span><span style='color: #00B000;'>ll</span><span style='color: #035900;'>e</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #DF0000;'>Vampir/Vampiress
+</td><td>
+Schwarze Magie
+</td><td align="center">
+<img src="images/female.gif" alt="weiblich">
+</td><td>
+</span><span style='color: #00B0B0;'>Die Felder</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+5 Tage
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trdark'><td>
+<span style='color: #FFFF00;'>15</span>
+</td><td>
+<span style='color: #FFFFFF;'>Vagabund Naruboku</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #FFFF99;'>Halbengel
+</td><td>
+Schwertkampf
+</td><td align="center">
+<img src="images/male.gif" alt="männlich">
+</td><td>
+</span><span style='color: #00B0B0;'>Die Felder</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+52 Tage
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trlight'><td>
+<span style='color: #FFFF00;'>14</span>
+</td><td>
+<span style='color: #FFFFFF;'></span><span style='color: #4C4C4C;'></span><span style='color: #4C4C66;'>J</span><span style='color: #458B74;'>a</span><span style='color: #77EE77;'>d</span><span style='color: #B2FF7F;'>efe</span><span style='color: #77EE77;'>u</span><span style='color: #458B74;'>e</span><span style='color: #4C4C66;'>r </span><span style='color: #B2FF7F;'>Gl</span><span style='color: #77EE77;'>e</span><span style='color: #458B74;'>n</span><span style='color: #4C4C66;'>n</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #D0D0D0;'>Hayllier
+</td><td>
+Anima-Magie
+</td><td align="center">
+<img src="images/female.gif" alt="weiblich">
+</td><td>
+</span><span style='color: #00B0B0;'>Die Felder</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+Gestern
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trdark'><td>
+<span style='color: #FFFF00;'>14</span>
+</td><td>
+<span style='color: #FFFFFF;'>Bote Calafalas</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #DDFFBB;'>Elf/in
+</td><td>
+Bogenschütze
+</td><td align="center">
+<img src="images/male.gif" alt="männlich">
+</td><td>
+</span><span style='color: #00B0B0;'>Im Haus</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+33 Tage
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trlight'><td>
+<span style='color: #FFFF00;'>14</span>
+</td><td>
+<span style='color: #FFFFFF;'></span><span style='color: #993300;'>R</span><span style='color: #676767;'>e</span><span style='color: #999999;'>d </span><span style='color: #D0D0D0;'>R</span><span style='color: #999999;'>i</span><span style='color: #676767;'>o</span><span style='color: #993300;'>t</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #FF1F00;'>Blutelf
+</td><td>
+Axtkampf
+</td><td align="center">
+<img src="images/female.gif" alt="weiblich">
+</td><td>
+</span><span style='color: #00B0B0;'>Die Felder</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+17 Tage
+</td><td align="center">
+<img src="images/gruen.jpg"  alt="RP bereit">
+</td></tr>
+<tr class='trdark'><td>
+<span style='color: #FFFF00;'>14</span>
+</td><td>
+<span style='color: #FFFFFF;'></span><span style='color: #FFB266;'>We</span><span style='color: #DEB887;'>ltf</span><span style='color: #99B299;'>rem</span><span style='color: #4C664C;'>de</span> <span style='color: #4C664C;'>N</span><span style='color: #7F997F;'>i</span><span style='color: #99B299;'>a</span><span style='color: #DEB887;'>m</span><span style='color: #FFB266;'>h</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #FFFFFF;'>Mensch
+</td><td>
+Bogenschütze
+</td><td align="center">
+<img src="images/female.gif" alt="weiblich">
+</td><td>
+</span><span style='color: #00B0B0;'>Im Haus</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+2 Tage
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trlight'><td>
+<span style='color: #FFFF00;'>14</span>
+</td><td>
+<span style='color: #FFFFFF;'>Pfadfinderin Sylwen</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #aaff99;'>Hochelf/in
+</td><td>
+Lichtmagie
+</td><td align="center">
+<img src="images/female.gif" alt="weiblich">
+</td><td>
+</span><span style='color: #00B0B0;'>Im Haus</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+7 Tage
+</td><td align="center">
+<img src="images/gruen.jpg"  alt="RP bereit">
+</td></tr>
+<tr class='trdark'><td>
+<span style='color: #FFFF00;'>14</span>
+</td><td>
+<span style='color: #FFFFFF;'>Landstreicherin Sola</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #FFFFFF;'>Mensch
+</td><td>
+Schwertkampf
+</td><td align="center">
+<img src="images/female.gif" alt="weiblich">
+</td><td>
+</span><span style='color: #00B0B0;'>Die Felder</span>
+</td><td>
+<span style='color: #B00000;'>Tot</span>
+</td><td>
+59 Tage
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trlight'><td>
+<span style='color: #FFFF00;'>13</span>
+</td><td>
+<span style='color: #FFFFFF;'></span><span style='color: #444444;'>Wu</span><span style='color: #4C4C4C;'>td</span><span style='color: #999999;'>ämo</span><span style='color: #999999;'>n An</span><span style='color: #B0B0B0;'>dr</span><span style='color: #FFFFFF;'>ej</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #B00000;'>Dämon/in
+</td><td>
+Schwertkampf
+</td><td align="center">
+<img src="images/male.gif" alt="männlich">
+</td><td>
+</span><span style='color: #00B0B0;'>Die Felder</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+5 Tage
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trdark'><td>
+<span style='color: #FFFF00;'>13</span>
+</td><td>
+<span style='color: #FFFFFF;'></span><span style='color: #FEE676;'>N</span><span style='color: #FFB266;'>ar</span><span style='color: #FF9900;'>be</span><span style='color: #FF6600;'>nherz </span><span style='color: #FF6600;'>Sh</span><span style='color: #FF9900;'>ad</span><span style='color: #FFB266;'>ra</span><span style='color: #FEE676;'>n</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #FFFFFF;'>Mensch
+</td><td>
+Axtkampf
+</td><td align="center">
+<img src="images/female.gif" alt="weiblich">
+</td><td>
+</span><span style='color: #00B0B0;'>Im Haus</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+2 Tage
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trlight'><td>
+<span style='color: #FFFF00;'>13</span>
+</td><td>
+<span style='color: #FFFFFF;'></span><span style='color: #4C4C4C;'>Se</span><span style='color: #676767;'>el</span><span style='color: #898989;'>en</span><span style='color: #999999;'>sc</span><span style='color: #B0B0B0;'>hind</span><span style='color: #999999;'>er </span><span style='color: #898989;'>Mu</span><span style='color: #676767;'>nd</span><span style='color: #4C4C4C;'>us</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #7F7F99;'>Nachtmahr
+</td><td>
+Schwarze Magie
+</td><td align="center">
+<img src="images/male.gif" alt="männlich">
+</td><td>
+</span><span style='color: #00B0B0;'>Im Haus</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+14 Tage
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trdark'><td>
+<span style='color: #FFFF00;'>13</span>
+</td><td>
+<span style='color: #FFFFFF;'>Seefahrerin Shaiyala</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #DDFFBB;'>Elf/in
+</td><td>
+Bogenschütze
+</td><td align="center">
+<img src="images/female.gif" alt="weiblich">
+</td><td>
+</span><span style='color: #00B0B0;'>Im Haus</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+13 Tage
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trlight'><td>
+<span style='color: #FFFF00;'>13</span>
+</td><td>
+<span style='color: #FFFFFF;'></span><span style='color: #4C4C66;'>A</span><span style='color: #617080;'>n</span><span style='color: #708090;'>t</span><span style='color: #9FB6CD;'>i</span><span style='color: #B9D3EE;'>s</span><span style='color: #7FFFD4;'>t</span><span style='color: #00F0CC;'>i</span><span style='color: #00FFFF;'>t</span><span style='color: #00B0B0;'>a </span><span style='color: #458B74;'>o</span><span style='color: #617080;'>b</span><span style='color: #7F7F99;'>s</span><span style='color: #99B2B2;'>cu</span><span style='color: #7F7F99;'>r</span><span style='color: #617080;'>e</span><span style='color: #458B74;'>a </span><span style='color: #00B0B0;'>C</span><span style='color: #00FFFF;'>e</span><span style='color: #00F0CC;'>l</span><span style='color: #7FFFD4;'>e</span><span style='color: #B9D3EE;'>r</span><span style='color: #9FB6CD;'>i</span><span style='color: #708090;'>t</span><span style='color: #617080;'>a</span><span style='color: #4C4C66;'>s</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #D48561;'>Felyne
+</td><td>
+Schwertkampf
+</td><td align="center">
+<img src="images/female.gif" alt="weiblich">
+</td><td>
+</span><span style='color: #00B0B0;'>Im Haus</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+2 Tage
+</td><td align="center">
+<img src="images/gruen.jpg"  alt="RP bereit">
+</td></tr>
+<tr class='trdark'><td>
+<span style='color: #FFFF00;'>13</span>
+</td><td>
+<span style='color: #FFFFFF;'></span><span style='color: #676767;'>D</span><span style='color: #898989;'>e</span><span style='color: #999999;'>r </span><span style='color: #B0B0B0;'>u</span><span style='color: #D0D0D0;'>n</span><span style='color: #FFFFFF;'>n</span><span style='color: #FFFFCC;'>achah</span><span style='color: #FFFFFF;'>m</span><span style='color: #D0D0D0;'>li</span><span style='color: #999999;'>c</span><span style='color: #898989;'>h</span><span style='color: #676767;'>e </span><span style='color: #676767;'>T</span><span style='color: #898989;'>h</span><span style='color: #999999;'>o</span><span style='color: #B0B0B0;'>r</span><span style='color: #D0D0D0;'>in </span><span style='color: #FFFFFF;'>H</span><span style='color: #FFFFCC;'>elm</span><span style='color: #FFFFFF;'>g</span><span style='color: #D0D0D0;'>esc</span><span style='color: #B0B0B0;'>h</span><span style='color: #999999;'>e</span><span style='color: #898989;'>i</span><span style='color: #676767;'>t</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #BC8F8F;'>Zwerg
+</td><td>
+Axtkampf
+</td><td align="center">
+<img src="images/male.gif" alt="männlich">
+</td><td>
+</span><span style='color: #00B0B0;'>Im Haus</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+15 Tage
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trlight'><td>
+<span style='color: #FFFF00;'>13</span>
+</td><td>
+<span style='color: #FFFFFF;'>Tänzerin Merle</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #AABBEE;'>Sylphen
+</td><td>
+Anima-Magie
+</td><td align="center">
+<img src="images/female.gif" alt="weiblich">
+</td><td>
+</span><span style='color: #00B0B0;'>Im Haus</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+Gestern
+</td><td align="center">
+<img src="images/gruen.jpg"  alt="RP bereit">
+</td></tr>
+<tr class='trdark'><td>
+<span style='color: #FFFF00;'>13</span>
+</td><td>
+<span style='color: #FFFFFF;'></span><span style='color: #4C4C66;'>Cr</span><span style='color: #7F7F99;'>eperer</span><span style='color: #999999;'>um </span><span style='color: #4C4C66;'>El</span><span style='color: #7F7F99;'>rio</span><span style='color: #999999;'>n</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #B00000;'>Dämon/in
+</td><td>
+Schwarze Magie
+</td><td align="center">
+<img src="images/female.gif" alt="weiblich">
+</td><td>
+</span><span style='color: #00B0B0;'>Im Haus</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+Gestern
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trlight'><td>
+<span style='color: #FFFF00;'>13</span>
+</td><td>
+<span style='color: #FFFFFF;'>Knappe Crawley</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #993300;'>Lycantroph
+</td><td>
+Schwertkampf
+</td><td align="center">
+<img src="images/male.gif" alt="männlich">
+</td><td>
+</span><span style='color: #00B0B0;'>Im Haus</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+2 Tage
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trdark'><td>
+<span style='color: #FFFF00;'>13</span>
+</td><td>
+<span style='color: #FFFFFF;'>Pfadfinderin Jane</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #E50033;'>Halbdämon/in
+</td><td>
+Schwarze Magie
+</td><td align="center">
+<img src="images/female.gif" alt="weiblich">
+</td><td>
+</span><span style='color: #00B0B0;'>Im Haus</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+71 Tage
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trlight'><td>
+<span style='color: #FFFF00;'>13</span>
+</td><td>
+<span style='color: #FFFFFF;'>Pfadfinderin Roseroar</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #D48561;'>Felyne
+</td><td>
+Schwertkampf
+</td><td align="center">
+<img src="images/female.gif" alt="weiblich">
+</td><td>
+</span><span style='color: #00B0B0;'>Die Felder</span>
+</td><td>
+<span style='color: #B00000;'>Tot</span>
+</td><td>
+52 Tage
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trdark'><td>
+<span style='color: #FFFF00;'>13</span>
+</td><td>
+<span style='color: #FFFFFF;'>Diebin Alya</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #DDFFBB;'>Elf/in
+</td><td>
+Schwarze Magie
+</td><td align="center">
+<img src="images/female.gif" alt="weiblich">
+</td><td>
+</span><span style='color: #00B0B0;'>Im Haus</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+83 Tage
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trlight'><td>
+<span style='color: #FFFF00;'>13</span>
+</td><td>
+<span style='color: #FFFFFF;'>Dieb Marcius</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #aaff99;'>Hochelf/in
+</td><td>
+Stabmagie
+</td><td align="center">
+<img src="images/male.gif" alt="männlich">
+</td><td>
+</span><span style='color: #00B0B0;'>Die Felder</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+43 Tage
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trdark'><td>
+<span style='color: #FFFF00;'>12</span>
+</td><td>
+<span style='color: #FFFFFF;'></span><span style='color: #B0B0B0;'>† </span><span style='color: #880000;'>F</span><span style='color: #B00000;'>u</span><span style='color: #FF0000;'>c</span><span style='color: #FF334D;'>h</span><span style='color: #FF7256;'>s</span><span style='color: #FFB299;'>g</span><span style='color: #FFC49E;'>ö</span><span style='color: #FFD39B;'>t</span><span style='color: #FFFFCC;'>tin </span><span style='color: #FFFFCC;'>Ka</span><span style='color: #FFD39B;'>s</span><span style='color: #FFC49E;'>s</span><span style='color: #FFB299;'>i</span><span style='color: #FF7256;'>o</span><span style='color: #FF334D;'>p</span><span style='color: #FF0000;'>e</span><span style='color: #B00000;'>i</span><span style='color: #880000;'>a</span>
+</td><td>
+<span style='color: #00FF00;'>Priesterin
+</td><td>
+Kämpfer
+</td><td>
+</span><span style='color: #00FFFF;'>Kobold
+</td><td>
+Schwarze Magie
+</td><td align="center">
+<img src="images/female.gif" alt="weiblich">
+</td><td>
+</span><span style='color: #00B0B0;'>Die Felder</span>
+</td><td>
+<span style='color: #B00000;'>Tot</span>
+</td><td>
+Gestern
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trlight'><td>
+<span style='color: #FFFF00;'>12</span>
+</td><td>
+<span style='color: #FFFFFF;'></span><span style='color: #CCE5FF;'>J</span><span style='color: #99FFFF;'>a</span><span style='color: #66E5FF;'>e</span><span style='color: #99B2B2;'>r</span><span style='color: #7F7F99;'>k</span><span style='color: #4C4C66;'>e</span><span style='color: #4C4C4C;'>r </span><span style='color: #4C4C4C;'>Ar</span><span style='color: #4C4C66;'>ct</span><span style='color: #7F7F99;'>a</span><span style='color: #99B2B2;'>n</span><span style='color: #66E5FF;'>d</span><span style='color: #99FFFF;'>e</span><span style='color: #CCE5FF;'>r</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #FFFFFF;'>Mensch
+</td><td>
+Schwarze Magie
+</td><td align="center">
+<img src="images/male.gif" alt="männlich">
+</td><td>
+</span><span style='color: #00B0B0;'>Im Haus</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+13 Tage
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trdark'><td>
+<span style='color: #FFFF00;'>12</span>
+</td><td>
+<span style='color: #FFFF00;'></span><span style='color: #4C4C4C;'>Un</span><span style='color: #676767;'>fa</span><span style='color: #898989;'>s</span><span style='color: #B0B0B0;'>s</span><span style='color: #B299B2;'>ba</span><span style='color: #8B668B;'>re </span><span style='color: #8B668B;'>Na</span><span style='color: #B299B2;'>d</span><span style='color: #B0B0B0;'>e</span><span style='color: #898989;'>s</span><span style='color: #676767;'>h</span><span style='color: #4C4C4C;'>a</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #B0B0B0;'>Geist
+</td><td>
+Schwarze Magie
+</td><td align="center">
+<img src="images/female.gif" alt="weiblich">
+</td><td>
+</span><span style='color: #00B0B0;'>Im Haus</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+Gestern
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trlight'><td>
+<span style='color: #FFFF00;'>12</span>
+</td><td>
+<span style='color: #FFFFFF;'></span><span style='color: #CD2990;'>L</span><span style='color: #E500B2;'>e</span><span style='color: #FF00CC;'>n</span><span style='color: #FF88EE;'>i</span><span style='color: #FFB299;'>t</span><span style='color: #FFFFCC;'>a</span><span style='color: #FFFF99;'>s </span><span style='color: #FEE676;'>ca</span><span style='color: #FFFF99;'>s</span><span style='color: #FFB299;'>t</span><span style='color: #FF88EE;'>i</span><span style='color: #FF00CC;'>t</span><span style='color: #E500B2;'>a</span><span style='color: #CD2990;'>s </span><span style='color: #FFFF99;'>J</span><span style='color: #FFB299;'>i</span><span style='color: #FF88EE;'>l</span><span style='color: #E500B2;'>i</span><span style='color: #CD2990;'>a</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #B0B0B0;'>Geist
+</td><td>
+Lichtmagie
+</td><td align="center">
+<img src="images/female.gif" alt="weiblich">
+</td><td>
+</span><span style='color: #00B0B0;'>Im Haus</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+28 Tage
+</td><td align="center">
+<img src="images/gruen.jpg"  alt="RP bereit">
+</td></tr>
+<tr class='trdark'><td>
+<span style='color: #FFFF00;'>12</span>
+</td><td>
+<span style='color: #FFFFFF;'>Hofnärrin Milla Maxwell</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #FFFFFF;'>Mensch
+</td><td>
+Schwertkampf
+</td><td align="center">
+<img src="images/female.gif" alt="weiblich">
+</td><td>
+</span><span style='color: #00B0B0;'>Im Haus</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+56 Tage
+</td><td align="center">
+<img src="images/gruen.jpg"  alt="RP bereit">
+</td></tr>
+<tr class='trlight'><td>
+<span style='color: #FFFF00;'>12</span>
+</td><td>
+<span style='color: #FFFFFF;'>Schildmagd Lasarina</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #D48561;'>Felyne
+</td><td>
+Lichtmagie
+</td><td align="center">
+<img src="images/female.gif" alt="weiblich">
+</td><td>
+</span><span style='color: #00B0B0;'>Die Felder</span>
+</td><td>
+<span style='color: #B00000;'>Tot</span>
+</td><td>
+2 Tage
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trdark'><td>
+<span style='color: #FFFF00;'>12</span>
+</td><td>
+<span style='color: #FFFFFF;'>Knappe Terxon</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #FFFFFF;'>Mensch
+</td><td>
+Lichtmagie
+</td><td align="center">
+<img src="images/male.gif" alt="männlich">
+</td><td>
+</span><span style='color: #00B0B0;'>Im Haus</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+23 Tage
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trlight'><td>
+<span style='color: #FFFF00;'>12</span>
+</td><td>
+<span style='color: #FFFFFF;'>Totengräber Demolizion</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #E50033;'>Halbdämon/in
+</td><td>
+Schwertkampf
+</td><td align="center">
+<img src="images/male.gif" alt="männlich">
+</td><td>
+</span><span style='color: #00B0B0;'>Die Felder</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+8 Tage
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trdark'><td>
+<span style='color: #FFFF00;'>12</span>
+</td><td>
+<span style='color: #FFFFFF;'>Pfadfinder Yavem</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #FF1F00;'>Blutelf
+</td><td>
+Schwertkampf
+</td><td align="center">
+<img src="images/male.gif" alt="männlich">
+</td><td>
+</span><span style='color: #00B0B0;'>Im Haus</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+81 Tage
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trlight'><td>
+<span style='color: #FFFF00;'>12</span>
+</td><td>
+<span style='color: #FFFFFF;'>Dieb Exzession</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #00CC33;'>Dryade
+</td><td>
+Bogenschütze
+</td><td align="center">
+<img src="images/male.gif" alt="männlich">
+</td><td>
+</span><span style='color: #00B0B0;'>Die Felder</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+49 Tage
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trdark'><td>
+<span style='color: #FFFF00;'>12</span>
+</td><td>
+<span style='color: #FFFFFF;'>Wegelagerer Riddick</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #993300;'>Lycantroph
+</td><td>
+Schwertkampf
+</td><td align="center">
+<img src="images/male.gif" alt="männlich">
+</td><td>
+</span><span style='color: #00B0B0;'>Die Felder</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+Heute
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trlight'><td>
+<span style='color: #FFFF00;'>12</span>
+</td><td>
+<span style='color: #FFFFFF;'>Wegelagerer Stryke</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #FF1F00;'>Blutelf
+</td><td>
+Schwertkampf
+</td><td align="center">
+<img src="images/male.gif" alt="männlich">
+</td><td>
+</span><span style='color: #00B0B0;'>Im Haus</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+91 Tage
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trdark'><td>
+<span style='color: #FFFF00;'>11</span>
+</td><td>
+<span style='color: #FFFFFF;'></span><span style='color: #444444;'>Bl</span><span style='color: #4C4C4C;'>o</span><span style='color: #4C4C66;'>od</span><span style='color: #708090;'>p</span><span style='color: #458B74;'>ri</span><span style='color: #00B0B0;'>est </span><span style='color: #444444;'>K</span><span style='color: #4C4C4C;'>i</span><span style='color: #4C4C66;'>e</span><span style='color: #708090;'>v</span><span style='color: #458B74;'>a</span><span style='color: #00B0B0;'>n</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #B00000;'>Dämon/in
+</td><td>
+Lichtmagie
+</td><td align="center">
+<img src="images/male.gif" alt="männlich">
+</td><td>
+</span><span style='color: #00B0B0;'>Die Felder</span>
+</td><td>
+<span style='color: #B00000;'>Tot</span>
+</td><td>
+44 Tage
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trlight'><td>
+<span style='color: #FFFF00;'>11</span>
+</td><td>
+<span style='color: #FFFFFF;'></span><span style='color: #898989;'>M</span><span style='color: #8B3E2F;'>o</span><span style='color: #B56642;'>nd</span><span style='color: #D48561;'>wa</span><span style='color: #FFC49E;'>nd</span><span style='color: #D48561;'>le</span><span style='color: #B56642;'>ri</span><span style='color: #676767;'>n </span><span style='color: #676767;'>S</span><span style='color: #FF6600;'>o</span><span style='color: #FF9900;'>mn</span><span style='color: #898989;'>a</span><span style='color: #676767;'>m</span><span style='color: #D48561;'>b</span><span style='color: #FFC49E;'>u</span><span style='color: #8B7B8B;'>l</span><span style='color: #B0B0B0;'>e</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #DF0000;'>Vampir/Vampiress
+</td><td>
+Stabmagie
+</td><td align="center">
+<img src="images/female.gif" alt="weiblich">
+</td><td>
+</span><span style='color: #00B0B0;'>Die Felder</span>
+</td><td>
+<span style='color: #B00000;'>Tot</span>
+</td><td>
+35 Tage
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trdark'><td>
+<span style='color: #FFFF00;'>11</span>
+</td><td>
+<span style='color: #FFFFFF;'></span><span style='color: #FFFFFF;'>* </span><span style='color: #CCE5FF;'>Å</span><span style='color: #FF0000;'>s</span><span style='color: #708090;'>g</span><span style='color: #9FB6CD;'>a</span><span style='color: #CCE5FF;'>rd </span><span style='color: #CCE5FF;'>V</span><span style='color: #FF0000;'>a</span><span style='color: #4C4C66;'>k</span><span style='color: #708090;'>a</span><span style='color: #CCE5FF;'>n </span><span style='color: #CCE5FF;'>L</span><span style='color: #FF0000;'>i</span><span style='color: #708090;'>n</span><span style='color: #9FB6CD;'>u</span><span style='color: #CCE5FF;'>s</span>
+</td><td>
+<span style='color: #FF0000;'>Admin
+</td><td>
+Kämpfer
+</td><td>
+</span><span style='color: #FFFFFF;'>Mensch
+</td><td>
+Schwertkampf
+</td><td align="center">
+<img src="images/male.gif" alt="männlich">
+</td><td>
+</span><span style='color: #00B0B0;'>Im Haus</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+Gestern
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trlight'><td>
+<span style='color: #FFFF00;'>11</span>
+</td><td>
+<span style='color: #FFFFFF;'></span><span style='color: #6b563f;'>D</span><span style='color: #F8DB83;'>r. </span><span style='color: #F8DB83;'>Bell</span><span style='color: #6b563f;'>a</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #FFFFFF;'>Mensch
+</td><td>
+Bogenschütze
+</td><td align="center">
+<img src="images/female.gif" alt="weiblich">
+</td><td>
+</span><span style='color: #00B0B0;'>Im Haus</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+7 Tage
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trdark'><td>
+<span style='color: #FFFF00;'>11</span>
+</td><td>
+<span style='color: #FFFFFF;'></span><span style='color: #444444;'>S</span><span style='color: #4C4C4C;'>c</span><span style='color: #676767;'>h</span><span style='color: #898989;'>a</span><span style='color: #880000;'>tt</span><span style='color: #B00000;'>e</span><span style='color: #C90000;'>n</span><span style='color: #DF0000;'>kl</span><span style='color: #FF0000;'>an</span><span style='color: #E50033;'>g </span><span style='color: #FF334D;'>L</span><span style='color: #FF997F;'>e</span><span style='color: #F08080;'>i</span><span style='color: #FDD69D;'>t</span><span style='color: #FFFFFF;'>h</span><span style='color: #D0D0D0;'>k</span><span style='color: #999999;'>o</span><span style='color: #898989;'>r</span><span style='color: #676767;'>i</span><span style='color: #4C4C4C;'>a</span><span style='color: #444444;'>s</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #6b563f;'>Dunkelelf/in
+</td><td>
+Schwertkampf
+</td><td align="center">
+<img src="images/male.gif" alt="männlich">
+</td><td>
+</span><span style='color: #00B0B0;'>Die Felder</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+19 Tage
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trlight'><td>
+<span style='color: #FFFF00;'>11</span>
+</td><td>
+<span style='color: #FFFFFF;'>Hofnarr Laurin</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #B00000;'>Dämon/in
+</td><td>
+Schwertkampf
+</td><td align="center">
+<img src="images/male.gif" alt="männlich">
+</td><td>
+</span><span style='color: #00B0B0;'>Die Felder</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+3 Tage
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trdark'><td>
+<span style='color: #FFFF00;'>11</span>
+</td><td>
+<span style='color: #FFFFFF;'>Gauklerin Isadora</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #DF0000;'>Vampir/Vampiress
+</td><td>
+Schwarze Magie
+</td><td align="center">
+<img src="images/female.gif" alt="weiblich">
+</td><td>
+</span><span style='color: #00B0B0;'>Im Haus</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+Gestern
+</td><td align="center">
+<img src="images/gruen.jpg"  alt="RP bereit">
+</td></tr>
+<tr class='trlight'><td>
+<span style='color: #FFFF00;'>11</span>
+</td><td>
+<span style='color: #FFFFFF;'></span><span style='color: #0000B0;'>M</span><span style='color: #0000FF;'>a</span><span style='color: #0070FF;'>s</span><span style='color: #63B8FF;'>a</span><span style='color: #87CEFF;'>r</span><span style='color: #66E5FF;'>i</span><span style='color: #99FFFF;'>l</span><span style='color: #CCE5FF;'>i </span><span style='color: #0070FF;'>L</span><span style='color: #63B8FF;'>u</span><span style='color: #87CEFF;'>t</span><span style='color: #66E5FF;'>h</span><span style='color: #99FFFF;'>o</span><span style='color: #CCE5FF;'>n</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #993300;'>Lycantroph
+</td><td>
+Schwertkampf
+</td><td align="center">
+<img src="images/male.gif" alt="männlich">
+</td><td>
+</span><span style='color: #00B0B0;'>Im Haus</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+17 Tage
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+<tr class='trdark'><td>
+<span style='color: #FFFF00;'>11</span>
+</td><td>
+<span style='color: #FFFFFF;'>Knappe Noctis</span>
+</td><td>
+Spieler
+</td><td>
+Kämpfer
+</td><td>
+<span style='color: #CCE5FF;'>Lichtelf/in
+</td><td>
+Schwertkampf
+</td><td align="center">
+<img src="images/male.gif" alt="männlich">
+</td><td>
+</span><span style='color: #00B0B0;'>Im Haus</span>
+</td><td>
+<span style='color: #0000B0;'>Lebt</span>
+</td><td>
+Heute
+</td><td align="center">
+<img src="images/rot.jpg" alt="nicht bereit">
+</td></tr>
+</table>
+<br />
+Es sind 0 Spieler und 0 Teammitglieder in Alvion online.<br />
+<br />
+
+
+    </td>
+  </tr>
+  <tr>
+    <td width='145' valign='top' bgcolor='#000000' align="center">
+      <table border="0" width="142" cellpadding="0" cellspacing="0">
+        <tr><td><img src='images/uscroll.GIF' width='142' height='20' alt=''></td></tr>
+        <tr><td class="nav">
+<a href="index.php?c=1-073218" accesskey="L" class='nav' ><span class='navhi'>L</span>ogin Seite<br></a>
+
+<a href="list.php?c=1-073218" accesskey="G" class='nav' ><span class='navhi'>G</span>erade Online<br></a>
+
+<span class="navhead">&#151;Seiten&#151;<br></span>
+
+<a href="list.php?page=1&amp;c=1-073218" accesskey="S" class='nav' ><span class='navhi'>S</span>eite 1 (1-50)<br></a>
+
+<a href="list.php?page=2&amp;c=1-073218" accesskey="e" class='nav' >S<span class='navhi'>e</span>ite 2 (51-100)<br></a>
+
+<a href="list.php?page=3&amp;c=1-073218" accesskey="i" class='nav' >Se<span class='navhi'>i</span>te 3 (101-150)<br></a>
+
+<a href="list.php?page=4&amp;c=1-073218" accesskey="t" class='nav' >Sei<span class='navhi'>t</span>e 4 (151-200)<br></a>
+
+<a href="list.php?page=5&amp;c=1-073218" accesskey="5" class='nav' >Seite <span class='navhi'>5</span> (201-250)<br></a>
+
+<a href="list.php?page=6&amp;c=1-073218" accesskey="6" class='nav' >Seite <span class='navhi'>6</span> (251-300)<br></a>
+
+<a href="list.php?page=7&amp;c=1-073218" accesskey="7" class='nav' >Seite <span class='navhi'>7</span> (301-350)<br></a>
+
+<a href="list.php?page=8&amp;c=1-073218" accesskey="8" class='nav' >Seite <span class='navhi'>8</span> (351-363)<br></a>
+</td></tr>
+        <tr><td><img src='images/lscroll.GIF' width='142' height='20' alt=''></td></tr>
+      </table>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan=2 class='footer'>
+      <table border='0' cellpadding='0' cellspacing='0' width='100%' class='noborder'>
+        <tr>
+          <td class='noborder'>Copyright 2002-2003, Game: Eric Stevens, Design: Chris Yarbrough (Seitengenerierung: 0.04s, Schnitt: 0.04s) </td>
+          <td align='right' class='noborder'><a href='source.php' target='_blank'>Source</a></td>
+        </tr>
+        <tr><br />
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<script language="JavaScript" type="text/javascript" src="./templates/wz_tooltip.js"></script></body>
+</html>

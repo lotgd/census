@@ -1,0 +1,987 @@
+
+<?xml version="1.0"?>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+@New-Eassos Skin - Author & Copyright Eassos,  2014 - 2016
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+        <head>
+                <!-- Piwik -->
+                <script type="text/javascript">
+                var pkBaseURL = (("https:" == document.location.protocol) ? "https://wp1153005.wp183.webpack.hosteurope.de/piwiki/" : "http://wp1153005.wp183.webpack.hosteurope.de/piwiki/");
+                document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+                </script><script type="text/javascript">
+                try {
+                var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+                piwikTracker.trackPageView();
+                piwikTracker.enableLinkTracking();
+                } catch( err ) {}
+                </script><noscript><p><img src="http://wp1153005.wp183.webpack.hosteurope.de/piwiki/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+                <!-- End Piwik Tag -->
+
+                <title>Einwohnerliste</title>
+
+				<link href="templates/newsaint/newsaint1v2.css" rel="stylesheet" type="text/css" media="screen"/>
+				<link href="templates/newsaint/colors.css" rel="stylesheet" type="text/css" media="screen"/>
+				<link href="templates/common/glyphicon.css" rel="stylesheet" type="text/css" media="screen"/>
+
+                <link rel="shortcut icon" href="templates/common/bso.png" type="image/x-icon" />
+
+                
+                <script language="JavaScript" type="text/javascript">
+        <!--
+        function keyevent(e){
+                var c;
+                var target;
+                var altKey;
+                var ctrlKey;
+                if (window.event != null) {
+                        c=String.fromCharCode(window.event.keyCode).toUpperCase();
+                        altKey=window.event.altKey;
+                        ctrlKey=window.event.ctrlKey;
+                }else{
+                        c=String.fromCharCode((e.charCode ? e.charCode : e.keyCode)).toUpperCase();
+                        altKey=e.altKey;
+                        ctrlKey=e.ctrlKey;
+                }
+                if (window.event != null)
+                        target=window.event.srcElement || window.event.target;
+                else
+                        target=e.originalTarget || e.target;
+                if (target.nodeName.toUpperCase()!='INPUT' && target.nodeName.toUpperCase()!='TEXTAREA' && !altKey && !ctrlKey){
+                        if (c == 'G') { window.location='list.php?c=1-084754';; return false; }
+                        if (c == 'Z') { window.location='index.php?c=1-084754';; return false; }
+                        if (c == 'S') { window.location='list.php?page=1&ret=&c=1-084754';; return false; }
+                        if (c == 'E') { window.location='list.php?page=2&ret=&c=1-084754';; return false; }
+                        if (c == 'I') { window.location='list.php?page=3&ret=&c=1-084754';; return false; }
+                        if (c == 'T') { window.location='list.php?page=4&ret=&c=1-084754';; return false; }
+                        if (c == '5') { window.location='list.php?page=5&ret=&c=1-084754';; return false; }
+                        if (c == '6') { window.location='list.php?page=6&ret=&c=1-084754';; return false; }
+                        if (c == '7') { window.location='list.php?page=7&ret=&c=1-084754';; return false; }
+                        if (c == '8') { window.location='list.php?page=8&ret=&c=1-084754';; return false; }
+                        if (c == '9') { window.location='list.php?page=9&ret=&c=1-084754';; return false; }
+                        if (c == '1') { window.location='list.php?page=10&ret=&c=1-084754';; return false; }
+                        if (c == '3') { window.location='list.php?page=11&ret=&c=1-084754';; return false; }
+                        if (c == '2') { window.location='list.php?page=12&ret=&c=1-084754';; return false; }
+                }
+        }
+
+        document.onkeypress=keyevent;
+
+        //-->
+        </script>
+        </head>
+
+        <body>
+            <div style="display: table; width: 100%;">
+				<div id="header">
+					<div id="pagetitle">Einwohnerliste</div>
+
+					<div id="head_line">
+						<div id="motd_nav">
+							<span id="motd_nav"><a href='popup_motd.php' target='_blank' onClick="window.open('popup_motd.php','popupmotdphp','scrollbars=yes,resizable=yes,width=900,height=700');return false;" class='motd'><b>MotD</b></a> &#149;  &#149;  &#149;  &#149;  &#149;  &#149;  &#149 </span>
+						</div>
+					</div>
+				</div>
+				<div style="display: table">
+					<div class="sidebar sidebar-left">
+						<div id="nav"><a href='list.php?c=1-084754' style='{style}'  accesskey="G"  class='nav ' width='135'  ><span class="navhi">G</span>erade Online</a><br />
+
+<span class='navhead {classes}'><center>&#8211; Zur&uuml;ck &#8211;</center></span>
+<a href='index.php?c=1-084754' style='{style}'  accesskey="z"  class='nav ' width='135'  ><span class="navhi">z</span>ur Login Seite</a><br />
+
+<span class='navhead {classes}'><center>&#8211; Seiten &#8211;</center></span>
+<a href='list.php?page=1&amp;ret=&amp;c=1-084754' style='{style}'  accesskey="S"  class='nav ' width='135'  ><span class="navhi">S</span>eite 1 (1-30)</a><br />
+
+<a href='list.php?page=2&amp;ret=&amp;c=1-084754' style='{style}'  accesskey="e"  class='nav ' width='135'  >S<span class="navhi">e</span>ite 2 (31-60)</a><br />
+
+<a href='list.php?page=3&amp;ret=&amp;c=1-084754' style='{style}'  accesskey="i"  class='nav ' width='135'  >Se<span class="navhi">i</span>te 3 (61-90)</a><br />
+
+<a href='list.php?page=4&amp;ret=&amp;c=1-084754' style='{style}'  accesskey="t"  class='nav ' width='135'  >Sei<span class="navhi">t</span>e 4 (91-120)</a><br />
+
+<a href='list.php?page=5&amp;ret=&amp;c=1-084754' style='{style}'  accesskey="5"  class='nav ' width='135'  >Seite <span class="navhi">5</span> (121-150)</a><br />
+
+<a href='list.php?page=6&amp;ret=&amp;c=1-084754' style='{style}'  accesskey="6"  class='nav ' width='135'  >Seite <span class="navhi">6</span> (151-180)</a><br />
+
+<a href='list.php?page=7&amp;ret=&amp;c=1-084754' style='{style}'  accesskey="7"  class='nav ' width='135'  >Seite <span class="navhi">7</span> (181-210)</a><br />
+
+<a href='list.php?page=8&amp;ret=&amp;c=1-084754' style='{style}'  accesskey="8"  class='nav ' width='135'  >Seite <span class="navhi">8</span> (211-240)</a><br />
+
+<a href='list.php?page=9&amp;ret=&amp;c=1-084754' style='{style}'  accesskey="9"  class='nav ' width='135'  >Seite <span class="navhi">9</span> (241-270)</a><br />
+
+<a href='list.php?page=10&amp;ret=&amp;c=1-084754' style='{style}'  accesskey="1"  class='nav ' width='135'  >Seite <span class="navhi">1</span>0 (271-300)</a><br />
+
+<a href='list.php?page=11&amp;ret=&amp;c=1-084754' style='{style}'  accesskey="3"  class='nav ' width='135'  >Seite 11 (<span class="navhi">3</span>01-330)</a><br />
+
+<a href='list.php?page=12&amp;ret=&amp;c=1-084754' style='{style}'  accesskey="2"  class='nav ' width='135'  >Seite 1<span class="navhi">2</span> (331-345)</a><br />
+
+</div>
+					</div>
+					<div id="main-content">
+						<div id="main"><br />
+<br />
+
+
+<table border='0' align='center' cellspacing='2' cellpadding='2'>
+<tr>
+<td width='10'></td>
+<td align='center'><img src='images/Assos/Bewohnerliste.jpg' width='100%' height='100%'></td>
+<td width='10'></td>
+</tr>
+</table>
+<br />
+
+
+
+<center ><span style="color: #c0c0c0"> Folgende Bewohner von Eassos sind online!<br />
+
+        Hier findest du jeden, der in unserem Land wohnt.<br />
+
+        Au&szlig;erdem kannst du dich hier &uuml;ber deine Mitb&uuml;rger informieren und ihren Status einsehen.</center><br />
+<br />
+</span>
+<script type="text/javascript" src="templates/common/wz_tooltip.js"></script>
+<center ><strong >Bewohner in dieser Welt (Seite 1: 1-30 von 345)</strong></center>
+<table border='0' align='center' cellpadding='2' cellspacing='1' bgcolor='#999999'>
+<tr class='trhead' align='center'><td><b>Name</b></td><td><b>Rasse</b></td><td><b>Spezifikation</b></td><td><b>Char-Klasse</b></td><td><b><img src="images/system/common/female.gif">/<img src="images/system/common/male.gif"></b></td><td><b>Amt</b></td><td><b>Ort</b></td><td><b>RP-Bereit?</b></td><td><b>Status</b></td><td><b>Zuletzt da</b></td>
+</tr>
+<tr class='trlight'><td>
+<span style="color: #242424">A</span><span style="color: #331D1D">n</span><span style="color: #431616">d</span><span style="color: #521010">r</span><span style="color: #620909">a</span><span style="color: #710202">s <span style='color: #303030;'>&#8734;</span></span>
+<br />
+<span style='color: #b0b0b0;'>Info: &quot;Test&quot;, 'test', test</span>
+</td><td align="center">
+<span style="color: #331D1D">D</span><span style="color: #431616">&auml;</span><span style="color: #521010">m</span><span style="color: #620909">o</span><span style="color: #710202">n</span>
+</td><td align="center">
+<span style="color: #d9d027">D</span><span style="color: #d0c724">e</span><span style="color: #c8bf21">r </span><span style="color: #c0b71e">G</span><span style="color: #b7ae1b">e</span><span style="color: #afa618">l</span><span style="color: #a79e15">b</span><span style="color: #9e9512">&auml;</span><span style="color: #968d0f">u</span><span style="color: #8e850c">g</span><span style="color: #857c09">i</span><span style="color: #7d7406">g</span><span style="color: #756c04">e</span>
+</td><td align="center">
+<span style="color: #c0c0c0">M</span><span style="color: #b1b1b1">i</span><span style="color: #a2a2a2">x</span><span style="color: #949494">-</span><span style="color: #949494">C</span><span style="color: #7b7b7b">h</span><span style="color: #626262">a</span><span style="color: #4a4a4a">r</span>
+</td><td align="center">
+<img src="images/system/common/male.gif">
+</td><td align="center">
+<span style="color: #d4af37">B</span><span style="color: #c7a433">a</span><span style="color: #ba9a30">u</span><span style="color: #ae902d">m</span><span style="color: #a18529">e</span><span style="color: #957b26">i</span><span style="color: #887123">s</span><span style="color: #7c661f">t</span><span style="color: #6f5c1c">e</span><span style="color: #635219">r<span style='color: #b0b0b0;'></span> </span>
+</td><td>
+<center >Bewohnerliste</center>
+</td><td>
+<span style='color: #0000b0;'><center ><strong >Lebt</strong></center></span>
+</td><td align="center">
+<img src='images/Assos/bulb0.png' alt='Kein Interesse am RP' titel='Kein Interesse am RP'>
+</td><td>
+<center >Heute</center>
+</td>
+</tr>
+<tr class='trdark'><td>
+<span style="color: #815e39">K</span><span style="color: #766136">a</span><span style="color: #6b6434">m</span><span style="color: #606731">p</span><span style="color: #556b2f">f</span><span style="color: #556b2f">z</span><span style="color: #6e8323">w</span><span style="color: #889b17">e</span><span style="color: #a1b30b">r</span><span style="color: #bbcc00">g </span><span style="color: #bbcc00">A</span><span style="color: #889b17">r</span><span style="color: #556b2f">a</span><span style="color: #556b2f">m</span><span style="color: #6b6434">u</span><span style="color: #815e39">s</span>
+</td><td align="center">
+<span style="color: #815e39">Z</span><span style="color: #636632">w</span><span style="color: #556b2f">e</span><span style="color: #889b17">r</span><span style="color: #bbcc00">g</span>
+</td><td align="center">
+<i >Keine</i>
+</td><td align="center">
+<span style="color: #c0c0c0">M</span><span style="color: #b1b1b1">i</span><span style="color: #a2a2a2">x</span><span style="color: #949494">-</span><span style="color: #949494">C</span><span style="color: #7b7b7b">h</span><span style="color: #626262">a</span><span style="color: #4a4a4a">r</span>
+</td><td align="center">
+<img src="images/system/common/male.gif">
+</td><td align="center">
+<span style="color: #d4af37">B</span><span style="color: #c7a433">a</span><span style="color: #ba9a30">u</span><span style="color: #ae902d">m</span><span style="color: #a18529">e</span><span style="color: #957b26">i</span><span style="color: #887123">s</span><span style="color: #7c661f">t</span><span style="color: #6f5c1c">e</span><span style="color: #635219">r<span style='color: #b0b0b0;'></span> </span>
+</td><td>
+<center >Bei der Arbeit</center>
+</td><td>
+<span style='color: #0000b0;'><center ><strong >Lebt</strong></center></span>
+</td><td align="center">
+<img src='images/Assos/bulb0.png' alt='Kein Interesse am RP' titel='Kein Interesse am RP'>
+</td><td>
+<center >35 Tage</center>
+</td>
+</tr>
+<tr class='trlight'><td>
+<span style="color: #f3e7eb">Z</span><span style="color: #d7b7be">á</span><span style="color: #bc8891">r</span><span style="color: #bc8891">y</span><span style="color: #bdacba">s</span><span style="color: #bed0e3">a </span><span style="color: #f3e7eb">A</span><span style="color: #e5cfd4">n</span><span style="color: #d7b7be">a</span><span style="color: #c99fa7">s</span><span style="color: #bc8891">t</span><span style="color: #bc8891">a</span><span style="color: #bc9aa5">z</span><span style="color: #bdacba">i</span><span style="color: #bdbece">j</span><span style="color: #bed0e3">a </span><span style="color: #f3e7eb">R</span><span style="color: #e3cbd1">i</span><span style="color: #d3b0b7">m</span><span style="color: #c3959d">i</span><span style="color: #bc8891">r</span><span style="color: #bc9aa5">o</span><span style="color: #bdacba">v</span><span style="color: #bdbece">i</span><span style="color: #bed0e3">&#269;</span>
+<br />
+<span style='color: #b0b0b0;'>Info: </span><span style='color: #b0b0b0;'>Diverse Spieler f&uuml;r Astaros gesucht!! 
+<br />
+<br />
+
+Ana sucht einen pers&ouml;nlichen, playfreudigen Sekret&auml;r(m/w). Wer Zeit und Lust hat, darf sich gerne bei mir melden :)
+</span>
+</td><td align="center">
+<i >Elemi</i>
+</td><td align="center">
+<i >Wasser</i>
+</td><td align="center">
+<span style="color: #4a4a4a">R</span><span style="color: #676767">P</span><span style="color: #858585">-</span><span style="color: #949494">C</span><span style="color: #a2a2a2">h</span><span style="color: #b1b1b1">a</span><span style="color: #c0c0c0">r</span>
+</td><td align="center">
+<img src="images/system/common/female.gif">
+</td><td align="center">
+<span style="color: #202020">S</span><span style="color: #363121">e</span><span style="color: #4c4222">r</span><span style="color: #635424">v</span><span style="color: #796525">e</span><span style="color: #8f7727">r</span><span style="color: #9b8028">l</span><span style="color: #a18a41">e</span><span style="color: #a7955a">i</span><span style="color: #ada074">t</span><span style="color: #b3aa8d">u</span><span style="color: #b9b5a6">n</span><span style="color: #c0c0c0">g<span style='color: #b0b0b0;'></span> </span>
+</td><td>
+<center >Bewohnerliste</center>
+</td><td>
+<span style='color: #0000b0;'><center ><strong >Lebt</strong></center></span>
+</td><td align="center">
+<img src='images/Assos/bulb0.png' alt='Kein Interesse am RP' titel='Kein Interesse am RP'>
+</td><td>
+<center >Heute</center>
+</td>
+</tr>
+<tr class='trdark'><td>
+<span style="color: #ebeb1e">Q</span><span style="color: #d8c71c">a</span><span style="color: #c5a41b">y</span><span style="color: #b2801a">s</span><span style="color: #9f5d18">s</span><span style="color: #8c3917">a</span><span style="color: #7a1616">r </span><span style="color: #7a1616">D</span><span style="color: #742020">h</span><span style="color: #6e2b2b">r</span><span style="color: #683536">a</span><span style="color: #624041">e</span><span style="color: #5c4a4c">g</span><span style="color: #575557">o</span>
+<br />
+<span style='color: #b0b0b0;'>Info: <center ></span><span style='color: #303030;'> <i >After all this time?<br />
+
+A l w a y s</i></center>
+
+</span>
+</td><td align="center">
+<i ><span style="color: #ebeb1e">F</span><span style="color: #ceb51c">e</span><span style="color: #b2801a">u</span><span style="color: #964b18">e</span><span style="color: #7a1616">r</span><span style="color: #7a1616">w</span><span style="color: #712526">e</span><span style="color: #683536">s</span><span style="color: #5f4546">e</span><span style="color: #575557">n (Ifrit)</i></span>
+</td><td align="center">
+<i ><span style="color: #ebeb1e">V</span><span style="color: #d9ca1c">a</span><span style="color: #c8a91b">t</span><span style="color: #b6881a">e</span><span style="color: #a56719">r </span><span style="color: #944717">d</span><span style="color: #822616">e</span><span style="color: #7a1616">r </span><span style="color: #751f1f">D</span><span style="color: #702828">r</span><span style="color: #6b3131">a</span><span style="color: #663a3b">c</span><span style="color: #614344">h</span><span style="color: #5c4c4d">e</span><span style="color: #575557">n</i></span>
+</td><td align="center">
+<span style="color: #4a4a4a">R</span><span style="color: #676767">P</span><span style="color: #858585">-</span><span style="color: #949494">C</span><span style="color: #a2a2a2">h</span><span style="color: #b1b1b1">a</span><span style="color: #c0c0c0">r</span>
+</td><td align="center">
+<img src="images/system/common/male.gif">
+</td><td align="center">
+<span style="color: #635219">A</span><span style="color: #7f6920">d</span><span style="color: #9b8028">m</span><span style="color: #b7972f">i</span><span style="color: #d4af37">n<span style='color: #b0b0b0;'></span> </span>
+</td><td>
+<center >Bewohnerliste</center>
+</td><td>
+<span style='color: #0000b0;'><center ><strong >Lebt</strong></center></span>
+</td><td align="center">
+<img src='images/Assos/bulb1.png' alt='Bin bereit zum RPn' titel='Bin bereit zum RPn'>
+</td><td>
+<center >Gestern</center>
+</td>
+</tr>
+<tr class='trlight'><td>
+<span style="color: #3e302d">Q</span><span style="color: #532d26">a</span><span style="color: #692a1f">y</span><span style="color: #7f2719">â</span><span style="color: #8a2616">s</span><span style="color: #9b3b19">s</span><span style="color: #ad501c">i</span><span style="color: #be651f">r</span><span style="color: #d07b23">a </span><span style="color: #d07b23">D</span><span style="color: #be651f">i</span><span style="color: #ad501c">o</span><span style="color: #9b3b19">k</span><span style="color: #8a2616">l</span><span style="color: #7f2719">y</span><span style="color: #692a1f">r</span><span style="color: #532d26">i</span><span style="color: #3e302d">a</span>
+<br />
+<span style='color: #b0b0b0;'>Info: <span style="color: #d07b23"><center ><strong >H&ouml;ret! H&ouml;ret! Die Volksstimme hat gesprochen.</strong><br />
+
+<i >Einsehbar am Stadtplatz von Astaros</i></center></span></span>
+</td><td align="center">
+<span style="color: #3e302d"><strong ><i >M</i></strong></span><span style="color: #532d26">e</span><span style="color: #692a1f">n</span><span style="color: #7f2719">s</span><span style="color: #8a2616">c</span><span style="color: #9b3b19">h</span>
+</td><td align="center">
+<span style="color: #3e302d"><strong ><i >H</i></strong></span><span style="color: #532d26">o</span><span style="color: #692a1f">h</span><span style="color: #7f2719">e</span><span style="color: #8a2616">p</span><span style="color: #9b3b19">r</span><span style="color: #ad501c">i</span><span style="color: #be651f">e</span><span style="color: #d07b23">sterin</span>
+</td><td align="center">
+<span style="color: #c0c0c0">M</span><span style="color: #b1b1b1">i</span><span style="color: #a2a2a2">x</span><span style="color: #949494">-</span><span style="color: #949494">C</span><span style="color: #7b7b7b">h</span><span style="color: #626262">a</span><span style="color: #4a4a4a">r</span>
+</td><td align="center">
+<img src="images/system/common/female.gif">
+</td><td align="center">
+<span style="color: #4a4a4a">M</span><span style="color: #555555">o</span><span style="color: #616161">d</span><span style="color: #6d6d6d">e</span><span style="color: #797979">r</span><span style="color: #858585">a</span><span style="color: #909090">t</span><span style="color: #9c9c9c">o</span><span style="color: #a8a8a8">r</span><span style="color: #b4b4b4">i</span><span style="color: #c0c0c0">n<span style='color: #b0b0b0;'></span> </span>
+</td><td>
+<center >Bewohnerliste</center>
+</td><td>
+<span style='color: #0000b0;'><center ><strong >Lebt</strong></center></span>
+</td><td align="center">
+<img src='images/Assos/bulb4.png' alt='Derzeit in einem RP' titel='Derzeit in einem RP'>
+</td><td>
+<center >Gestern</center>
+</td>
+</tr>
+<tr class='trdark'><td>
+<span style="color: #381010">H</span><span style="color: #321010">a</span><span style="color: #2d1010">y</span><span style="color: #271010">l</span><span style="color: #221111">e</span><span style="color: #1c1111">i</span><span style="color: #171111">g</span><span style="color: #121212">h </span><span style="color: #121212">Q</span><span style="color: #0d1d17">u</span><span style="color: #09291c">i</span><span style="color: #043421">n</span><span style="color: #004026">n</span>
+</td><td align="center">
+<span style="color: #121212">S</span><span style="color: #0a241a">h</span><span style="color: #033622">a</span><span style="color: #004026">y</span><span style="color: #12301e">j</span><span style="color: #252017">a</span><span style="color: #381010">n</span>
+</td><td align="center">
+<span style="color: #381010">S</span><span style="color: #321010">c</span><span style="color: #2d1010">h</span><span style="color: #271010">w</span><span style="color: #221111">a</span><span style="color: #1c1111">r</span><span style="color: #171111">z</span><span style="color: #121212">e </span><span style="color: #121212">M</span><span style="color: #0f1814">a</span><span style="color: #0c1f17">g</span><span style="color: #0a251a">i</span><span style="color: #072c1d">e</span><span style="color: #053220">r</span><span style="color: #023923">i</span><span style="color: #004026">n</span>
+</td><td align="center">
+<span style="color: #c0c0c0">M</span><span style="color: #b1b1b1">i</span><span style="color: #a2a2a2">x</span><span style="color: #949494">-</span><span style="color: #949494">C</span><span style="color: #7b7b7b">h</span><span style="color: #626262">a</span><span style="color: #4a4a4a">r</span>
+</td><td align="center">
+<img src="images/system/common/female.gif">
+</td><td align="center">
+<span style="color: #70481f">B</span><span style="color: #7c4f22">e</span><span style="color: #885725">w</span><span style="color: #945e28">o</span><span style="color: #a1662b">h</span><span style="color: #a1662b">n</span><span style="color: #ac6c2c">e</span><span style="color: #b7722e">r</span><span style="color: #c27830">i</span><span style="color: #cd7f32">n<span style='color: #b0b0b0;'></span> </span>
+</td><td>
+<center >Astaros Hauptplatz</center>
+</td><td>
+<span style='color: #0000b0;'><center ><strong >Lebt</strong></center></span>
+</td><td align="center">
+<img src='images/Assos/bulb1.png' alt='Bin bereit zum RPn' titel='Bin bereit zum RPn'>
+</td><td>
+<center >Heute</center>
+</td>
+</tr>
+<tr class='trlight'><td>
+Finsterer Dular
+<br />
+<span style='color: #b0b0b0;'>Info: </span>
+</td><td align="center">
+<i >Ork</i>
+</td><td align="center">
+<i >Schmutzblut</i>
+</td><td align="center">
+<span style="color: #4a4a4a">R</span><span style="color: #676767">P</span><span style="color: #858585">-</span><span style="color: #949494">C</span><span style="color: #a2a2a2">h</span><span style="color: #b1b1b1">a</span><span style="color: #c0c0c0">r</span>
+</td><td align="center">
+<img src="images/system/common/male.gif">
+</td><td align="center">
+<span style="color: #70481f">B</span><span style="color: #805223">e</span><span style="color: #905c27">w</span><span style="color: #a1662b">o</span><span style="color: #a1662b">h</span><span style="color: #af6e2d">n</span><span style="color: #be762f">e</span><span style="color: #cd7f32">r </span>
+</td><td>
+<center >Astaros Hauptplatz</center>
+</td><td>
+<span style='color: #0000b0;'><center ><strong >Lebt</strong></center></span>
+</td><td align="center">
+<img src='images/Assos/bulb3.png' alt='Suche späteren RP-Partner' titel='Suche späteren RP-Partner'>
+</td><td>
+<center >77 Tage</center>
+</td>
+</tr>
+<tr class='trdark'><td>
+<span style="color: #f50505">E</span><span style="color: #ba0909">m</span><span style="color: #800d0d">p</span><span style="color: #461111">e</span><span style="color: #291414">r</span><span style="color: #534240">a</span><span style="color: #7e706c">d</span><span style="color: #a99e98">o</span><span style="color: #d4ccc5">r </span><span style="color: #f2eeeb">S</span><span style="color: #bfb7b5">a</span><span style="color: #8d817f">d </span><span style="color: #5b4a49">L</span><span style="color: #291414">u</span><span style="color: #291414">c</span><span style="color: #5c1010">i</span><span style="color: #8f0c0c">v</span><span style="color: #c20808">a</span><span style="color: #f50505">r </span>
+<br />
+<span style='color: #b0b0b0;'>Info: </span><span style='color: #6a0000;'> F&uuml;r Fragen immer zu haben.<br />
+
+Bel&auml;stigungen erw&uuml;nscht ^^</span>
+</td><td align="center">
+<span style='color: #6a0000;'> D&auml;mon
+</td><td align="center">
+<br />
+<i ></span><span style='color: #6a0000;'> Reinrassig<br />
+<br />
+ Sadistisch <br />
+<br />
+ B&ouml;se</i>
+</td><td align="center">
+<span style="color: #4a4a4a">R</span><span style="color: #676767">P</span><span style="color: #858585">-</span><span style="color: #949494">C</span><span style="color: #a2a2a2">h</span><span style="color: #b1b1b1">a</span><span style="color: #c0c0c0">r</span></span>
+</td><td align="center">
+<img src="images/system/common/male.gif">
+</td><td align="center">
+<span style="color: #70481f">B</span><span style="color: #805223">e</span><span style="color: #905c27">w</span><span style="color: #a1662b">o</span><span style="color: #a1662b">h</span><span style="color: #af6e2d">n</span><span style="color: #be762f">e</span><span style="color: #cd7f32">r </span>
+</td><td>
+<center >Bewohnerliste</center>
+</td><td>
+<span style='color: #0000b0;'><center ><strong >Lebt</strong></center></span>
+</td><td align="center">
+<img src='images/Assos/bulb0.png' alt='Kein Interesse am RP' titel='Kein Interesse am RP'>
+</td><td>
+<center >15 Tage</center>
+</td>
+</tr>
+<tr class='trlight'><td>
+<span style='color: #b0b0b0;'>Un</span><span style='color: #8d8d8d;'>s</span><span style='color: #606060;'>c</span><span style='color: #505050;'>h</span><span style='color: #404040;'>u</span><span style='color: #303030;'>l</span><span style='color: #202020;'>d</span><span style='color: #2f142f;'>s</span><span style='color: #4c334c;'>e</span><span style='color: #664c66;'>n</span><span style='color: #7f667f;'>g</span><span style='color: #997f99;'>e</span><span style='color: #c0b2c0;'>l  Ke</span><span style='color: #997f99;'>s</span><span style='color: #7f667f;'>t</span><span style='color: #664c66;'>r</span><span style='color: #4c334c;'>e</span><span style='color: #2f142f;'>l</span>
+<br />
+<span style='color: #b0b0b0;'>Info: <i >Es hat begonnen...</i></span>
+</td><td align="center">
+<span style='color: #c0b2c0;'>S</span><span style='color: #997f99;'>c</span><span style='color: #7f667f;'>h</span><span style='color: #4c334c;'>u</span><span style='color: #2f142f;'>t</span><span style='color: #202020;'>z</span><span style='color: #303030;'>g</span><span style='color: #404040;'>e</span><span style='color: #505050;'>i</span><span style='color: #606060;'>s</span><span style='color: #8d8d8d;'>t
+</td><td align="center">
+</span><span style='color: #c0b2c0;'>R</span><span style='color: #997f99;'>e</span><span style='color: #7f667f;'>i</span><span style='color: #4c334c;'>n</span><span style='color: #2f142f;'>k</span><span style='color: #202020;'>a</span><span style='color: #303030;'>r</span><span style='color: #404040;'>n</span><span style='color: #505050;'>a</span><span style='color: #606060;'>t</span><span style='color: #8d8d8d;'>i</span><span style='color: #b0b0b0;'>on
+</td><td align="center">
+<span style="color: #c0c0c0">M</span><span style="color: #b1b1b1">i</span><span style="color: #a2a2a2">x</span><span style="color: #949494">-</span><span style="color: #949494">C</span><span style="color: #7b7b7b">h</span><span style="color: #626262">a</span><span style="color: #4a4a4a">r</span></span>
+</td><td align="center">
+<img src="images/system/common/female.gif">
+</td><td align="center">
+<span style="color: #70481f">B</span><span style="color: #7c4f22">e</span><span style="color: #885725">w</span><span style="color: #945e28">o</span><span style="color: #a1662b">h</span><span style="color: #a1662b">n</span><span style="color: #ac6c2c">e</span><span style="color: #b7722e">r</span><span style="color: #c27830">i</span><span style="color: #cd7f32">n </span>
+</td><td>
+<center >Astaros Hauptplatz</center>
+</td><td>
+<span style='color: #0000b0;'><center ><strong >Lebt</strong></center></span>
+</td><td align="center">
+<img src='images/Assos/bulb4.png' alt='Derzeit in einem RP' titel='Derzeit in einem RP'>
+</td><td>
+<center >Gestern</center>
+</td>
+</tr>
+<tr class='trdark'><td>
+Eisklaue <span style='color: #4682b4;'>W</span><span style='color: #3c619e;'>u</span><span style='color: #617080;'>l</span><span style='color: #8296A9;'>f</span><span style='color: #b9d3ee;'>g</span><span style='color: #c6e2ff;'>a</span><span style='color: #c1fffd;'>r</span>
+</td><td align="center">
+Gestaltwandler
+</td><td align="center">
+Ulfhednar - Wolfswandler
+</td><td align="center">
+<span style="color: #c0c0c0">M</span><span style="color: #b1b1b1">i</span><span style="color: #a2a2a2">x</span><span style="color: #949494">-</span><span style="color: #949494">C</span><span style="color: #7b7b7b">h</span><span style="color: #626262">a</span><span style="color: #4a4a4a">r</span>
+</td><td align="center">
+<img src="images/system/common/male.gif">
+</td><td align="center">
+<span style="color: #70481f">B</span><span style="color: #805223">e</span><span style="color: #905c27">w</span><span style="color: #a1662b">o</span><span style="color: #a1662b">h</span><span style="color: #af6e2d">n</span><span style="color: #be762f">e</span><span style="color: #cd7f32">r </span>
+</td><td>
+<center >Stadtumgebung</center>
+</td><td>
+<span style='color: #0000b0;'><center ><strong >Lebt</strong></center></span>
+</td><td align="center">
+<img src='images/Assos/bulb4.png' alt='Derzeit in einem RP' titel='Derzeit in einem RP'>
+</td><td>
+<center >173 Tage</center>
+</td>
+</tr>
+<tr class='trlight'><td>
+<span style="color: #00f7ff">H</span><span style="color: #1edeee">e</span><span style="color: #3dc6dd">l</span><span style="color: #5caecc">e</span><span style="color: #7b96bb">d</span><span style="color: #9a7eab">i</span><span style="color: #9a7eab">r </span><span style="color: #ae97bb">A</span><span style="color: #c2b1cc">e</span><span style="color: #d6cbdd">r</span><span style="color: #eae5ee">y</span><span style="color: #ffffff">s</span>
+<br />
+<span style='color: #b0b0b0;'>Info: <span style="color: #3dc6dd">Bereit f&uuml;r RPs :)</span></span>
+</td><td align="center">
+<i ><span style="color: #00f7ff">E</span><span style="color: #3dc6dd">i</span><span style="color: #7b96bb">s</span><span style="color: #9a7eab">e</span><span style="color: #bba9c7">l</span><span style="color: #ddd4e3">f</span><span style="color: #ffffff">e</i></span>
+</td><td align="center">
+
+</td><td align="center">
+<span style="color: #c0c0c0">M</span><span style="color: #b1b1b1">i</span><span style="color: #a2a2a2">x</span><span style="color: #949494">-</span><span style="color: #949494">C</span><span style="color: #7b7b7b">h</span><span style="color: #626262">a</span><span style="color: #4a4a4a">r</span>
+</td><td align="center">
+<img src="images/system/common/female.gif">
+</td><td align="center">
+<span style="color: #70481f">B</span><span style="color: #7c4f22">e</span><span style="color: #885725">w</span><span style="color: #945e28">o</span><span style="color: #a1662b">h</span><span style="color: #a1662b">n</span><span style="color: #ac6c2c">e</span><span style="color: #b7722e">r</span><span style="color: #c27830">i</span><span style="color: #cd7f32">n </span>
+</td><td>
+<center >Bewohnerliste</center>
+</td><td>
+<span style='color: #0000b0;'><center ><strong >Lebt</strong></center></span>
+</td><td align="center">
+<img src='images/Assos/bulb3.png' alt='Suche späteren RP-Partner' titel='Suche späteren RP-Partner'>
+</td><td>
+<center >23 Tage</center>
+</td>
+</tr>
+<tr class='trdark'><td>
+<span style='color: #6b563f;'>Rechengenie </span><span style='color: #6b563f;'>Peter</span>
+<br />
+<span style='color: #b0b0b0;'>Info: </span>
+</td><td align="center">
+Mensch
+</td><td align="center">
+Mathematik
+</td><td align="center">
+<span style="color: #c0c0c0">M</span><span style="color: #b1b1b1">i</span><span style="color: #a2a2a2">x</span><span style="color: #949494">-</span><span style="color: #949494">C</span><span style="color: #7b7b7b">h</span><span style="color: #626262">a</span><span style="color: #4a4a4a">r</span>
+</td><td align="center">
+<img src="images/system/common/male.gif">
+</td><td align="center">
+<span style="color: #70481f">B</span><span style="color: #805223">e</span><span style="color: #905c27">w</span><span style="color: #a1662b">o</span><span style="color: #a1662b">h</span><span style="color: #af6e2d">n</span><span style="color: #be762f">e</span><span style="color: #cd7f32">r </span>
+</td><td>
+<center >Astaros Hauptplatz</center>
+</td><td>
+<span style='color: #0000b0;'><center ><strong >Lebt</strong></center></span>
+</td><td align="center">
+<img src='images/Assos/bulb0.png' alt='Kein Interesse am RP' titel='Kein Interesse am RP'>
+</td><td>
+<center >34 Tage</center>
+</td>
+</tr>
+<tr class='trlight'><td>
+<span style="color: #a98a81">C</span><span style="color: #866f68">h</span><span style="color: #645550">a</span><span style="color: #423a38">o</span><span style="color: #202020">s</span><span style="color: #202020">e</span><span style="color: #2e3a42">n</span><span style="color: #3c5465">g</span><span style="color: #4a6e87">e</span><span style="color: #5988aa">l </span><span style="color: #5988aa">A</span><span style="color: #425e72">n</span><span style="color: #2b343b">t</span><span style="color: #202020">h</span><span style="color: #4d4340">i</span><span style="color: #7b6660">e</span><span style="color: #a98a81">l </span>
+</td><td align="center">
+<span style="color: #5988aa"><strong ><i >G</i></strong></span><span style="color: #507894">e</span><span style="color: #47687f">f</span><span style="color: #3e586a">a</span><span style="color: #354855">l</span><span style="color: #2d383f">l</span><span style="color: #24282a">e</span><span style="color: #202020">n</span><span style="color: #332f2d">e</span><span style="color: #473e3b">r </span><span style="color: #5a4d49"><strong ><i >E</i></strong></span><span style="color: #6e5c57">n</span><span style="color: #816b65">g</span><span style="color: #957a73">e</span><span style="color: #a98a81">l</span>
+</td><td align="center">
+<span style="color: #a98a81"><strong ><i >V</i></strong></span><span style="color: #7b6660">e</span><span style="color: #4d4340">r</span><span style="color: #202020">d</span><span style="color: #202020">a</span><span style="color: #33424e">m</span><span style="color: #46657c">m</span><span style="color: #5988aa">t</span>
+</td><td align="center">
+<span style="color: #c0c0c0">M</span><span style="color: #b1b1b1">i</span><span style="color: #a2a2a2">x</span><span style="color: #949494">-</span><span style="color: #949494">C</span><span style="color: #7b7b7b">h</span><span style="color: #626262">a</span><span style="color: #4a4a4a">r</span>
+</td><td align="center">
+<img src="images/system/common/female.gif">
+</td><td align="center">
+<span style="color: #70481f">B</span><span style="color: #7c4f22">e</span><span style="color: #885725">w</span><span style="color: #945e28">o</span><span style="color: #a1662b">h</span><span style="color: #a1662b">n</span><span style="color: #ac6c2c">e</span><span style="color: #b7722e">r</span><span style="color: #c27830">i</span><span style="color: #cd7f32">n<span style='color: #b0b0b0;'></span> </span>
+</td><td>
+<center >Astaros Hauptplatz</center>
+</td><td>
+<span style='color: #0000b0;'><center ><strong >Lebt</strong></center></span>
+</td><td align="center">
+<img src='images/Assos/bulb4.png' alt='Derzeit in einem RP' titel='Derzeit in einem RP'>
+</td><td>
+<center >Heute</center>
+</td>
+</tr>
+<tr class='trdark'><td>
+Fremde Esmeriya
+<br />
+<span style='color: #b0b0b0;'>Info: <br />
+<br />
+<center >Suche: Jemand, der sich ihrer annimmt und eine kleine Lady aus ihr macht.</center></span>
+</td><td align="center">
+<i >Mensch</i>
+</td><td align="center">
+<i >Schankmaid</i>
+</td><td align="center">
+<span style="color: #c0c0c0">M</span><span style="color: #b1b1b1">i</span><span style="color: #a2a2a2">x</span><span style="color: #949494">-</span><span style="color: #949494">C</span><span style="color: #7b7b7b">h</span><span style="color: #626262">a</span><span style="color: #4a4a4a">r</span>
+</td><td align="center">
+<img src="images/system/common/female.gif">
+</td><td align="center">
+<span style="color: #70481f">B</span><span style="color: #7c4f22">e</span><span style="color: #885725">w</span><span style="color: #945e28">o</span><span style="color: #a1662b">h</span><span style="color: #a1662b">n</span><span style="color: #ac6c2c">e</span><span style="color: #b7722e">r</span><span style="color: #c27830">i</span><span style="color: #cd7f32">n </span>
+</td><td>
+<center >Bewohnerliste</center>
+</td><td>
+<span style='color: #0000b0;'><center ><strong >Lebt</strong></center></span>
+</td><td align="center">
+<img src='images/Assos/bulb3.png' alt='Suche späteren RP-Partner' titel='Suche späteren RP-Partner'>
+</td><td>
+<center >Heute</center>
+</td>
+</tr>
+<tr class='trlight'><td>
+Fremder Asmodan
+</td><td align="center">
+
+</td><td align="center">
+
+</td><td align="center">
+<span style="color: #4a4a4a">R</span><span style="color: #676767">P</span><span style="color: #858585">-</span><span style="color: #949494">C</span><span style="color: #a2a2a2">h</span><span style="color: #b1b1b1">a</span><span style="color: #c0c0c0">r</span>
+</td><td align="center">
+<img src="images/system/common/male.gif">
+</td><td align="center">
+<span style="color: #70481f">B</span><span style="color: #805223">e</span><span style="color: #905c27">w</span><span style="color: #a1662b">o</span><span style="color: #a1662b">h</span><span style="color: #af6e2d">n</span><span style="color: #be762f">e</span><span style="color: #cd7f32">r </span>
+</td><td>
+<center >Bewohnerliste</center>
+</td><td>
+<span style='color: #0000b0;'><center ><strong >Lebt</strong></center></span>
+</td><td align="center">
+<img src='images/Assos/bulb0.png' alt='Kein Interesse am RP' titel='Kein Interesse am RP'>
+</td><td>
+<center >64 Tage</center>
+</td>
+</tr>
+<tr class='trdark'><td>
+<span style='color: #8c5018;'>R</span><span style='color: #563419;'>e</span><span style='color: #503723;'>b</span><span style='color: #493c33;'>e</span><span style='color: #303030;'>ll   </span><span style='color: #4c4c66;'>A</span><span style='color: #617080;'>l</span><span style='color: #8296A9;'>es</span><span style='color: #b9d3ee;'>sio </span><span style='color: #38b0de;'>Jo</span><span style='color: #348dff;'>s</span><span style='color: #0070ff;'>é</span> <span style='color: #606060;'> &#422;</span>
+</td><td align="center">
+<i ><span style='color: #8c5018;'>B</span><span style='color: #563419;'>e</span><span style='color: #503723;'>st</span><span style='color: #493c33;'>ia</span><span style='color: #303030;'>fo</span><span style='color: #4c4c66;'>r</span><span style='color: #617080;'>ma </span><span style='color: #8296A9;'>mu</span><span style='color: #b9d3ee;'>ta</span><span style='color: #38b0de;'>bi</span><span style='color: #348dff;'>li</span><span style='color: #0070ff;'>s</span></i>
+</td><td align="center">
+<i ><span style='color: #8c5018;'>V</span><span style='color: #563419;'>o</span><span style='color: #503723;'>g</span><span style='color: #493c33;'>el</span><span style='color: #303030;'>fr</span><span style='color: #4c4c66;'>e</span><span style='color: #617080;'>i<br />
+Zur Jagd freigegeben</i>
+</td><td align="center">
+<span style="color: #c0c0c0">M</span><span style="color: #b1b1b1">i</span><span style="color: #a2a2a2">x</span><span style="color: #949494">-</span><span style="color: #949494">C</span><span style="color: #7b7b7b">h</span><span style="color: #626262">a</span><span style="color: #4a4a4a">r</span></span>
+</td><td align="center">
+<img src="images/system/common/male.gif">
+</td><td align="center">
+<span style="color: #70481f">B</span><span style="color: #805223">e</span><span style="color: #905c27">w</span><span style="color: #a1662b">o</span><span style="color: #a1662b">h</span><span style="color: #af6e2d">n</span><span style="color: #be762f">e</span><span style="color: #cd7f32">r </span>
+</td><td>
+<center >Astaros - das Marineford</center>
+</td><td>
+<span style='color: #0000b0;'><center ><strong >Lebt</strong></center></span>
+</td><td align="center">
+<img src='images/Assos/bulb0.png' alt='Kein Interesse am RP' titel='Kein Interesse am RP'>
+</td><td>
+<center >5 Tage</center>
+</td>
+</tr>
+<tr class='trlight'><td>
+<span style="color: #6aa891">C</span><span style="color: #649684">y</span><span style="color: #5e8577">r</span><span style="color: #58746a">i</span><span style="color: #52635d">a</span><span style="color: #4c5250">c </span><span style="color: #4a4a4a">C</span><span style="color: #50403d">r</span><span style="color: #573731">a</span><span style="color: #5e2d25">v</span><span style="color: #652418">e</span><span style="color: #6c1a0c">r</span><span style="color: #731100">i</span>
+</td><td align="center">
+<i >D&auml;mon</i>
+</td><td align="center">
+<i >Horned Reaper</i>
+</td><td align="center">
+<span style="color: #c0c0c0">M</span><span style="color: #b1b1b1">i</span><span style="color: #a2a2a2">x</span><span style="color: #949494">-</span><span style="color: #949494">C</span><span style="color: #7b7b7b">h</span><span style="color: #626262">a</span><span style="color: #4a4a4a">r</span>
+</td><td align="center">
+<img src="images/system/common/male.gif">
+</td><td align="center">
+<span style="color: #70481f">B</span><span style="color: #805223">e</span><span style="color: #905c27">w</span><span style="color: #a1662b">o</span><span style="color: #a1662b">h</span><span style="color: #af6e2d">n</span><span style="color: #be762f">e</span><span style="color: #cd7f32">r<span style='color: #b0b0b0;'></span> </span>
+</td><td>
+<center >Astaros Hauptplatz</center>
+</td><td>
+<span style='color: #0000b0;'><center ><strong >Lebt</strong></center></span>
+</td><td align="center">
+<img src='images/Assos/bulb1.png' alt='Bin bereit zum RPn' titel='Bin bereit zum RPn'>
+</td><td>
+<center >Heute</center>
+</td>
+</tr>
+<tr class='trdark'><td>
+Marlee  <span style="color: #87bf71">I</span><span style="color: #7db061">r</span><span style="color: #74a152">r</span><span style="color: #74a152">e</span><span style="color: #516e3e">a</span><span style="color: #2e3b2a">l</span>
+<br />
+<span style='color: #b0b0b0;'>Info: <span style="color: #74a152"><i >
+blubber.</i></span></span>
+</td><td align="center">
+<span style="color: #2e3b2a">M</span><span style="color: #516e3e">u</span><span style="color: #74a152">s</span><span style="color: #74a152">e</span>
+</td><td align="center">
+<span style="color: #2e3b2a">G</span><span style="color: #516e3e">e</span><span style="color: #74a152">d</span><span style="color: #74a152">a</span><span style="color: #7db061">n</span><span style="color: #87bf71">k</span><span style="color: #87bf71">e</span><span style="color: #7db061">ngift</span>
+</td><td align="center">
+<span style="color: #c0c0c0">M</span><span style="color: #b1b1b1">i</span><span style="color: #a2a2a2">x</span><span style="color: #949494">-</span><span style="color: #949494">C</span><span style="color: #7b7b7b">h</span><span style="color: #626262">a</span><span style="color: #4a4a4a">r</span>
+</td><td align="center">
+<img src="images/system/common/female.gif">
+</td><td align="center">
+<span style="color: #70481f">B</span><span style="color: #7c4f22">e</span><span style="color: #885725">w</span><span style="color: #945e28">o</span><span style="color: #a1662b">h</span><span style="color: #a1662b">n</span><span style="color: #ac6c2c">e</span><span style="color: #b7722e">r</span><span style="color: #c27830">i</span><span style="color: #cd7f32">n </span>
+</td><td>
+<center >Astaros - Zwielichtiges Viertel</center>
+</td><td>
+<span style='color: #0000b0;'><center ><strong >Lebt</strong></center></span>
+</td><td align="center">
+<img src='images/Assos/bulb2.png' alt='Im RP - Weitere Partner erwünscht' titel='Im RP - Weitere Partner erwünscht'>
+</td><td>
+<center >Gestern</center>
+</td>
+</tr>
+<tr class='trlight'><td>
+Botenjunge Julien
+</td><td align="center">
+<i ><span style="color: #F2F2F2">Gestaltwandler</i></span>
+</td><td align="center">
+<i ><span style="color: #F2F2F2">Mischling</i></span>
+</td><td align="center">
+<span style="color: #c0c0c0">M</span><span style="color: #b1b1b1">i</span><span style="color: #a2a2a2">x</span><span style="color: #949494">-</span><span style="color: #949494">C</span><span style="color: #7b7b7b">h</span><span style="color: #626262">a</span><span style="color: #4a4a4a">r</span>
+</td><td align="center">
+<img src="images/system/common/male.gif">
+</td><td align="center">
+<span style="color: #70481f">B</span><span style="color: #805223">e</span><span style="color: #905c27">w</span><span style="color: #a1662b">o</span><span style="color: #a1662b">h</span><span style="color: #af6e2d">n</span><span style="color: #be762f">e</span><span style="color: #cd7f32">r </span>
+</td><td>
+<center >Wohnviertel - Astaros</center>
+</td><td>
+<span style='color: #0000b0;'><center ><strong >Lebt</strong></center></span>
+</td><td align="center">
+<img src='images/Assos/bulb3.png' alt='Suche späteren RP-Partner' titel='Suche späteren RP-Partner'>
+</td><td>
+<center >103 Tage</center>
+</td>
+</tr>
+<tr class='trdark'><td>
+<span style="color: #ff000d">B</span><span style="color: #de040e">l</span><span style="color: #be0910">u</span><span style="color: #9d0e12">t</span><span style="color: #7d1314">p</span><span style="color: #751515">r</span><span style="color: #901010">i</span><span style="color: #ac0c0c">n</span><span style="color: #c70808">z </span><span style="color: #e30404">C</span><span style="color: #ff0000">e</span><span style="color: #ff0000">r</span><span style="color: #e30404">o </span><span style="color: #c70808">D</span><span style="color: #ac0c0c">u</span><span style="color: #901010">c</span><span style="color: #751515">a</span><span style="color: #751515">n </span><span style="color: #921013">R</span><span style="color: #af0c11">i</span><span style="color: #cc070f">v</span><span style="color: #e9030e">er</span>
+<br />
+<span style='color: #b0b0b0;'>Info: <center > </span><span style='color: #ffffff;'><span style="color: #7d0e0e"> Auf der Suche nach RP's, Anfragen gern gesehen.</center></span></span>
+</td><td align="center">
+<strong ><span style="color: #d40606">V</span><span style="color: #df0404">a</span><span style="color: #e90303">m</span><span style="color: #f40101">p</span><span style="color: #ff0000">i</span><span style="color: #ff0000">r</strong></span>
+</td><td align="center">
+<i ><span style="color: #ff000d">S</span><span style="color: #cc070f">t</span><span style="color: #9a0f12">o</span><span style="color: #751515">l</span><span style="color: #a30e0e">z</span><span style="color: #d10707">e</span><span style="color: #ff0000">s </span><span style="color: #ff0000">R</span><span style="color: #d10707">e</span><span style="color: #a30e0e">i</span><span style="color: #751515">n</span><span style="color: #751515">b</span><span style="color: #a70d12">l</span><span style="color: #d9050f">ut</i></span>
+</td><td align="center">
+<span style="color: #4a4a4a">R</span><span style="color: #676767">P</span><span style="color: #858585">-</span><span style="color: #949494">C</span><span style="color: #a2a2a2">h</span><span style="color: #b1b1b1">a</span><span style="color: #c0c0c0">r</span>
+</td><td align="center">
+<img src="images/system/common/male.gif">
+</td><td align="center">
+<span style="color: #70481f">B</span><span style="color: #805223">e</span><span style="color: #905c27">w</span><span style="color: #a1662b">o</span><span style="color: #a1662b">h</span><span style="color: #af6e2d">n</span><span style="color: #be762f">e</span><span style="color: #cd7f32">r </span>
+</td><td>
+<center >Wohnviertel - Astaros</center>
+</td><td>
+<span style='color: #0000b0;'><center ><strong >Lebt</strong></center></span>
+</td><td align="center">
+<img src='images/Assos/bulb4.png' alt='Derzeit in einem RP' titel='Derzeit in einem RP'>
+</td><td>
+<center >Gestern</center>
+</td>
+</tr>
+<tr class='trlight'><td>
+<span style='color: #890000;'>R</span><span style='color: #6a0000;'>ek</span><span style='color: #570000;'>i</span><span style='color: #450000;'>nn </span><span style='color: #202020;'>Zhul-u </span><span style='color: #450000;'>Uz</span><span style='color: #570000;'>ba</span><span style='color: #890000;'>d</span>
+</td><td align="center">
+<span style='color: #890000;'>Zwerg
+</td><td align="center">
+</span><span style='color: #890000;'>Lavak&ouml;nig
+</td><td align="center">
+<span style="color: #c0c0c0">M</span><span style="color: #b1b1b1">i</span><span style="color: #a2a2a2">x</span><span style="color: #949494">-</span><span style="color: #949494">C</span><span style="color: #7b7b7b">h</span><span style="color: #626262">a</span><span style="color: #4a4a4a">r</span></span>
+</td><td align="center">
+<img src="images/system/common/male.gif">
+</td><td align="center">
+<span style="color: #70481f">B</span><span style="color: #805223">e</span><span style="color: #905c27">w</span><span style="color: #a1662b">o</span><span style="color: #a1662b">h</span><span style="color: #af6e2d">n</span><span style="color: #be762f">e</span><span style="color: #cd7f32">r </span>
+</td><td>
+<center >Carvo - Die Talsenke</center>
+</td><td>
+<span style='color: #0000b0;'><center ><strong >Lebt</strong></center></span>
+</td><td align="center">
+<img src='images/Assos/bulb0.png' alt='Kein Interesse am RP' titel='Kein Interesse am RP'>
+</td><td>
+<center >5 Tage</center>
+</td>
+</tr>
+<tr class='trdark'><td>
+<span style="color: #283d3e">C</span><span style="color: #424546">o</span><span style="color: #5c4e4e">r</span><span style="color: #5c4e4e">r</span><span style="color: #686b69">u</span><span style="color: #748984">p</span><span style="color: #748984">t</span><span style="color: #748984">o</span><span style="color: #686b69">r </span><span style="color: #5c4e4e">A</span><span style="color: #5c4e4e">m</span><span style="color: #424546">o</span><span style="color: #283d3e">s</span>
+</td><td align="center">
+<i >D&auml;mon</i>
+</td><td align="center">
+<i >Ashmodai - Verderber</i>
+</td><td align="center">
+<span style="color: #c0c0c0">M</span><span style="color: #b1b1b1">i</span><span style="color: #a2a2a2">x</span><span style="color: #949494">-</span><span style="color: #949494">C</span><span style="color: #7b7b7b">h</span><span style="color: #626262">a</span><span style="color: #4a4a4a">r</span>
+</td><td align="center">
+<img src="images/system/common/male.gif">
+</td><td align="center">
+<span style="color: #70481f">B</span><span style="color: #805223">e</span><span style="color: #905c27">w</span><span style="color: #a1662b">o</span><span style="color: #a1662b">h</span><span style="color: #af6e2d">n</span><span style="color: #be762f">e</span><span style="color: #cd7f32">r </span>
+</td><td>
+<center >Astaros - Magischer Ort</center>
+</td><td>
+<span style='color: #0000b0;'><center ><strong >Lebt</strong></center></span>
+</td><td align="center">
+<img src='images/Assos/bulb2.png' alt='Im RP - Weitere Partner erwünscht' titel='Im RP - Weitere Partner erwünscht'>
+</td><td>
+<center >45 Tage</center>
+</td>
+</tr>
+<tr class='trlight'><td>
+<span style="color: #697200">R</span><span style="color: #757c0d">e</span><span style="color: #81871a">i</span><span style="color: #8d9127">s</span><span style="color: #9a9c34">e</span><span style="color: #a6a741">n</span><span style="color: #b2b14e">d</span><span style="color: #bfbc5b">e </span><span style="color: #cbc668">L</span><span style="color: #d7d175">i</span><span style="color: #e4dc82">a</span>
+</td><td align="center">
+<span style="color: #697200">M</span><span style="color: #81871a">e</span><span style="color: #9a9c34">n</span><span style="color: #b2b14e">s</span><span style="color: #cbc668">c</span><span style="color: #e4dc82">h</span>
+</td><td align="center">
+
+</td><td align="center">
+<span style="color: #4a4a4a">R</span><span style="color: #676767">P</span><span style="color: #858585">-</span><span style="color: #949494">C</span><span style="color: #a2a2a2">h</span><span style="color: #b1b1b1">a</span><span style="color: #c0c0c0">r</span>
+</td><td align="center">
+<img src="images/system/common/female.gif">
+</td><td align="center">
+<span style="color: #70481f">B</span><span style="color: #7c4f22">e</span><span style="color: #885725">w</span><span style="color: #945e28">o</span><span style="color: #a1662b">h</span><span style="color: #a1662b">n</span><span style="color: #ac6c2c">e</span><span style="color: #b7722e">r</span><span style="color: #c27830">i</span><span style="color: #cd7f32">n </span>
+</td><td>
+<center >Bewohnerliste</center>
+</td><td>
+<span style='color: #0000b0;'><center ><strong >Lebt</strong></center></span>
+</td><td align="center">
+<img src='images/Assos/bulb2.png' alt='Im RP - Weitere Partner erwünscht' titel='Im RP - Weitere Partner erwünscht'>
+</td><td>
+<center >10 Tage</center>
+</td>
+</tr>
+<tr class='trdark'><td>
+<span style='color: #8B0A50;'>S</span><span style='color: #a00446;'>c</span><span style='color: #b9034c;'>h</span><span style='color: #D80655;'>e</span><span style='color: #b9034c;'></span><span style='color: #a00446;'>i</span><span style='color: #8B0A50;'>n</span><span style='color: #b9034c;'>t</span><span style='color: #D80655;'>r</span><span style='color: #8B0A50;'>u</span><span style='color: #a00446;'>g </span><span style='color: #b9034c;'>L</span><span style='color: #D80655;'>i</span><span style='color: #8B0A50;'>v</span>
+<br />
+<span style='color: #b0b0b0;'>Info: </span><span style='color: #6495ed;'>* </span><span style='color: #b9034c;'>Weitere Informationen zu Livs Vampirismus im OoC!<br />
+
+</span><span style='color: #b9034c;'>Playbereit!</span>
+</td><td align="center">
+<span style='color: #b9034c;'>Mensch (Anschein)
+</td><td align="center">
+</span><span style='color: #b9034c;'>Vampir</span><span style='color: #6495ed;'>* </span><span style='color: #b9034c;'>(unbemerkt)
+</td><td align="center">
+<span style="color: #4a4a4a">R</span><span style="color: #676767">P</span><span style="color: #858585">-</span><span style="color: #949494">C</span><span style="color: #a2a2a2">h</span><span style="color: #b1b1b1">a</span><span style="color: #c0c0c0">r</span></span>
+</td><td align="center">
+<img src="images/system/common/female.gif">
+</td><td align="center">
+<span style="color: #70481f">B</span><span style="color: #7c4f22">e</span><span style="color: #885725">w</span><span style="color: #945e28">o</span><span style="color: #a1662b">h</span><span style="color: #a1662b">n</span><span style="color: #ac6c2c">e</span><span style="color: #b7722e">r</span><span style="color: #c27830">i</span><span style="color: #cd7f32">n </span>
+</td><td>
+<center >Bewohnerliste</center>
+</td><td>
+<span style='color: #0000b0;'><center ><strong >Lebt</strong></center></span>
+</td><td align="center">
+<img src='images/Assos/bulb1.png' alt='Bin bereit zum RPn' titel='Bin bereit zum RPn'>
+</td><td>
+<center >3 Tage</center>
+</td>
+</tr>
+<tr class='trlight'><td>
+<span style="color: #919091">R</span><span style="color: #848883">a</span><span style="color: #788175">z</span><span style="color: #6c7967">i</span><span style="color: #607259">e</span><span style="color: #546a4b">l </span><span style="color: #48633e">d</span><span style="color: #48633e">e </span><span style="color: #546a4b">C</span><span style="color: #607259">o</span><span style="color: #6c7967">n</span><span style="color: #788175">r</span><span style="color: #848883">o</span><span style="color: #919091">y <span style='color: #303030;'>&#8734;</span></span>
+<br />
+<span style='color: #b0b0b0;'>Info: <span style="color: #858583">E</span><span style="color: #848481">r
+</span><span style="color: #84847f">s</span><span style="color: #84847e">a</span><span style="color: #84847c">h
+</span><span style="color: #84847b">i</span><span style="color: #838479">n
+</span><span style="color: #838478">e</span><span style="color: #838476">i</span><span style="color: #838475">n</span><span style="color: #838473">e</span><span style="color: #838472">r
+</span><span style="color: #828370">Q</span><span style="color: #82836f">u</span><span style="color: #82836d">e</span><span style="color: #82836c">l</span><span style="color: #82836a">l</span><span style="color: #828369">e
+</span><span style="color: #818367">d</span><span style="color: #818366">i</span><span style="color: #818364">e
+</span><span style="color: #818363">s</span><span style="color: #818361">i</span><span style="color: #818360">l</span><span style="color: #80825e">b</span><span style="color: #80825d">e</span><span style="color: #80825b">r</span><span style="color: #80825a">n
+</span><span style="color: #808258">r</span><span style="color: #808257">a</span><span style="color: #7f8255">n</span><span style="color: #7f8254">n</span><span style="color: #7f8252">,
+</span><span style="color: #7f8251">s</span><span style="color: #7f824f">e</span><span style="color: #7f824e">i</span><span style="color: #7f824e">n
+</span><span style="color: #7b804c">e</span><span style="color: #787f4a">i</span><span style="color: #747e49">g</span><span style="color: #717c47">e</span><span style="color: #6e7b46">n</span><span style="color: #6a7a44">\'
+</span><span style="color: #677843">B</span><span style="color: #637741">i</span><span style="color: #607640">l</span><span style="color: #5d743e">d</span><span style="color: #59733d">,
+</span><span style="color: #56723b">u</span><span style="color: #527039">n</span><span style="color: #4f6f38">d
+</span><span style="color: #4c6e36">l</span><span style="color: #486c35">i</span><span style="color: #456b33">e</span><span style="color: #416a32">b</span><span style="color: #3e6930">t</span><span style="color: #3b672f">\'
+</span><span style="color: #37662d">e</span><span style="color: #34652c">s
+</span><span style="color: #30632a">a</span><span style="color: #2d6228">u</span><span style="color: #2a6127">f
+</span><span style="color: #265f25">d</span><span style="color: #235e24">e</span><span style="color: #1f5d22">r
+</span><span style="color: #1c5b21">S</span><span style="color: #195a1f">t</span><span style="color: #15591e">e</span><span style="color: #12571c">l</span><span style="color: #0e561b">l</span><span style="color: #0b5519">e</span><span style="color: #085418">.</span></span>
+</td><td align="center">
+<span style="color: #48633e">M</span><span style="color: #48633e">e</span><span style="color: #607259">n</span><span style="color: #6c7967">s</span><span style="color: #788175">c</span><span style="color: #848883">h</span>
+</td><td align="center">
+<span style="color: #48633e">N</span><span style="color: #48633e">a</span><span style="color: #607259">r</span><span style="color: #6c7967">z</span><span style="color: #788175">i</span><span style="color: #848883">s</span><span style="color: #919091">s </span>
+</td><td align="center">
+<span style="color: #c0c0c0">M</span><span style="color: #b1b1b1">i</span><span style="color: #a2a2a2">x</span><span style="color: #949494">-</span><span style="color: #949494">C</span><span style="color: #7b7b7b">h</span><span style="color: #626262">a</span><span style="color: #4a4a4a">r</span>
+</td><td align="center">
+<img src="images/system/common/male.gif">
+</td><td align="center">
+<span style="color: #70481f">B</span><span style="color: #805223">e</span><span style="color: #905c27">w</span><span style="color: #a1662b">o</span><span style="color: #a1662b">h</span><span style="color: #af6e2d">n</span><span style="color: #be762f">e</span><span style="color: #cd7f32">r </span>
+</td><td>
+<center >Bewohnerliste</center>
+</td><td>
+<span style='color: #0000b0;'><center ><strong >Lebt</strong></center></span>
+</td><td align="center">
+<img src='images/Assos/bulb3.png' alt='Suche späteren RP-Partner' titel='Suche späteren RP-Partner'>
+</td><td>
+<center >Gestern</center>
+</td>
+</tr>
+<tr class='trdark'><td>
+<span style="color: #edbf4a">P</span><span style="color: #c5a758">r</span><span style="color: #9d8f66">æ</span><span style="color: #767875">s</span><span style="color: #767875">e</span><span style="color: #83528d">n</span><span style="color: #902da6">s</span><span style="color: #9e08bf">i</span><span style="color: #9e08bf">o </span><span style="color: #902da6">Q</span><span style="color: #83528d">u</span><span style="color: #767875">i</span><span style="color: #767875">v</span><span style="color: #9d8f66">i</span><span style="color: #c5a758">n</span><span style="color: #edbf4a">e</span>
+<br />
+<span style='color: #b0b0b0;'>Info: <center ><i ><strong ><span style="color: #deb347">A</strong></span><span style="color: #d29e5a">n</span><span style="color: #c78a6d">p</span><span style="color: #bc7681">a</span><span style="color: #b16194">s</span><span style="color: #a64da8">s</span><span style="color: #9b39bb">u</span><span style="color: #9025cf">n</span><span style="color: #9025cf">g i</span><span style="color: #9b39bb">s</span><span style="color: #a64da8">t </span><span style="color: #b16194">a</span><span style="color: #bc7681">l</span><span style="color: #c78a6d">l</span><span style="color: #d29e5a">e</span><span style="color: #deb347">s!</i></center><br />
+
+</span></span>
+</td><td align="center">
+<strong ><i ><span style="color: #edbf4a">M</strong></i></span><span style="color: #c5a758">e</span><span style="color: #9d8f66">n</span><span style="color: #767875">s</span><span style="color: #767875">c</span><span style="color: #83528d">h</span>
+</td><td align="center">
+<strong ><i ><span style="color: #edbf4a">P</i></strong></span><span style="color: #c5a758">i</span><span style="color: #9d8f66">r</span><span style="color: #767875">a</span><span style="color: #767875">t</span><span style="color: #83528d">i</span><span style="color: #902da6">n</span>
+</td><td align="center">
+<span style="color: #4a4a4a">R</span><span style="color: #676767">P</span><span style="color: #858585">-</span><span style="color: #949494">C</span><span style="color: #a2a2a2">h</span><span style="color: #b1b1b1">a</span><span style="color: #c0c0c0">r</span>
+</td><td align="center">
+<img src="images/system/common/female.gif">
+</td><td align="center">
+<span style="color: #70481f">B</span><span style="color: #7c4f22">e</span><span style="color: #885725">w</span><span style="color: #945e28">o</span><span style="color: #a1662b">h</span><span style="color: #a1662b">n</span><span style="color: #ac6c2c">e</span><span style="color: #b7722e">r</span><span style="color: #c27830">i</span><span style="color: #cd7f32">n </span>
+</td><td>
+<center >Waldlichtung</center>
+</td><td>
+<span style='color: #0000b0;'><center ><strong >Lebt</strong></center></span>
+</td><td align="center">
+<img src='images/Assos/bulb1.png' alt='Bin bereit zum RPn' titel='Bin bereit zum RPn'>
+</td><td>
+<center >Heute</center>
+</td>
+</tr>
+<tr class='trlight'><td>
+Botenjunge Jonne
+</td><td align="center">
+<i ><span style="color: #001c4a">M </span><span style="color: #07448f">e </span><span style="color: #194d8c">n </span><span style="color: #3a6db2">s </span><span style="color: #5b8dd9">c </span><span style="color: #a5bfe7">h</i></span>
+</td><td align="center">
+<i >Keine</i>
+</td><td align="center">
+<span style="color: #c0c0c0">M</span><span style="color: #b1b1b1">i</span><span style="color: #a2a2a2">x</span><span style="color: #949494">-</span><span style="color: #949494">C</span><span style="color: #7b7b7b">h</span><span style="color: #626262">a</span><span style="color: #4a4a4a">r</span>
+</td><td align="center">
+<img src="images/system/common/male.gif">
+</td><td align="center">
+<span style="color: #70481f">B</span><span style="color: #805223">e</span><span style="color: #905c27">w</span><span style="color: #a1662b">o</span><span style="color: #a1662b">h</span><span style="color: #af6e2d">n</span><span style="color: #be762f">e</span><span style="color: #cd7f32">r </span>
+</td><td>
+<center >Astaros Hauptplatz</center>
+</td><td>
+<span style='color: #0000b0;'><center ><strong >Lebt</strong></center></span>
+</td><td align="center">
+<img src='images/Assos/bulb1.png' alt='Bin bereit zum RPn' titel='Bin bereit zum RPn'>
+</td><td>
+<center >2 Tage</center>
+</td>
+</tr>
+<tr class='trdark'><td>
+<span style="color: #60051d">V</span><span style="color: #5d1519">a</span><span style="color: #592616">l</span><span style="color: #563612">e</span><span style="color: #52470f">e</span><span style="color: #4f570b">r</span><span style="color: #4b6707">a </span><span style="color: #487804">M</span><span style="color: #52470f">a</span><span style="color: #52470f">l</span><span style="color: #563612">e</span><span style="color: #592616">n</span><span style="color: #5d1519">t</span><span style="color: #60051d">o</span>
+</td><td align="center">
+<i ><span style="color: #60051d">H</span><span style="color: #5d1519">a</span><span style="color: #592616">l</span><span style="color: #563612">b</span><span style="color: #52470f">-</span><span style="color: #4f570b">W</span><span style="color: #4b6707">aldelbin</i></span>
+</td><td align="center">
+<i ><span style="color: #60051d">M</span><span style="color: #5d1519">e</span><span style="color: #592616">d</span><span style="color: #563612">i</span><span style="color: #52470f">c</span><span style="color: #4f570b">a</i></span>
+</td><td align="center">
+<span style="color: #c0c0c0">M</span><span style="color: #b1b1b1">i</span><span style="color: #a2a2a2">x</span><span style="color: #949494">-</span><span style="color: #949494">C</span><span style="color: #7b7b7b">h</span><span style="color: #626262">a</span><span style="color: #4a4a4a">r</span>
+</td><td align="center">
+<img src="images/system/common/female.gif">
+</td><td align="center">
+<span style="color: #70481f">B</span><span style="color: #7c4f22">e</span><span style="color: #885725">w</span><span style="color: #945e28">o</span><span style="color: #a1662b">h</span><span style="color: #a1662b">n</span><span style="color: #ac6c2c">e</span><span style="color: #b7722e">r</span><span style="color: #c27830">i</span><span style="color: #cd7f32">n </span>
+</td><td>
+<center >Astaros Hauptplatz</center>
+</td><td>
+<span style='color: #0000b0;'><center ><strong >Lebt</strong></center></span>
+</td><td align="center">
+<img src='images/Assos/bulb3.png' alt='Suche späteren RP-Partner' titel='Suche späteren RP-Partner'>
+</td><td>
+<center >3 Tage</center>
+</td>
+</tr>
+<tr class='trlight'><td>
+<span style='color: #0000b0;'>E</span><span style='color: #0000ff;'>l</span><span style='color: #0047fc;'>f</span><span style='color: #0070ff;'>e</span><span style='color: #348dff;'>n</span><span style='color: #00bdb6;'>d</span><span style='color: #00b0b0;'>ä</span><span style='color: #008f8a;'>m</span><span style='color: #00605d;'>o</span><span style='color: #004e4b;'>n </span><span style='color: #00605d;'>K</span><span style='color: #008f8a;'>i</span><span style='color: #00b0b0;'>s</span><span style='color: #00bdb6;'>a </span><span style='color: #348dff;'>I</span><span style='color: #0070ff;'>k</span><span style='color: #0047fc;'>e</span>
+</td><td align="center">
+<span style='color: #0000b0;'>E</span><span style='color: #0000ff;'>l</span><span style='color: #0047fc;'>f</span><span style='color: #0070ff;'>e</span><span style='color: #348dff;'>n</span><span style='color: #00bdb6;'>d</span><span style='color: #00b0b0;'>&auml;</span><span style='color: #008f8a;'>m</span><span style='color: #00605d;'>o</span><span style='color: #004e4b;'>n
+</td><td align="center">
+</span><span style='color: #0000b0;'>Er</span><span style='color: #0000ff;'>b</span><span style='color: #0047fc;'>e </span><span style='color: #0070ff;'>d</span><span style='color: #348dff;'>es </span><span style='color: #00bdb6;'>Wa</span><span style='color: #00b0b0;'>s</span><span style='color: #008f8a;'>s</span><span style='color: #00605d;'>e</span><span style='color: #004e4b;'>rs
+</td><td align="center">
+<span style="color: #c0c0c0">M</span><span style="color: #b1b1b1">i</span><span style="color: #a2a2a2">x</span><span style="color: #949494">-</span><span style="color: #949494">C</span><span style="color: #7b7b7b">h</span><span style="color: #626262">a</span><span style="color: #4a4a4a">r</span></span>
+</td><td align="center">
+<img src="images/system/common/male.gif">
+</td><td align="center">
+<span style="color: #70481f">B</span><span style="color: #805223">e</span><span style="color: #905c27">w</span><span style="color: #a1662b">o</span><span style="color: #a1662b">h</span><span style="color: #af6e2d">n</span><span style="color: #be762f">e</span><span style="color: #cd7f32">r </span>
+</td><td>
+<center >Bewohnerliste</center>
+</td><td>
+<span style='color: #0000b0;'><center ><strong >Lebt</strong></center></span>
+</td><td align="center">
+<img src='images/Assos/bulb4.png' alt='Derzeit in einem RP' titel='Derzeit in einem RP'>
+</td><td>
+<center >Gestern</center>
+</td>
+</tr>
+<tr class='trdark'><td>
+<span style="color: #1e3347">M</span><span style="color: #263541">i</span><span style="color: #2f373c">g</span><span style="color: #373937">u</span><span style="color: #403b31">e</span><span style="color: #483d2c">l </span><span style="color: #513f27">d</span><span style="color: #594121">e </span><span style="color: #5e421f">V</span><span style="color: #5c4425">i</span><span style="color: #5b462c">l</span><span style="color: #5a4832">l</span><span style="color: #594b39">e</span><span style="color: #574d40">d</span><span style="color: #564f46">i</span><span style="color: #55514d">e</span><span style="color: #545454">u</span>
+</td><td align="center">
+<i ><span style="color: #1e3347">V</span><span style="color: #263541">a</span><span style="color: #2f373c">m</span><span style="color: #373937">p</span><span style="color: #403b31">i</span><span style="color: #483d2c">r</i></span>
+</td><td align="center">
+
+</td><td align="center">
+<span style="color: #c0c0c0">M</span><span style="color: #b1b1b1">i</span><span style="color: #a2a2a2">x</span><span style="color: #949494">-</span><span style="color: #949494">C</span><span style="color: #7b7b7b">h</span><span style="color: #626262">a</span><span style="color: #4a4a4a">r</span>
+</td><td align="center">
+<img src="images/system/common/male.gif">
+</td><td align="center">
+<span style="color: #70481f">B</span><span style="color: #805223">e</span><span style="color: #905c27">w</span><span style="color: #a1662b">o</span><span style="color: #a1662b">h</span><span style="color: #af6e2d">n</span><span style="color: #be762f">e</span><span style="color: #cd7f32">r </span>
+</td><td>
+<center >Astaros Hauptplatz</center>
+</td><td>
+<span style='color: #0000b0;'><center ><strong >Lebt</strong></center></span>
+</td><td align="center">
+<img src='images/Assos/bulb2.png' alt='Im RP - Weitere Partner erwünscht' titel='Im RP - Weitere Partner erwünscht'>
+</td><td>
+<center >49 Tage</center>
+</td>
+</tr>
+</table><br />
+<br />
+<br />
+<br />
+<br />
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<table border='1' align='center' cellspacing='1' cellpadding='1' bgcolor='#202020'>
+	<table border='1' align='center' cellspacing='2' cellpadding='2' bgcolor='#202020'>
+	<tr><td>
+	  <table border='0' cellspacing='3' cellpadding='3' bgcolor='#000000'>
+		<tr>
+			<td colspan='6'><font size='2pt'><strong ><center ><span style="color: #c0c0c0">K</span><span style="color: #a7a7a7">r</span><span style="color: #8e8e8e">i</span><span style="color: #767676">s</span><span style="color: #5d5d5d">t</span><span style="color: #444444">a</span><span style="color: #2c2c2c">l</span><span style="color: #202020">l</span><span style="color: #363636">l</span><span style="color: #4d4d4d">e</span><span style="color: #646464">g</span><span style="color: #7b7b7b">e</span><span style="color: #929292">n</span><span style="color: #a9a9a9">d</span><span style="color: #c0c0c0">e:</center></strong></font></td>
+		</tr>
+		<tr>
+             		<td><img src='images/Assos/bulb0.png'></td><td><strong >&raquo; Derzeit kein RP möglich.</strong></td>
+			<td><img src='images/Assos/bulb1.png'></td><td><strong >&raquo; Ich bin sofort startklar! Frag mich!!</strong></td>
+			<td><img src='images/Assos/bulb4.png'></td><td><strong >&raquo; Ich bin bereits in einem Play.</strong></td>			
+			<td>&nbsp</td><td>&nbsp</td>
+		</tr>
+		<tr><center>
+                        <td><img src='images/Assos/bulb2.png'></td><td><strong >&raquo; In mein Spiel darf sich jeder reinschreiben!</strong></td>
+			<td><img src='images/Assos/bulb3.png'></td><td><strong >&raquo; Suche für später einen RP-Partner.</strong></td></center>
+
+
+		</tr>
+	  </table>
+	</td></tr>
+</table></table></span>
+</div>
+						<div id="footer">
+								<div id="copy"><b>Copyright 2002-2003, Game: Eric Stevens</b><br /><br />Eassos &copy; 2014 - 2016 Eassos Team<br />Design: &copy; 2014 - 2016 Eassos Team</div>
+								<div id="source"><a href='source.php' target='_blank'>Source</a></div>
+								<div id="admin_box"></div>
+
+						</div>
+					</div>
+					<div class="sidebar sidebar-right">
+						<div id="vita">
+							<div id="vital_info"><br />
+<i ><strong ><span style="color: #d4af37">Administration:</strong></i><br />
+</span><i ><span style='color: #aabbee;'>Keine Admins online</i></span><br />
+<br />
+<i ><strong ><span style="color: #c0c0c0">Helfer:</strong></i> <br />
+</span><i ><span style='color: #aabbee;'>Keine Helfer online</i></span><br />
+<br />
+<i ><strong ><span style="color: #cd7f32">Bewohner:</strong></i><br />
+</span><span style='color: #eaff00;'></span><span style='color: #4682b4;'>R</span><span style='color: #617080;'>y</span><span style='color: #8296A9;'>u</span><span style='color: #b9d3ee;'>j</span><span style='color: #d9fffe;'>i </span><span style='color: #67fffa;'>D</span><span style='color: #98fffb;'>a</span><span style='color: #d9fffe;'>l</span><span style='color: #b9d3ee;'>i</span><span style='color: #8296A9;'>c</span><span style='color: #617080;'>i</span><span style='color: #4682b4;'>a</span><br />
+<br />
+<hr noshade='noshade'><i ><strong ><span style='color: #aabbee;'>1 User online</strong></i></span></div>
+
+							<div id="vita_extra">
+								<div></div>
+								<div></div>
+								<div></div>
+								<p><table align="center"><tr><td><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                                        <input type="hidden" name="cmd" value="_xclick">
+                                        <input type="hidden" name="business" value="nahdude81@hotmail.com">
+                                        <input type="hidden" name="item_name" value="Legend of the Green Dragon Author Donation from ">
+                                        <input type="hidden" name="item_number" value=":www.eassos.de/list.php?op=bypage&page=1">
+                                        <input type="hidden" name="no_shipping" value="1">
+                                        <input type="hidden" name="cn" value="Your Character Name">
+                                        <input type="hidden" name="cs" value="1">
+                                        <input type="hidden" name="currency_code" value="USD">
+                                        <input type="hidden" name="tax" value="0">
+                                        <input type="image" src="images/system/common/paypal1.gif" border="0" name="submit" alt="Donate!">
+                                   </form></td><td><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                                                <input type="hidden" name="cmd" value="_xclick">
+                                                <input type="hidden" name="business" value="admina@eassos.de">
+                                                <input type="hidden" name="item_name" value="Legend of the Green Dragon Site Donation from ">
+                                                <input type="hidden" name="item_number" value=":www.eassos.de/list.php?op=bypage&page=1">
+                                                <input type="hidden" name="no_shipping" value="1">
+                                                <input type="hidden" name="cn" value="Your Character Name">
+                                                <input type="hidden" name="cs" value="1">
+                                                <input type="hidden" name="currency_code" value="EUR">
+                                                <input type="hidden" name="tax" value="0">
+                                                <input type="image" src="images/Eassos/Paypal_Eassos.jpg" border="0" name="submit" alt="Donate!">
+                                           </form></td></tr></table></p>
+								<p><table border='0' cellpadding='1' cellspacing='1' align='center' class='helpmenu'style='text-align: center; '><tr><td><a href='popup_petition.php' target='_blank' title='FAQ' class='motd' onClick="window.open('popup_petition.php','popuppetitionphp','scrollbars=yes,resizable=yes,width=900,height=700');return false;">Eassos FAQ</a></td></tr>
+                                         <tr><td><a href='popup_regeln.php' target='_blank' title='Informationen' class='motd' onClick="window.open('popup_regeln.php','popupregelnphp','scrollbars=yes,resizable=yes,width=900,height=700');return false;">Regeln in Eassos</a></td></tr>
+                                         <tr><td><a href='popup_help.php?op=show&place=list.php?op=bypage&page=1' target='_blank' title='Wegweiser' class='motd' onClick="window.open('popup_help.php?op=show&place=list.php?op=bypage&page=1','popuphelpphpopshowplacelistphpopbypagepage1','scrollbars=yes,resizable=yes,width=900,height=700');return false;">Ortefinder</a></td></tr>
+                                        </table></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+      <script type="text/javascript" src="/lib/js/eassos.js"></script>
+      <script type="text/javascript" src="/lib/js/restore.js"></script>
+      <script type="text/javascript">
+        $(function () {
+          $('#commentform').sisyphus({
+            locationBased: true,
+            ignoreQueryParams: true
+          })
+        })
+      </script>
+    </body>
+</html>
+

@@ -34,7 +34,7 @@ class WarriorsPageTest extends \PHPUnit_Framework_TestCase {
     $stats->mau = 40;
 
     $this->assertEquals(WarriorsPageState::Valid, $wp->state);
-    $this->assertEquals(0, Stats::compare($wp->stats, $stats));
+    $this->assertTrue(Stats::isEqual($wp->stats, $stats));
   }
 
   public function testLotgdDeHtml() {
@@ -48,7 +48,7 @@ class WarriorsPageTest extends \PHPUnit_Framework_TestCase {
     $stats->mau = 46;
 
     $this->assertEquals(WarriorsPageState::Valid, $wp->state);
-    $this->assertEquals(0, Stats::compare($wp->stats, $stats));
+    $this->assertTrue(Stats::isEqual($wp->stats, $stats));
   }
 
   public function testDragonPrimeLotgdNetHtml() {
@@ -62,6 +62,48 @@ class WarriorsPageTest extends \PHPUnit_Framework_TestCase {
     $stats->mau = 12;
 
     $this->assertEquals(WarriorsPageState::Valid, $wp->state);
-    $this->assertEquals(0, Stats::compare($wp->stats, $stats));
+    $this->assertTrue(Stats::isEqual($wp->stats, $stats));
+  }
+
+  public function testAtrahorHtml() {
+    $url = __DIR__ . '/html/atrahor.de.html';
+    $contents = file_get_contents($url);
+    $wp = new WarriorsPage($this->logger, $url, $contents);
+
+    $stats = new Stats();
+    $stats->count = 40;
+    $stats->dau = 9;
+    $stats->mau = 28;
+
+    $this->assertEquals(WarriorsPageState::Valid, $wp->state);
+    $this->assertTrue(Stats::isEqual($wp->stats, $stats));
+  }
+
+  public function DISABLEDtestAlvionHtml() {
+    $url = __DIR__ . '/html/alvion.de.html';
+    $contents = file_get_contents($url);
+    $wp = new WarriorsPage($this->logger, $url, $contents);
+
+    $stats = new Stats();
+    $stats->count = 50;
+    $stats->dau = 10;
+    $stats->mau = 36;
+
+    $this->assertEquals(WarriorsPageState::Valid, $wp->state);
+    $this->assertTrue(Stats::isEqual($wp->stats, $stats));
+  }
+
+  public function testEassosHtml() {
+    $url = __DIR__ . '/html/eassos.de.html';
+    $contents = file_get_contents($url);
+    $wp = new WarriorsPage($this->logger, $url, $contents);
+
+    $stats = new Stats();
+    $stats->count = 30;
+    $stats->dau = 14;
+    $stats->mau = 22;
+
+    $this->assertEquals(WarriorsPageState::Valid, $wp->state);
+    $this->assertTrue(Stats::isEqual($wp->stats, $stats));
   }
 }
