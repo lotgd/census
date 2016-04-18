@@ -49,7 +49,7 @@ class WarriorsPage {
 
     $t = str_replace('Today', '0 days', $t);
     $t = str_replace('Heute', '0 days', $t);
-    $t = str_replace('Gastern', '1 days', $t);
+    $t = str_replace('Gestern', '1 days', $t);
 
     $t = str_replace('Never', "{$max} days", $t);
     $t = str_replace('Nie', "{$max} days", $t);
