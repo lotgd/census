@@ -26,6 +26,7 @@ class Census {
       }
       if ($a == '--fake-data') {
         $this->debugFakeData = true;
+        print "Yo";
         continue;
       }
       if ($a == '--debug') {
@@ -238,12 +239,21 @@ class Census {
     $readme .= "Site | Total | MAU | DAU\n";
     $readme .= "--- | ---:| ---:| ---:\n";
 
+    $totalCount = 0;
+    $totalMAU = 0;
+    $totalDAU = 0;
+
     foreach ($statsArray as $s => $stats) {
       $count = $stats->count;
       $mau = $stats->mau;
       $dau = $stats->dau;
       $readme .= "[$s](http://{$s})|{$count}|{$mau}|{$dau}\n";
+
+      $totalCount += $count;
+      $totalMAU += $mau;
+      $totalDAU += $dau;
     }
+    $readme .= "**Total**|**{$totalCount}**|**{$totalMAU}**|**{$totalDAU}**\n";
 
     $readme .= "\nAs of " . date("F j, Y") . ".\n";
 

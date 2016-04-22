@@ -17,7 +17,10 @@ class Stats {
     return $b->count - $a->count;
   }
 
-  public static function isEqual(Stats $a, Stats $b): bool {
+  public static function isEqual(?Stats $a, ?Stats $b): bool {
+    if ($a === null || $b === null) {
+      return false;
+    }
     return
       $a->count == $b->count &&
       $a->dau == $b->dau &&

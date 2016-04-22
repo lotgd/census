@@ -64,7 +64,7 @@ class WarriorsPage {
     return $i;
   }
 
-  private function findHeader(\DOMDocument $doc, \DOMNodeList $trs): \DOMElement {
+  private function findHeader(\DOMDocument $doc, \DOMNodeList $trs): ?\DOMElement {
     $trhead = null;
     foreach ($trs as $tr) {
       if ($tr->getAttribute('class') == 'trhead') {
