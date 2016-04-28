@@ -6,23 +6,23 @@ Want to add your site? Put up a pull request or contact @austenmc on [DragonPrim
 
 Site | Total | MAU | DAU
 --- | ---:| ---:| ---:
-[www.lotgd.net](http://www.lotgd.net)|446|346|109
-[www.dragonsofmyth.com](http://www.dragonsofmyth.com)|609|115|7
-[stormvalley.rpglink.in](http://stormvalley.rpglink.in)|280|18|2
-[dragonprimelogd.net](http://dragonprimelogd.net)|26|6|0
-[forbiddenrealm.rpglink.in](http://forbiddenrealm.rpglink.in)|784|189|56
-[enchantedland.rpglink.in](http://enchantedland.rpglink.in)|116|28|4
+[www.lotgd.net](http://www.lotgd.net)|446|368|150
+[www.dragonsofmyth.com](http://www.dragonsofmyth.com)|609|116|8
+[stormvalley.rpglink.in](http://stormvalley.rpglink.in)|280|19|3
+[dragonprimelogd.net](http://dragonprimelogd.net)|25|11|4
+[forbiddenrealm.rpglink.in](http://forbiddenrealm.rpglink.in)|785|188|48
+[enchantedland.rpglink.in](http://enchantedland.rpglink.in)|116|27|3
 [twx.rpglink.in](http://twx.rpglink.in)|11|6|0
 [ess.rpglink.in](http://ess.rpglink.in)|33|5|0
-[lotgd4adults2.com](http://lotgd4adults2.com)|389|189|74
-[deathstar.rpglink.in](http://deathstar.rpglink.in)|93|37|6
+[lotgd4adults2.com](http://lotgd4adults2.com)|391|189|76
+[deathstar.rpglink.in](http://deathstar.rpglink.in)|96|40|8
 [golden-empire.com](http://golden-empire.com)|21|4|0
-[the-complex.net](http://the-complex.net)|672|493|203
-[tynastera2.com](http://tynastera2.com)|60|50|35
-[www.lotgd.de](http://www.lotgd.de)|1496|698|301
-[www.hogwartslive.com](http://www.hogwartslive.com)|1910|1088|298
-[www.atrahor.de](http://www.atrahor.de)|1291|783|321
-[www.eassos.de](http://www.eassos.de)|359|253|87
-**Total**|**8596**|**4308**|**1503**
+[the-complex.net](http://the-complex.net)|672|490|196
+[tynastera2.com](http://tynastera2.com)|64|54|37
+[www.lotgd.de](http://www.lotgd.de)|1495|693|310
+[www.hogwartslive.com](http://www.hogwartslive.com)|1888|1064|306
+[www.atrahor.de](http://www.atrahor.de)|1292|771|297
+[www.eassos.de](http://www.eassos.de)|361|256|79
+**Total**|**8585**|**4301**|**1525**
 
-As of April 27, 2016.
+As of April 28, 2016.
