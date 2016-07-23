@@ -6,23 +6,23 @@ Want to add your site? Put up a pull request or contact @austenmc on [DragonPrim
 
 Site | Total | MAU | DAU
 --- | ---:| ---:| ---:
-[www.lotgd.net](http://www.lotgd.net)|412|315|108
-[www.dragonsofmyth.com](http://www.dragonsofmyth.com)|525|70|19
-[stormvalley.rpglink.in](http://stormvalley.rpglink.in)|283|15|5
-[dragonprimelogd.net](http://dragonprimelogd.net)|23|4|1
-[forbiddenrealm.rpglink.in](http://forbiddenrealm.rpglink.in)|854|209|67
-[enchantedland.rpglink.in](http://enchantedland.rpglink.in)|125|24|7
-[twx.rpglink.in](http://twx.rpglink.in)|15|7|1
+[www.lotgd.net](http://www.lotgd.net)|412|315|100
+[www.dragonsofmyth.com](http://www.dragonsofmyth.com)|525|71|14
+[stormvalley.rpglink.in](http://stormvalley.rpglink.in)|283|15|6
+[dragonprimelogd.net](http://dragonprimelogd.net)|25|6|1
+[forbiddenrealm.rpglink.in](http://forbiddenrealm.rpglink.in)|856|215|57
+[enchantedland.rpglink.in](http://enchantedland.rpglink.in)|125|24|2
+[twx.rpglink.in](http://twx.rpglink.in)|15|7|2
 [ess.rpglink.in](http://ess.rpglink.in)|34|3|0
-[lotgd4adults2.com](http://lotgd4adults2.com)|454|217|72
-[deathstar.rpglink.in](http://deathstar.rpglink.in)|112|46|14
-[golden-empire.com](http://golden-empire.com)|23|8|0
-[the-complex.net](http://the-complex.net)|590|447|165
-[tynastera2.com](http://tynastera2.com)|84|76|22
-[www.lotgd.de](http://www.lotgd.de)|1468|654|261
-[www.hogwartslive.com](http://www.hogwartslive.com)|1909|1062|307
-[www.atrahor.de](http://www.atrahor.de)|1299|734|295
-[www.eassos.de](http://www.eassos.de)|402|235|48
-**Total**|**8612**|**4126**|**1392**
+[lotgd4adults2.com](http://lotgd4adults2.com)|449|213|73
+[deathstar.rpglink.in](http://deathstar.rpglink.in)|102|38|4
+[golden-empire.com](http://golden-empire.com)|23|8|2
+[the-complex.net](http://the-complex.net)|590|440|166
+[tynastera2.com](http://tynastera2.com)|84|75|16
+[www.lotgd.de](http://www.lotgd.de)|1462|664|272
+[www.hogwartslive.com](http://www.hogwartslive.com)|1889|1048|312
+[www.atrahor.de](http://www.atrahor.de)|1296|722|257
+[www.eassos.de](http://www.eassos.de)|401|235|51
+**Total**|**8571**|**4099**|**1335**
 
-As of July 20, 2016.
+As of July 23, 2016.
