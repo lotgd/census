@@ -6,23 +6,23 @@ Want to add your site? Put up a pull request or contact @austenmc on [DragonPrim
 
 Site | Total | MAU | DAU
 --- | ---:| ---:| ---:
-[www.lotgd.net](http://www.lotgd.net)|417|317|113
-[www.dragonsofmyth.com](http://www.dragonsofmyth.com)|531|72|21
-[stormvalley.rpglink.in](http://stormvalley.rpglink.in)|285|17|6
-[dragonprimelogd.net](http://dragonprimelogd.net)|30|10|0
-[forbiddenrealm.rpglink.in](http://forbiddenrealm.rpglink.in)|871|196|40
-[enchantedland.rpglink.in](http://enchantedland.rpglink.in)|126|22|1
+[www.lotgd.net](http://www.lotgd.net)|429|326|113
+[www.dragonsofmyth.com](http://www.dragonsofmyth.com)|532|70|17
+[stormvalley.rpglink.in](http://stormvalley.rpglink.in)|285|16|4
+[dragonprimelogd.net](http://dragonprimelogd.net)|31|10|0
+[forbiddenrealm.rpglink.in](http://forbiddenrealm.rpglink.in)|872|191|55
+[enchantedland.rpglink.in](http://enchantedland.rpglink.in)|126|18|2
 [twx.rpglink.in](http://twx.rpglink.in)|16|9|0
-[ess.rpglink.in](http://ess.rpglink.in)|34|4|0
-[lotgd4adults2.com](http://lotgd4adults2.com)|474|215|83
-[deathstar.rpglink.in](http://deathstar.rpglink.in)|106|43|8
+[ess.rpglink.in](http://ess.rpglink.in)|35|5|1
+[lotgd4adults2.com](http://lotgd4adults2.com)|475|213|75
+[deathstar.rpglink.in](http://deathstar.rpglink.in)|105|39|8
 [golden-empire.com](http://golden-empire.com)|0|0|0
-[the-complex.net](http://the-complex.net)|595|465|204
-[tynastera2.com](http://tynastera2.com)|82|75|18
-[www.lotgd.de](http://www.lotgd.de)|1432|663|278
-[www.hogwartslive.com](http://www.hogwartslive.com)|1911|1059|309
-[www.atrahor.de](http://www.atrahor.de)|1321|771|307
-[www.eassos.de](http://www.eassos.de)|404|219|45
-**Total**|**8635**|**4157**|**1433**
+[the-complex.net](http://the-complex.net)|585|458|178
+[tynastera2.com](http://tynastera2.com)|81|76|26
+[www.lotgd.de](http://www.lotgd.de)|1431|653|214
+[www.hogwartslive.com](http://www.hogwartslive.com)|1911|1054|304
+[www.atrahor.de](http://www.atrahor.de)|1319|775|272
+[www.eassos.de](http://www.eassos.de)|403|219|50
+**Total**|**8636**|**4132**|**1319**
 
-As of August 16, 2016.
+As of August 19, 2016.
