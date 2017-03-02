@@ -2,3 +2,4 @@ vendor
 .env
 *.un~
 *.swp
+.DS_Store
