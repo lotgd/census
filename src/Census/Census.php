@@ -26,7 +26,6 @@ class Census {
       }
       if ($a == '--fake-data') {
         $this->debugFakeData = true;
-        print "Yo";
         continue;
       }
       if ($a == '--debug') {
