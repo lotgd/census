@@ -1,0 +1,1223 @@
+
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'>
+<html>
+ <head>
+  <title>List Patrons</title>
+  <base href="http://www.innersinners.com/">
+  <link href='templates/sinisterred.css' rel='stylesheet' type='text/css'>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+  <link rel='shortcut icon' href='favicon.png' type='image/x-icon' /><script language='JavaScript'>
+	<!--
+	document.onkeypress=keyevent;
+	function keyevent(e){
+		var c;
+		var target;
+		var altKey;
+		var ctrlKey;
+		if (window.event != null) {
+			c=String.fromCharCode(window.event.keyCode).toUpperCase();
+			altKey=window.event.altKey;
+			ctrlKey=window.event.ctrlKey;
+		}else{
+			c=String.fromCharCode(e.charCode).toUpperCase();
+			altKey=e.altKey;
+			ctrlKey=e.ctrlKey;
+		}
+		if (window.event != null)
+			target=window.event.srcElement;
+		else
+			target=e.originalTarget;
+		if (target.nodeName.toUpperCase()=='INPUT' || target.nodeName.toUpperCase()=='TEXTAREA' || altKey || ctrlKey){
+		}else{
+			if (c == 'L') { window.location='index.php?c=1-060832'; return false; }
+			if (c == 'C') { window.location='list.php?c=1-060832'; return false; }
+			if (c == 'M') { window.location='runmodule.php?module=recentplayers&c=1-060832'; return false; }
+		}
+	}
+	//-->
+	</script>
+ </head>
+ <body bgcolor='#000000' text="#CD0000">
+  <table border='0' cellpadding='0' cellspacing='0' width='100%'>
+   <tr>
+    <td>
+     <table border='0' cellpadding='0' cellspacing='0' width='100%'>
+      <tr>
+       <td nowrap valign='top'>
+        <table border='0' cellpadding='0' cellspacing='0'>
+         <tr>
+          <td><img name='tlc' src='templates/sinisterred/tlc.gif' width='10' height='15' border='0' alt=''></td>
+          <td background='templates/sinisterred/tm.gif'><img name='tm' src='templates/sinisterred/spacer.gif' width='1' height='1' border='0' alt=''></td>
+          <td><img name='trc' src='templates/sinisterred/trc.gif' width='10' height='15' border='0' alt=''></td>
+         </tr>
+         <tr>
+          <td background='templates/sinisterred/tlt.gif'><img name='tlt' src='templates/sinisterred/spacer.gif' width='1' height='1' border='0' alt=''></td>
+          <td valign='top' bgcolor='#000000' nowrap><span class='pagetitle'>&#149; List Patrons</span></td>
+          <td background='templates/sinisterred/trt.gif'><img name='trt' src='templates/sinisterred/spacer.gif' width='1' height='1' border='0' alt=''></td>
+         </tr>
+         <tr>
+          <td><img name='blc' src='templates/sinisterred/blc.gif' width='10' height='12' border='0' alt=''></td>
+          <td background='templates/sinisterred/btm.gif'><img name='btm' src='templates/sinisterred/spacer.gif' width='1' height='1' border='0' alt=''></td>
+          <td><img name='brc' src='templates/sinisterred/brc.gif' width='10' height='12' border='0' alt=''></td>
+         </tr>
+        </table>
+       </td>
+       <td align='right' valign="top"><img src='templates/sinisterred/logo.png'></td>
+      </tr>
+      <tr>
+       <td valign='top' colspan='2'>
+        <div style="float: left;"></div>
+        <div align="right"><a href='motd.php' target='_blank' onClick="window.open('motd.php','motdphp','scrollbars=yes,resizable=yes,width=850,height=450').focus();return false;" class='motd'><b>MoTD</b></a> |  | <a href='petition.php' onClick="window.open('petition.php','petitionphp','scrollbars=yes,resizable=yes,width=550,height=300').focus();return false;" target='_blank' align='right' class='motd'>Petition for Help</a><br><br></div>
+       </td>
+      </tr>
+     </table>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border='0' cellpadding='4' cellspacing='0' width='100%'>
+      <tr>
+       <td valign='top' width="182">
+        <table border='0' cellpadding='0' cellspacing='0'>
+         <tr>
+          <td><img name='tlc' src='templates/sinisterred/tlc.gif' width='10' height='15' border='0' alt=''></td>
+          <td width='100%' background='templates/sinisterred/tm.gif'><img name='tm' src='templates/sinisterred/spacer.gif' width='1' height='1' border='0' alt=''></td>
+          <td><img name='trc' src='templates/sinisterred/trc.gif' width='10' height='15' border='0' alt=''></td>
+         </tr>
+         <tr>
+          <td background='templates/sinisterred/tlt.gif'><img name='tlt' src='templates/sinisterred/spacer.gif' width='1' height='1' border='0' alt=''></td>
+          <td valign='top' bgcolor='#000000' class='nav'><div style='position: relative; top: -15;' align='center'></div><div align="center">
+<span class="navhead">&#151;*&#151;</span><br clear='all'>
+
+<a href="index.php?c=1-060832" accesskey="L" class='nav' ><span class='navhi'>L</span>ogin Screen</a><br clear='all'>
+
+<a href="list.php?c=1-060832" accesskey="C" class='nav' ><span class='navhi'>C</span>urrently Online</a><br clear='all'>
+
+
+<span class="navhead">&#151;Pages&#151;</span><br clear='all'>
+
+<a href="list.php?page=1&amp;c=1-060832"class='nav' ><b><span class='colBlueCabbage'>Page 1</span> (1-50)</b></a><br clear='all'>
+
+<a href="list.php?page=2&amp;c=1-060832"class='nav' >Page 2 (51-100)</a><br clear='all'>
+
+<a href="list.php?page=3&amp;c=1-060832"class='nav' >Page 3 (101-145)</a><br clear='all'>
+
+<a href="runmodule.php?module=recentplayers&amp;c=1-060832" accesskey="M" class='nav' ><span class='navhi'>M</span>ost Recent Players</a><br clear='all'>
+
+</div></td>
+          <td background='templates/sinisterred/trt.gif'><img name='trt' src='templates/sinisterred/spacer.gif' width='1' height='1' border='0' alt=''></td>
+         </tr>
+         <tr>
+          <td><img name='blc' src='templates/sinisterred/blc.gif' width='10' height='12' border='0' alt=''></td>
+          <td background='templates/sinisterred/btm.gif'><img name='btm' src='templates/sinisterred/spacer.gif' width='1' height='1' border='0' alt=''></td>
+          <td><img name='brc' src='templates/sinisterred/brc.gif' width='10' height='12' border='0' alt=''></td>
+         </tr>
+        </table>
+       </td>
+       <td valign='top' width="100%">
+        <table border='0' cellpadding='0' cellspacing='0' width='100%' height='100%'>
+         <tr>
+          <td style='width:10px'><img name='tlc' src='templates/sinisterred/tlcb.gif' width='10' height='15' border='0' alt=''></td>
+          <td background='templates/sinisterred/tm.gif'><img name='tm' src='templates/sinisterred/spacer.gif' width='1' height='1' border='0' alt=''></td>
+          <td style='width:10px'><img name='trc' src='templates/sinisterred/trcb.gif' width='10' height='15' border='0' alt=''></td>
+         </tr>
+         <tr height='100%'>
+          <td valign='top' bgcolor='#000000' class='headrow' colspan="3">
+           <table width='100%' border='0' cellspacing='0' cellpadding='0'>
+            <tr>
+             <td valign=top align=left width='100%'><div style="float: right"></div>
+ <!--
+AllowAnonymous: True
+Override Forced Nav: False
+-->
+
+<style type='text/css'>
+.colDeepSkyBlue { color: #00BFFF; }
+.colTurqoiseGreen { color: #009664; }
+.colXDkGreen { color: #004000; }
+.colXLtYellow { color: #FFFF64; }
+.colXDkYellow { color: #4B4B00; }
+.colDkPurple { color: #3C0055; }
+.colBurntRaspberry { color: #860034; }
+.colTree { color: #07A620; }
+.colCottonCandy { color: #FF57DF; }
+.colRoyalAzure { color: #0038A8; }
+.colPaleBlue { color: #007DD7; }
+.colBlueCabbage { color: #1CA9C9; }
+.colMidnight { color: #191970; }
+.colPurpleBlue { color: #5C3EE4; }
+.colOcean { color: #00A46E; }
+.colCitrine { color: #FFF000; }
+.colSunglow { color: #FFBB33; }
+.colWatermelon { color: #FF033E; }
+.colPumpkin { color: #FF4000; }
+.colBedsheet { color: #FF0000; }
+.colDriedBlood { color: #900000; }
+.colCyan { color: #4DFF7F; }
+.colViolent { color: #7A27DE; }
+.colForgetMeNot { color: #9581ED; }
+.colFadedCheese { color: #FFF54D; }
+.colDebianRed { color: #D70A53; }
+.colFakeStrawberry { color: #F000C2; }
+.colPinkCloud { color: #FF8BE9; }
+.colForest { color: #045D29; }
+.colLime { color: #00FE41; }
+.colPumpkinJuice { color: #FF7E2B; }
+.colChocolatePudding { color: #5B1300; }
+.colMilkChocolate { color: #654321; }
+.colSteelBlue { color: #315B7E; }
+.colCharcoal { color: #4A4A4A; }
+.colNewWhite { color: #FFFFFE; }
+.colNewBlack { color: #3B3B3B; }
+.colPlumPurple { color: #7A378B; }
+.colNoobBlue { color: #00EEEE; }
+.colXLtRed { color: #FFBBBB; }
+.colMidnightBlue { color: #003366; }
+</style>
+
+
+
+<form action='list.php?op=search' method='POST'>Search By Name: <input name='name'><input type='submit' class='button' value='Search'></form>
+<div align='center'><b>Warriors of the realm (Page 1: 1-50 of 145)</b>
+
+
+
+
+
+
+
+
+<script type='text/javascript' src='js/sorttable.js'></script>
+<style>
+table.sortable thead {
+    background-color:#eee;
+    color:#666666;
+    font-weight: bold;
+    cursor: pointer;
+}
+</style>
+<table border=0 cellpadding=2 cellspacing=1 bgcolor='#999999' class='sortable'>
+<tr class='trhead'><td>Alive</td><td>Level</td><td>Name</td><td>Location</td><td>Race</td><td>Sex</td><td>Last On</tr>
+
+
+
+
+<tr class='trlight'><td>
+<span class='colCyan'>Yes
+</td><td>
+</span><span class='colCitrine'>14</span>
+</td><td sorttable_customkey='Seth'>
+<span class='colNewWhite'></span><span class='colTree'><b><i>B</i></b></span><span class='colForest'>a</span><span class='colTree'>b</span><span class='colForest'>y <b></span><span class='colTree'><i>S</i></b></span><span class='colForest'><i>e</i>th</span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Plant
+</td><td>
+
+<span class='colPaleBlue'>Male</span>
+</td><td sorttable_customkey='7104'>
+
+Today
+</td></tr>
+<tr class='trdark'><td>
+<span class='colLime'>Unconscious</span>
+</td><td>
+<span class='colCitrine'>14</span>
+</td><td sorttable_customkey='Fleur'>
+<span class='colNewWhite'><b></span><span class='colNewBlack'>O</b><i></span><span class='colDebianRed'>h</span><span class='colChocolatePudding'>,</i> <i></span><span class='colForgetMeNot'>F</span><span class='colViolent'>l</span><span class='colPlumPurple'>e</span><span class='colDkPurple'>u</span><span class='colNewBlack'>r</i></span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Creature
+</td><td>
+
+<span class='colCottonCandy'>Female</span>
+</td><td sorttable_customkey='467629'>
+
+5 days
+</td></tr>
+<tr class='trlight'><td>
+<span class='colCyan'>Yes
+</td><td>
+</span><span class='colCitrine'>13</span>
+</td><td sorttable_customkey='Chace'>
+<span class='colNewWhite'></span><span class='colChocolatePudding'><b>C</b></span><span class='colDriedBlood'><i>a</i></span><span class='colBedsheet'>t</span><span class='colDkWhite'><i>a</i></span><span class='colLtBlack'>s</span><span class='colNewBlack'><b>t</b></span><span class='colCharcoal'>r</span><span class='colBedsheet'><i>o</i></span><span class='colDriedBlood'>ph</span><span class='colChocolatePudding'>i<i>c</i> </span><span class='colCharcoal'><b>C</b></span><span class='colLtBlack'>h</span><span class='colDkWhite'><i>a</i></span><span class='colMdGrey'>o<i>s</i>  </span><span class='colChocolatePudding'><b>C</b></span><span class='colDriedBlood'>h</span><span class='colBedsheet'><i>a</i></span><span class='colMdGrey'>c</span><span class='colDkWhite'><i>e</i></span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+
+<span class='colaquamarine'>(<b>O</b></span><span class='colaquamarine'>nlin<i>e</i>)
+</td><td>
+Immortal
+</td><td>
+
+</span><span class='colPaleBlue'>Male</span>
+</td><td sorttable_customkey='4'>
+
+
+<span class='colForgetMeNot'>Now </span><span class='colDkWhite'><i>(4s)</i></span>
+</td></tr>
+<tr class='trdark'><td>
+<span class='colCyan'>Yes
+</td><td>
+</span><span class='colCitrine'>13</span>
+</td><td sorttable_customkey='Revel'>
+<span class='colNewWhite'></span><span class='colsalmon'><b>P</b></span><span class='colXLtRed'>r</span><span class='colwheat'><i>e</i></span><span class='colXLtGreen'>t</span><span class='colCyan'>t</span><span class='colaquamarine'><i>y</i> </span><span class='colsalmon'><b>F</b></span><span class='collightsalmon'><i>u</i></span><span class='colXLtRed'>c</span><span class='colwheat'><b>k</b></span><span class='colXLtGreen'>i</span><span class='colaquamarine'>n</span><span class='colNoobBlue'>&rsquo; </span><span class='colsalmon'><b>P</b></span><span class='colXLtRed'><i>e</i></span><span class='colXLtGreen'><b>t</b></span><span class='colXLtYellow'><b>#</b></span><span class='colLtBrown'>T</span><span class='coltan'><i>e</i></span><span class='coldarkkhaki'><b>a</b></span><span class='colNewWhite'>; </span><span class='colNoobBlue'><b>R</b></span><span class='colaquamarine'><i>e</i></span><span class='colwheat'><b>v</b></span><span class='colXLtRed'>e</span><span class='colsalmon'><b>l</b></span>
+</td><td>
+<span class='colNewWhite'>Hallow Vale University</span>
+
+<span class='colaquamarine'>(<b>O</b></span><span class='colaquamarine'>nlin<i>e</i>)
+</td><td>
+Immortal
+</td><td>
+
+</span><span class='colCottonCandy'>Female</span>
+</td><td sorttable_customkey='1'>
+
+
+<span class='colForgetMeNot'>Now </span><span class='colDkWhite'><i>(1s)</i></span>
+</td></tr>
+<tr class='trlight'><td>
+<span class='colLime'>Unconscious</span>
+</td><td>
+<span class='colCitrine'>13</span>
+</td><td sorttable_customkey='Cameron'>
+<span class='colNewWhite'></span><span class='colWatermelon'><b>S</b></span><span class='colBedsheet'><i>t</i></span><span class='colDriedBlood'>r</span><span class='colDebianRed'>i</span><span class='colWatermelon'>p</span><span class='colBedsheet'>p</span><span class='colDriedBlood'><i>e</i>r </span><span class='colMdGrey'>C</span><span class='colCharcoal'>a</span><span class='colBedsheet'>m</span><span class='colNewBlack'>e</span><span class='colNewWhite'>r</span><span class='colDriedBlood'>o</span><span class='colNewBlack'>n</span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Mortal
+</td><td>
+
+<span class='colPaleBlue'>Male</span>
+</td><td sorttable_customkey='31742'>
+
+Today
+</td></tr>
+<tr class='trdark'><td>
+<span class='colCyan'>Yes
+</td><td>
+</span><span class='colCitrine'>13</span>
+</td><td sorttable_customkey='Gage'>
+<span class='colNewWhite'><b></span><span class='colPurpleBlue'>C</b><i></span><span class='colPurpleBlue'>h</i></span><span class='colBlueCabbage'>a<i><b></span><span class='colPurpleBlue'>s</i></b></span><span class='colBlueCabbage'>i<i></span><span class='colBlueCabbage'>n</i><b></span><span class='colPurpleBlue'>g</b> <b></span><span class='colMidnight'>H</b><i></span><span class='colDkPurple'>e</i></span><span class='colPurpleBlue'>a<i><b></span><span class='colMidnight'>r</i></b></span><span class='colBlueCabbage'>t<b>s</b> <b></span><span class='colMidnight'>G</b><i></span><span class='colPurpleBlue'>a</i><b></span><span class='colBlueCabbage'>g</b><i></span><span class='colPlumPurple'>e</i></span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Mortal
+</td><td>
+
+<span class='colPaleBlue'>Male</span>
+</td><td sorttable_customkey='490'>
+
+Today
+</td></tr>
+<tr class='trlight'><td>
+<span class='colLime'>Unconscious</span>
+</td><td>
+<span class='colCitrine'>12</span>
+</td><td sorttable_customkey='David'>
+<span class='colNewWhite'></span><span class='colbeige'><i>F</i>a</span><span class='colNewBlack'>m</span><span class='colbeige'><i>o</i></span><span class='colCharcoal'><b>u</b></span><span class='colNewWhite'>s </span><span class='colNewBlack'>L</span><span class='colNewWhite'><b>a</b></span><span class='colbeige'><i>s</i></span><span class='colNewWhite'>t </span><span class='colNewBlack'><i>W</i></span><span class='colCharcoal'>o</span><span class='colMdGrey'><b>r</b></span><span class='colCharcoal'><b>d</b></span><span class='colMdGrey'>s </span><span class='colForgetMeNot'><b>D</b></span><span class='colPlumPurple'><i>a</i></span><span class='colCottonCandy'><b>v</b></span><span class='colPinkCloud'>i</span><span class='colXLtRed'>d</span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Immortal
+</td><td>
+
+<span class='colPaleBlue'>Male</span>
+</td><td sorttable_customkey='30814'>
+
+Today
+</td></tr>
+<tr class='trdark'><td>
+<span class='colLime'>Unconscious</span>
+</td><td>
+<span class='colCitrine'>11</span>
+</td><td sorttable_customkey='Kael'>
+<span class='colNewWhite'></span><span class='colLtBlack'><i>Levi</span><span class='colDriedBlood'>a</span><span class='colLtBlack'>than</i> </span><span class='colCharcoal'><b>K</b></span><span class='colDriedBlood'>a</span><span class='colChocolatePudding'>e</span><span class='colLtBlack'><i>l</i></span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Creature
+</td><td>
+
+<span class='colPaleBlue'>Male</span>
+</td><td sorttable_customkey='92388'>
+
+1 day
+</td></tr>
+<tr class='trlight'><td>
+<span class='colLime'>Unconscious</span>
+</td><td>
+<span class='colCitrine'>11</span>
+</td><td sorttable_customkey='Malos'>
+<span class='colNewWhite'></span><span class='colMilkChocolate'><b>3</b><i>0</i></span><span class='colMdGrey'>&amp;</span><span class='colDkRust'><b>L</b>ivi<i>n</i>g</span><span class='colMilkChocolate'><b>W</b>it<i>h</i><b>P</b>ar<i>e</i>n<i>t</i>s <i><b></span><span class='colSteelBlue'>M</b></i></span><span class='colNewBlack'>alos</span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Animal
+</td><td>
+
+<span class='colPaleBlue'>Male</span>
+</td><td sorttable_customkey='180505'>
+
+2 days
+</td></tr>
+<tr class='trdark'><td>
+<span class='colLime'>Unconscious</span>
+</td><td>
+<span class='colCitrine'>11</span>
+</td><td sorttable_customkey='Jagger'>
+<span class='colNewWhite'></span><span class='colBurntRaspberry'>Pe</span><span class='colChocolatePudding'>tt</span><span class='colDriedBlood'>y </span><span class='colSunglow'>De</span><span class='colLtBrown'>a</span><span class='coldarkkhaki'>l</span><span class='colLtBlack'>e</span><span class='colCharcoal'>r </span><span class='colSunglow'>J</span><span class='colLtBrown'>a</span><span class='colLtBlack'>g</span><span class='colCharcoal'>g</span><span class='colDriedBlood'>e</span><span class='colChocolatePudding'>r</span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Immortal
+</td><td>
+
+<span class='colPaleBlue'>Male</span>
+</td><td sorttable_customkey='200810'>
+
+2 days
+</td></tr>
+<tr class='trlight'><td>
+<span class='colLime'>Unconscious</span>
+</td><td>
+<span class='colCitrine'>11</span>
+</td><td sorttable_customkey='Kaleb'>
+<span class='colNewWhite'></span><span class='colMilkChocolate'><b>P</b><i>e</i>nnil<i>e</i>ss <b>P</b>a<i>u</i><b>p</b>e<i>r</i> Kaleb</span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Immortal
+</td><td>
+
+<span class='colPaleBlue'>Male</span>
+</td><td sorttable_customkey='19548'>
+
+Today
+</td></tr>
+<tr class='trdark'><td>
+<span class='colCyan'>Yes
+</td><td>
+</span><span class='colCitrine'>10</span>
+</td><td sorttable_customkey='Genevieve'>
+<span class='colNewWhite'></span><span class='colDkBrown'><b>P</b><i>e</i>n<b>n</b>il<i>e</i>s<i>s</i> <b>P</b><i>a</i>up<i>e</i><b>r</b> </span><span class='colBedsheet'><b>G</b></span><span class='colCottonCandy'>e</span><span class='colDkMagenta'><i>n</i></span><span class='colDriedBlood'>e</span><span class='colBedsheet'><i>v</i></span><span class='colCottonCandy'>i</span><span class='colDkMagenta'>e</span><span class='colBedsheet'><b>v</b></span><span class='colCottonCandy'>e</span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Mortal
+</td><td>
+
+<span class='colCottonCandy'>Female</span>
+</td><td sorttable_customkey='1261097'>
+
+15 days
+</td></tr>
+<tr class='trlight'><td>
+<span class='colLime'>Unconscious</span>
+</td><td>
+<span class='colCitrine'>10</span>
+</td><td sorttable_customkey='Ash'>
+<span class='colNewWhite'></span><span class='colDkBrown'><b>P</b><i>e</i>n<b>n</b>il<i>e</i>s<i>s</i> <b>P</b><i>a</i>up<i>e</i><b>r</b> <b></span><span class='colCharcoal'>A</b><i></span><span class='colChocolatePudding'>s</span><span class='colNewBlack'>h</i></span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Immortal
+</td><td>
+
+<span class='colCottonCandy'>Female</span>
+</td><td sorttable_customkey='128978'>
+
+1 day
+</td></tr>
+<tr class='trdark'><td>
+<span class='colCyan'>Yes
+</td><td>
+</span><span class='colCitrine'>10</span>
+</td><td sorttable_customkey='Brone'>
+<span class='colNewWhite'></span><span class='colMilkChocolate'><b>P</b><i>e</i>nnil<i>e</i>ss <b>P</b>a<i>u</i><b>p</b>e<i>r</i> <b></span><span class='colNewBlack'>B</b><i></span><span class='colBurntRaspberry'>r</span><span class='colXDkGreen'>o</span><span class='colDkPurple'>n</span><span class='colMidnight'>e</i></span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Mortal
+</td><td>
+
+<span class='colPaleBlue'>Male</span>
+</td><td sorttable_customkey='12469'>
+
+Today
+</td></tr>
+<tr class='trlight'><td>
+<span class='colCyan'>Yes
+</td><td>
+</span><span class='colCitrine'>10</span>
+</td><td sorttable_customkey='Messiah'>
+<span class='colNewWhite'></span><span class='colCharcoal'><b>F</b></span><span class='colNewWhite'>a</span><span class='colDkWhite'>l</span><span class='colLtBlack'><b>s</b></span><span class='colDkWhite'><b><i>e</i></b> P</span><span class='coltan'><b>r</b></span><span class='colNewBlack'><b>o</b></span><span class='colNewWhite'><i>p</i></span><span class='coldarkkhaki'><b><i>h</i></b></span><span class='colLtBlack'><i>e</i></span><span class='colwheat'><b>t</b></span><span class='colSunglow'>;</span> <span class='colbeige'>M</span><span class='colNewWhite'><b>e</b></span><span class='colMdGrey'>s<b>s</b></span><span class='colbeige'><b>i</b></span><span class='colDkWhite'><b>a</b></span><span class='colbeige'><i>h</i></span>
+</td><td>
+<span class='colNewWhite'>Currently Indoors</span>
+</td><td>
+Immortal
+</td><td>
+
+<span class='colPaleBlue'>Male</span>
+</td><td sorttable_customkey='171942'>
+
+2 days
+</td></tr>
+<tr class='trdark'><td>
+<span class='colCyan'>Yes
+</td><td>
+</span><span class='colCitrine'>9</span>
+</td><td sorttable_customkey='Octavia'>
+<span class='colNewWhite'><b></span><span class='colNewBlack'>H</b><i></span><span class='colCharcoal'>o</i></span><span class='colDkPurple'>r</span><span class='colBurntRaspberry'>r<b><i></span><span class='colForest'>o</b></span><span class='colTurqoiseGreen'>r</i> <b></span><span class='colTurqoiseGreen'>S</b><i></span><span class='colForest'>t</i></span><span class='colBurntRaspberry'>o<b></span><span class='colDkPurple'>r</b><i></span><span class='colNewBlack'>y</i> <b></span><span class='colNewBlack'>O</b></span><span class='colDkPurple'>c</span><span class='colBurntRaspberry'>t<i></span><span class='colForest'>a</span><span class='colTurqoiseGreen'>v</i><b></span><span class='colDkPurple'>i</b><i></span><span class='colNewBlack'>a</i></span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+
+<span class='colaquamarine'>(<b>O</b></span><span class='colaquamarine'>nlin<i>e</i>)
+</td><td>
+Immortal
+</td><td>
+
+</span><span class='colCottonCandy'>Female</span>
+</td><td sorttable_customkey='5'>
+
+
+<span class='colForgetMeNot'>Now </span><span class='colDkWhite'><i>(5s)</i></span>
+</td></tr>
+<tr class='trlight'><td>
+<span class='colCyan'>Yes
+</td><td>
+</span><span class='colCitrine'>9</span>
+</td><td sorttable_customkey='Alisa'>
+<span class='colNewWhite'><b></span><span class='colNewBlack'>D</b></span><span class='colNewBlack'>a</span><span class='colViolent'>rk W</span><span class='colDkMagenta'>his</span><span class='colViolent'>pe</span><span class='colNewBlack'>rs </span> <b><span class='colNewBlack'>A</b></span><span class='colViolent'>l</span><span class='colDkMagenta'>i</span><span class='colViolent'>s</span><span class='colNewBlack'>a</span>
+</td><td>
+<span class='colNewWhite'>Currently Indoors</span>
+</td><td>
+Mortal
+</td><td>
+
+<span class='colCottonCandy'>Female</span>
+</td><td sorttable_customkey='23408'>
+
+Today
+</td></tr>
+<tr class='trdark'><td>
+<span class='colCyan'>Yes
+</td><td>
+</span><span class='colCitrine'>9</span>
+</td><td sorttable_customkey='Cassandra'>
+<span class='colNewWhite'></span><span class='colDkPurple'><b>C</b><i></span><span class='colPlumPurple'>a</i></span><span class='colTurqoiseGreen'>s</span><span class='colXLtGreen'>s<i></span><span class='colwheat'>a</i></span><span class='colXLtGreen'>n</span><span class='colTurqoiseGreen'>d</span><span class='colPlumPurple'>r<i></span><span class='colDkPurple'>a</i></span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Mortal
+</td><td>
+
+<span class='colCottonCandy'>Female</span>
+</td><td sorttable_customkey='76097'>
+
+1 day
+</td></tr>
+<tr class='trlight'><td>
+<span class='colLime'>Unconscious</span>
+</td><td>
+<span class='colCitrine'>9</span>
+</td><td sorttable_customkey='Omar'>
+<span class='colNewWhite'></span><b><span class='colCottonCandy'>O</b><i></span><span class='colDkMagenta'>m</span><span class='colCottonCandy'>a</span><span class='colBurntRaspberry'>r</i></span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Immortal
+</td><td>
+
+<span class='colPaleBlue'>Male</span>
+</td><td sorttable_customkey='131104'>
+
+2 days
+</td></tr>
+<tr class='trdark'><td>
+<span class='colCyan'>Yes
+</td><td>
+</span><span class='colCitrine'>8</span>
+</td><td sorttable_customkey='Dap'>
+<span class='colNewWhite'></span><i><b><span class='colPaleBlue'>D</span><span class='colForgetMeNot'>a</span><span class='colPurpleBlue'>p</b></i></span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Immortal
+</td><td>
+
+<span class='colPaleBlue'>Male</span>
+</td><td sorttable_customkey='6988'>
+
+Today
+</td></tr>
+<tr class='trlight'><td>
+<span class='colCyan'>Yes
+</td><td>
+</span><span class='colCitrine'>8</span>
+</td><td sorttable_customkey='Callista'>
+<span class='colNewWhite'></span><span class='colDkBrown'><b>P</b><i>e</i>n<b>n</b>il<i>e</i>s<i>s</i> <b>P</b><i>a</i>up<i>e</i><b>r</b> Callista</span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Immortal
+</td><td>
+
+<span class='colCottonCandy'>Female</span>
+</td><td sorttable_customkey='110885'>
+
+1 day
+</td></tr>
+<tr class='trdark'><td>
+<span class='colCyan'>Yes
+</td><td>
+</span><span class='colCitrine'>8</span>
+</td><td sorttable_customkey='Colby'>
+<span class='colNewWhite'></span><span class='colDkBrown'><b>P</b><i>e</i>n<b>n</b>il<i>e</i>s<i>s</i> <b>P</b><i>a</i>up<i>e</i><b>r</b> </span><span class='colChocolatePudding'><b>C</b></span><span class='colBurntRaspberry'><i>o</i></span><span class='colDebianRed'>l<i></span><span class='colWatermelon'><b>b</b></span><span class='colBedsheet'>y</i></span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Mortal
+</td><td>
+
+<span class='colCottonCandy'>Female</span>
+</td><td sorttable_customkey='1442060'>
+
+17 days
+</td></tr>
+<tr class='trlight'><td>
+<span class='colLime'>Unconscious</span>
+</td><td>
+<span class='colCitrine'>8</span>
+</td><td sorttable_customkey='Jameson'>
+<span class='colNewWhite'><b></span><span class='colNewBlack'>T</b></span><span class='colNewBlack'>he <b></span><span class='colNewBlack'>B</b></span><span class='colNewBlack'>e<i></span><span class='colDkMagenta'>a</i></span><span class='colNewBlack'>r <b></span><span class='colNewBlack'>J</b></span><span class='colNewBlack'>ames<i></span><span class='colDkMagenta'>o</i></span><span class='colNewBlack'>n</span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Immortal
+</td><td>
+
+<span class='colPaleBlue'>Male</span>
+</td><td sorttable_customkey='300980'>
+
+3 days
+</td></tr>
+<tr class='trdark'><td>
+<span class='colCyan'>Yes
+</td><td>
+</span><span class='colCitrine'>7</span>
+</td><td sorttable_customkey='Ariella'>
+<span class='colNewWhite'></span><span class='colLtBrown'>R</span><span class='collightsalmon'><i>a</i></span><span class='colXLtYellow'><i>y</i>  </span><span class='colFadedCheese'>o<b>f</b> </span><span class='colPumpkinJuice'><b>S</b></span><span class='collightsalmon'><b><i>u</i></b></span><span class='colXLtYellow'><b>n</b></span><span class='colLtBrown'><i>s</i></span><span class='colPumpkinJuice'><i>h</i><b>i</b></span><span class='collightsalmon'>n</span><span class='colXLtYellow'><b>e</b> </span><span class='colbeige'><i>A</i></span><span class='colCitrine'>r</span><span class='colsalmon'>i<i>e</i><b>l</b></span><span class='colCitrine'>l</span><span class='colNewWhite'><b>a</b></span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Mortal
+</td><td>
+
+<span class='colCottonCandy'>Female</span>
+</td><td sorttable_customkey='25'>
+
+Today
+</td></tr>
+<tr class='trlight'><td>
+<span class='colCyan'>Yes
+</td><td>
+</span><span class='colCitrine'>6</span>
+</td><td sorttable_customkey='Atlas'>
+<span class='colNewWhite'></span><span class='colMilkChocolate'><b>P</b><i>e</i>nnil<i>e</i>ss <b>P</b>a<i>u</i><b>p</b>e<i>r</i> <i></span><span class='colDriedBlood'>A</span><span class='colLtBlack'>tl</span><span class='colDriedBlood'>a</span><span class='colLtBlack'>s</i></span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Mortal
+</td><td>
+
+<span class='colPaleBlue'>Male</span>
+</td><td sorttable_customkey='643697'>
+
+7 days
+</td></tr>
+<tr class='trdark'><td>
+<span class='colCyan'>Yes
+</td><td>
+</span><span class='colCitrine'>6</span>
+</td><td sorttable_customkey='Cassian'>
+<span class='colNewWhite'></span><span class='colMilkChocolate'><b>P</b><i>e</i>nnil<i>e</i>ss <b>P</b>a<i>u</i><b>p</b>e<i>r</i> <b></span><span class='colDkPurple'>C</b></span><span class='colBurntRaspberry'>a</span><span class='colDebianRed'>s<i></span><span class='colWatermelon'>s</span><span class='colPumpkinJuice'>i</i><b></span><span class='colsalmon'>a</b><i></span><span class='collightsalmon'>n</i></span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Immortal
+</td><td>
+
+<span class='colPaleBlue'>Male</span>
+</td><td sorttable_customkey='3618'>
+
+Today
+</td></tr>
+<tr class='trlight'><td>
+<span class='colCyan'>Yes
+</td><td>
+</span><span class='colCitrine'>6</span>
+</td><td sorttable_customkey='Danae'>
+<span class='colNewWhite'></span><span class='colDriedBlood'><b>D</b></span><span class='colDebianRed'><i>a</i></span><span class='colFakeStrawberry'>n</span><span class='colPinkCloud'><i>a</i></span><span class='colsalmon'><b>e</b></span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Immortal
+</td><td>
+
+<span class='colCottonCandy'>Female</span>
+</td><td sorttable_customkey='215204'>
+
+2 days
+</td></tr>
+<tr class='trdark'><td>
+<span class='colLime'>Unconscious</span>
+</td><td>
+<span class='colCitrine'>6</span>
+</td><td sorttable_customkey='Kzarine'>
+<span class='colNewWhite'></span><span class='colDkBrown'><b>P</b><i>e</i>n<b>n</b>il<i>e</i>s<i>s</i> <b>P</b><i>a</i>up<i>e</i><b>r</b> <b></span><span class='colDkPurple'>K<i></span><span class='colFakeStrawberry'>z</span><span class='colBurntRaspberry'>ar</span><span class='colDebianRed'>in</i></span><span class='colFakeStrawberry'>e</b></span>
+</td><td>
+<span class='colNewWhite'>Chace's Popeye's</span>
+</td><td>
+Immortal
+</td><td>
+
+<span class='colCottonCandy'>Female</span>
+</td><td sorttable_customkey='349902'>
+
+4 days
+</td></tr>
+<tr class='trlight'><td>
+<span class='colCyan'>Yes
+</td><td>
+</span><span class='colCitrine'>6</span>
+</td><td sorttable_customkey='Samantha'>
+<span class='colNewWhite'><b></span><span class='colDkPurple'>D</b><i></span><span class='colPlumPurple'>a</span><span class='colDkMagenta'>n</span><span class='colFakeStrawberry'>c</span><span class='colCottonCandy'>e</i> <b></span><span class='colDkPurple'>W</b><i></span><span class='colPlumPurple'>i</span><span class='colDkMagenta'>t</span><span class='colFakeStrawberry'>h</span><span class='colCottonCandy'>o</span><span class='colPinkCloud'>u</span><span class='colXLtRed'>t</i> <b></span><span class='colDkPurple'>Y</b><i></span><span class='colPlumPurple'>o</span><span class='colDkMagenta'>u</i> <b></span><span class='colDkPurple'>S</b><i></span><span class='colPlumPurple'>a</span><span class='colDkMagenta'>m</span><span class='colFakeStrawberry'>a</span><span class='colCottonCandy'>n</span><span class='colPinkCloud'>t</span><span class='colXLtRed'>h</span><span class='collightsalmon'>a</i></span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Immortal
+</td><td>
+
+<span class='colCottonCandy'>Female</span>
+</td><td sorttable_customkey='208335'>
+
+2 days
+</td></tr>
+<tr class='trdark'><td>
+<span class='colCyan'>Yes
+</td><td>
+</span><span class='colCitrine'>6</span>
+</td><td sorttable_customkey='Seamus'>
+<span class='colNewWhite'></span><span class='colMilkChocolate'><b>P</b><i>e</i>nnil<i>e</i>ss <b>P</b>a<i>u</i><b>p</b>e<i>r</i> Seamus</span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Creature
+</td><td>
+
+<span class='colPaleBlue'>Male</span>
+</td><td sorttable_customkey='170938'>
+
+2 days
+</td></tr>
+<tr class='trlight'><td>
+<span class='colCyan'>Yes
+</td><td>
+</span><span class='colCitrine'>5</span>
+</td><td sorttable_customkey='Legend'>
+<span class='colNewWhite'><b></span><span class='colXDkGreen'>L</b></span><span class='colForest'><i>v</i></span><span class='colTree'>. <i></span><span class='colLime'>99</span><span class='colaquamarine'></i> </span><span class='colaquamarine'><b>H</b></span><span class='colCyan'>e</span><span class='colLime'>r</span><span class='colTree'>b</span><span class='colTurqoiseGreen'><i>l</i></span><span class='colForest'>o</span><span class='colXDkGreen'>re</span><span class='colNewWhite'>; </span><span class='colXDkGreen'><b>L</b><i></span><span class='colForest'>e</span><span class='colTurqoiseGreen'>g</span><span class='colTree'>e</span><span class='colLime'>n</span><span class='colCyan'>d</i></span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Animal
+</td><td>
+
+<span class='colPaleBlue'>Male</span>
+</td><td sorttable_customkey='15210'>
+
+Today
+</td></tr>
+<tr class='trdark'><td>
+<span class='colLime'>Unconscious</span>
+</td><td>
+<span class='colCitrine'>5</span>
+</td><td sorttable_customkey='Aulë'>
+<span class='colNewWhite'></span><span class='colBurntRaspberry'><b>A</b></span><span class='colDriedBlood'><i>u</i></span><span class='colChocolatePudding'><b>l</b></span><span class='colMilkChocolate'>&euml;</span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Immortal
+</td><td>
+
+<span class='colPaleBlue'>Male</span>
+</td><td sorttable_customkey='196567'>
+
+2 days
+</td></tr>
+<tr class='trlight'><td>
+<span class='colLime'>Unconscious</span>
+</td><td>
+<span class='colCitrine'>5</span>
+</td><td sorttable_customkey='Caligula'>
+<span class='colNewWhite'></span><span class='colMilkChocolate'><b>P</b><i>e</i>nnil<i>e</i>ss <b>P</b>a<i>u</i><b>p</b>e<i>r</i> Caligula</span>
+</td><td>
+<span class='colNewWhite'>City Park</span>
+</td><td>
+Immortal
+</td><td>
+
+<span class='colPaleBlue'>Male</span>
+</td><td sorttable_customkey='263255'>
+
+3 days
+</td></tr>
+<tr class='trdark'><td>
+<span class='colCyan'>Yes
+</td><td>
+</span><span class='colCitrine'>5</span>
+</td><td sorttable_customkey='Draven'>
+<span class='colNewWhite'></span><b><span class='colMidnight'>D</b></span><span class='colOcean'>r<i></span><span class='colaquamarine'>a<b></span><span class='colBlueCabbage'>v</b></span><span class='colOcean'>e</span><span class='colMidnight'>n</i></span>
+</td><td>
+<span class='colNewWhite'>City Park</span>
+</td><td>
+Immortal
+</td><td>
+
+<span class='colPaleBlue'>Male</span>
+</td><td sorttable_customkey='552502'>
+
+6 days
+</td></tr>
+<tr class='trlight'><td>
+<span class='colCyan'>Yes
+</td><td>
+</span><span class='colCitrine'>5</span>
+</td><td sorttable_customkey='Xaviera'>
+<span class='colNewWhite'><i><b></span><span class='colViolent'>B</b></span><span class='colViolent'>r</span><span class='colNewBlack'>ok</span><span class='colwheat'>en<b></i></span><span class='colViolent'>h</b></span><span class='colViolent'>e</span><span class='colNewBlack'>art</span><span class='colwheat'>ed <b></span><span class='colViolent'>X</b></span><span class='colViolent'>a</span><span class='colNewBlack'>v<i></span><span class='colwheat'>i</i></span><span class='colNewBlack'>e</span><span class='colViolent'>r<b>a</b></span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Immortal
+</td><td>
+
+<span class='colCottonCandy'>Female</span>
+</td><td sorttable_customkey='3475795'>
+
+40 days
+</td></tr>
+<tr class='trdark'><td>
+<span class='colCyan'>Yes
+</td><td>
+</span><span class='colCitrine'>4</span>
+</td><td sorttable_customkey='Lucrais'>
+<span class='colNewWhite'></span><span class='colNewBlack'><b>F</b></span><span class='colLtBlack'><i>uc</span><span class='colDkWhite'>k</span><span class='colMdGrey'>in</span><span class='colSteelBlue'>g</i> </span><span class='colXLtYellow'><b>#</b></span><span class='colLtBrown'>T</span><span class='coltan'><i>e</i></span><span class='coldarkkhaki'><b>a</b></span><span class='colDkWhite'><i>s</span><span class='colMdGrey'>e</span><span class='colSteelBlue'><b>!</b></i> </span><span class='colNewBlack'><b>L</b><i></span><span class='colLtBlack'>uc</span><span class='colDkWhite'>r</span><span class='colMdGrey'>a</span><span class='colNewWhite'>i</span><span class='colSteelBlue'>s</i></span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+
+<span class='colaquamarine'>(<b>O</b></span><span class='colaquamarine'>nlin<i>e</i>)
+</td><td>
+Cannibal
+</td><td>
+
+</span><span class='colCottonCandy'>Female</span>
+</td><td sorttable_customkey='10'>
+
+
+<span class='colForgetMeNot'>Now </span><span class='colDkWhite'><i>(10s)</i></span>
+</td></tr>
+<tr class='trlight'><td>
+<span class='colCyan'>Yes
+</td><td>
+</span><span class='colCitrine'>4</span>
+</td><td sorttable_customkey='Zephyr'>
+<span class='colNewWhite'></span><span class='colMilkChocolate'><b>P</b><i>e</i>nnil<i>e</i>ss <b>P</b>a<i>u</i><b>p</b>e<i>r</i> </span><span class='colChocolatePudding'><b>Z</b></span><span class='colNewBlack'><i>e</i></span><span class='colLtBlack'>p</span><span class='colDkWhite'>h</span><span class='colLtBlack'><i>y</i></span><span class='colNewBlack'><b>r</b></span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Animal
+</td><td>
+
+<span class='colPaleBlue'>Male</span>
+</td><td sorttable_customkey='1001752'>
+
+12 days
+</td></tr>
+<tr class='trdark'><td>
+<span class='colLime'>Unconscious</span>
+</td><td>
+<span class='colCitrine'>3</span>
+</td><td sorttable_customkey='Carson'>
+<span class='colNewWhite'><b></span><span class='colRoyalAzure'>S</b><i></span><span class='colForest'>e</span><span class='colSteelBlue'>a</span><span class='colXDkGreen'><b></i></span><span class='colXDkGreen'>R</b><i></span><span class='colPaleBlue'>a</span><span class='colCyan'>i</span><span class='colBlueCabbage'>d</span><span class='colTree'>e</span><span class='colNoobBlue'>r</i> <b></span><span class='colPaleBlue'>C</b><i></span><span class='colCyan'>a</span><span class='colBlueCabbage'>r</span><span class='colTree'>s</span><span class='colNoobBlue'>o</span><span class='colXLtGreen'>n</i></span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Mortal
+</td><td>
+
+<span class='colPaleBlue'>Male</span>
+</td><td sorttable_customkey='182995'>
+
+2 days
+</td></tr>
+<tr class='trlight'><td>
+<span class='colCyan'>Yes
+</td><td>
+</span><span class='colCitrine'>3</span>
+</td><td sorttable_customkey='Damien Thorne'>
+<span class='colNewWhite'></span><span class='colMilkChocolate'><b>P</b><i>e</i>nnil<i>e</i>ss <b>P</b>a<i>u</i><b>p</b>e<i>r</i> Damien Thorne</span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Immortal
+</td><td>
+
+<span class='colPaleBlue'>Male</span>
+</td><td sorttable_customkey='542292'>
+
+6 days
+</td></tr>
+<tr class='trdark'><td>
+<span class='colCyan'>Yes
+</td><td>
+</span><span class='colCitrine'>3</span>
+</td><td sorttable_customkey='Kiav'>
+<span class='colNewWhite'></span><b><span class='colNewBlack'>K</b></span><span class='colDkPurple'><i>i</i>a<b>v</b></span>
+</td><td>
+<span class='colNewWhite'>Hallow Vale University</span>
+</td><td>
+Immortal
+</td><td>
+
+<span class='colPaleBlue'>Male</span>
+</td><td sorttable_customkey='10305'>
+
+Today
+</td></tr>
+<tr class='trlight'><td>
+<span class='colCyan'>Yes
+</td><td>
+</span><span class='colCitrine'>3</span>
+</td><td sorttable_customkey='Meridith'>
+<span class='colNewWhite'></span><span class='colDkBrown'><b>P</b><i>e</i>n<b>n</b>il<i>e</i>s<i>s</i> <b>P</b><i>a</i>up<i>e</i><b>r</b> Meridith</span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Immortal
+</td><td>
+
+<span class='colCottonCandy'>Female</span>
+</td><td sorttable_customkey='15456'>
+
+Today
+</td></tr>
+<tr class='trdark'><td>
+<span class='colCyan'>Yes
+</td><td>
+</span><span class='colCitrine'>3</span>
+</td><td sorttable_customkey='Vaeros'>
+<span class='colNewWhite'></span><span class='colMilkChocolate'><b>P</b><i>e</i>nnil<i>e</i>ss <b>P</b>a<i>u</i><b>p</b>e<i>r</i> Vaeros</span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Creature
+</td><td>
+
+<span class='colPaleBlue'>Male</span>
+</td><td sorttable_customkey='8136'>
+
+Today
+</td></tr>
+<tr class='trlight'><td>
+<span class='colLime'>Unconscious</span>
+</td><td>
+<span class='colCitrine'>2</span>
+</td><td sorttable_customkey='Khaleesi'>
+<span class='colNewWhite'></span><span class='colWatermelon'><b>P</b><i>e</i>ga</span><span class='colBedsheet'>si<b>s</b></span><span class='colWatermelon'>t<i>e</i>r  <b></span><span class='colFakeStrawberry'>K</span><span class='colPlumPurple'>h<i></span><span class='colCharcoal'>a</i></span><span class='colNewBlack'>l</b><i></span><span class='colPlumPurple'>e</span><span class='colDkMagenta'>e</i><b></span><span class='colCharcoal'>s</span><span class='colFakeStrawberry'>i</b></span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Immortal
+</td><td>
+
+<span class='colCottonCandy'>Female</span>
+</td><td sorttable_customkey='24665'>
+
+Today
+</td></tr>
+<tr class='trdark'><td>
+<span class='colLime'>Unconscious</span>
+</td><td>
+<span class='colCitrine'>2</span>
+</td><td sorttable_customkey='Alora'>
+<span class='colNewWhite'></span><span class='colDkBrown'><b>P</b><i>e</i>n<b>n</b>il<i>e</i>s<i>s</i> <b>P</b><i>a</i>up<i>e</i><b>r</b> </span><span class='colCharcoal'><b>A</b></span><span class='colDkBrown'><i>l</i></span><span class='colDkPurple'><i>o</i></span><span class='colPlumPurple'>r</span><span class='colNewBlack'><b>a</b></span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Immortal
+</td><td>
+
+<span class='colCottonCandy'>Female</span>
+</td><td sorttable_customkey='728254'>
+
+8 days
+</td></tr>
+<tr class='trlight'><td>
+<span class='colLime'>Unconscious</span>
+</td><td>
+<span class='colCitrine'>2</span>
+</td><td sorttable_customkey='Ellie'>
+<span class='colNewWhite'></span><span class='colDkMagenta'><b>Southern</span><span class='colLtBlack'>belle</span><span class='colDkMagenta'></b> Ellie</span>
+</td><td>
+<span class='colNewWhite'>Bikini Bar&amp;Sports Grill</span>
+</td><td>
+Immortal
+</td><td>
+
+<span class='colCottonCandy'>Female</span>
+</td><td sorttable_customkey='3619889'>
+
+42 days
+</td></tr>
+<tr class='trdark'><td>
+<span class='colCyan'>Yes
+</td><td>
+</span><span class='colCitrine'>2</span>
+</td><td sorttable_customkey='Grimoire'>
+<span class='colNewWhite'></span><span class='colMilkChocolate'><b>P</b><i>e</i>nnil<i>e</i>ss <b>P</b>a<i>u</i><b>p</b>e<i>r</i> <i><b></span><span class='colDkMagenta'>G</b></span><span class='colDkMagenta'>r</span><span class='colPlumPurple'>i<b>m</b></i></span><span class='colDkPurple'>o<i></span><span class='colNewBlack'>i</span><span class='colDkPurple'>re</i></span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Immortal
+</td><td>
+
+<span class='colPaleBlue'>Male</span>
+</td><td sorttable_customkey='249431'>
+
+3 days
+</td></tr>
+<tr class='trlight'><td>
+<span class='colLime'>Unconscious</span>
+</td><td>
+<span class='colCitrine'>2</span>
+</td><td sorttable_customkey='Kalysperis'>
+<span class='colNewWhite'></span><span class='colBurntRaspberry'><b>G</b></span><span class='colCharcoal'><i>e</i><b><i>n</i></b></span><span class='colFakeStrawberry'>i</span><span class='colWatermelon'><i>e</i> </span><span class='colLtBlack'><i>i</i></span><span class='colFakeStrawberry'>n </span><span class='colWatermelon'>a B<b>o</b></span><span class='colFakeStrawberry'><b><i>t</i></b><i>t</i></span><span class='colLtBlack'>l</span><span class='colBurntRaspberry'><i>e</i> </span><span class='colWatermelon'><b>K</b></span><span class='colBurntRaspberry'>a</span><span class='colFakeStrawberry'><i>l</i></span><span class='colCharcoal'>y</span><span class='colWatermelon'><b>s</b>p</span><span class='colCharcoal'><i>er</i></span><span class='colNewBlack'><i>i</i></span><span class='colWatermelon'><b>s</b></span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Immortal
+</td><td>
+
+<span class='colCottonCandy'>Female</span>
+</td><td sorttable_customkey='438913'>
+
+5 days
+</td></tr>
+<tr class='trdark'><td>
+<span class='colCyan'>Yes
+</td><td>
+</span><span class='colCitrine'>2</span>
+</td><td sorttable_customkey='Sienna'>
+<span class='colNewWhite'></span><span class='colDkBrown'><b>P</b><i>e</i>n<b>n</b>il<i>e</i>s<i>s</i> <b>P</b><i>a</i>up<i>e</i><b>r</b> Sienna</span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Plant
+</td><td>
+
+<span class='colCottonCandy'>Female</span>
+</td><td sorttable_customkey='1429487'>
+
+17 days
+</td></tr>
+<tr class='trlight'><td>
+<span class='colCyan'>Yes
+</td><td>
+</span><span class='colCitrine'>2</span>
+</td><td sorttable_customkey='Zenle'>
+<span class='colNewWhite'></span><span class='colMilkChocolate'><b>P</b><i>e</i>nnil<i>e</i>ss <b>P</b>a<i>u</i><b>p</b>e<i>r</i> Zenle</span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Mortal
+</td><td>
+
+<span class='colPaleBlue'>Male</span>
+</td><td sorttable_customkey='5544'>
+
+Today
+</td></tr>
+<tr class='trdark'><td>
+<span class='colCyan'>Yes
+</td><td>
+</span><span class='colCitrine'>1</span>
+</td><td sorttable_customkey='Souta Kobayashi'>
+<span class='colNewWhite'></span> <span class='colNewWhite'>S<i></span><span class='colChocolatePudding'>o</span><span class='colDriedBlood'>u</span><span class='colBedsheet'>t</i></span><span class='colNewWhite'>a Kob<i></span><span class='colChocolatePudding'>a</span><span class='colDriedBlood'>y</span><span class='colBedsheet'>a</i></span><span class='colNewWhite'>shi</span>
+</td><td>
+<span class='colNewWhite'>Inner Sinners</span>
+</td><td>
+Creature
+</td><td>
+
+<span class='colPaleBlue'>Male</span>
+</td><td sorttable_customkey='173655'>
+
+2 days
+</td></tr>
+</table>
+<br>
+<small><span class='colNewWhite'><i>Unique people: 102</i></small><br>
+
+</div>
+</span><span class='colNewWhite'><div align='center'><i><small>Most online ever: 33 - 31 users, 2 guests (12 Feb '17 08:16pm)</small></i></div>
+<br>
+<br>
+
+<br>
+<div align='center'><i></span><span class='colSunglow'>Quote:</i> </span><span class='colCitrine'></span><span class='colNewWhite'></span><span class='colBlueCabbage'><</span><span class='colForest'></span><span class='colNewWhite'>fsociety</span><span class='colBlueCabbage'>> </span><span class='colNewWhite'><b></span><span class='colNewWhite'>S</b></span><span class='colaquamarine'>a</span><span class='colNoobBlue'>l<i></span><span class='colBlueCabbage'>t</i></span><span class='colXLtYellow'><b>#</b></span><span class='colLtBrown'>T</span><span class='coltan'><i>e</i></span><span class='coldarkkhaki'><b>a</b>  </span><span class='colNewWhite'>A</span><span class='colaquamarine'>r<i></span><span class='colNoobBlue'>s</i></span><span class='colBlueCabbage'>e</span><span class='colPaleBlue'>n</span><span class='colNewWhite'> </span><span class='colLtBrown'>fastens herself swiftly and firmly into a chastity belt, shuddering in horror at the article she just read. </span><span class='colPinkCloud'>"Some <i>demon man</i> just patented what is essentially <b>a labia glue stick</b> as an alternative to pads&#47;tampons&#47;cups. To.. just.. <i>glue</i> them together." </span><span class='colLtBrown'>She gags.<br>
+</span></div>
+
+
+
+
+
+
+
+             </td>
+            </tr>
+           </table>
+          </td>
+         </tr>
+        </table>
+       </td>
+       <td valign=top width='120'>
+        <table width="120" border='0' cellpadding='0' cellspacing='0'>
+         <tr>
+          <td><img name='tlc' src='templates/sinisterred/tlc.gif' width='10' height='15' border='0' alt=''></td>
+          <td width='100%' background='templates/sinisterred/tm.gif'></td>
+          <td><img name='trc' src='templates/sinisterred/trc.gif' width='10' height='15' border='0' alt=''></td>
+         </tr> 
+         <tr>
+          <td background='templates/sinisterred/tlt.gif'><img name='tlt' src='templates/sinisterred/spacer.gif' width='1' height='1' border='0' alt=''></td>
+          <td valign='top' bgcolor='#000000'class='nav' align='left' nowrap><span class='colBedsheet'><b>Online Staff (6)</b><br>
+<span class='colCitrine'></span><span class='colChocolatePudding'><b>C</b></span><span class='colDriedBlood'><i>a</i></span><span class='colBedsheet'>t</span><span class='colDkWhite'><i>a</i></span><span class='colLtBlack'>s</span><span class='colNewBlack'><b>t</b></span><span class='colCharcoal'>r</span><span class='colBedsheet'><i>o</i></span><span class='colDriedBlood'>ph</span><span class='colChocolatePudding'>i<i>c</i> </span><span class='colCharcoal'><b>C</b></span><span class='colLtBlack'>h</span><span class='colDkWhite'><i>a</i></span><span class='colMdGrey'>o<i>s</i>  </span><span class='colChocolatePudding'><b>C</b></span><span class='colDriedBlood'>h</span><span class='colBedsheet'><i>a</i></span><span class='colMdGrey'>c</span><span class='colDkWhite'><i>e</i></span><br>
+<span class='colCitrine'></span><span class='colsalmon'><b>P</b></span><span class='colXLtRed'>r</span><span class='colwheat'><i>e</i></span><span class='colXLtGreen'>t</span><span class='colCyan'>t</span><span class='colaquamarine'><i>y</i> </span><span class='colsalmon'><b>F</b></span><span class='collightsalmon'><i>u</i></span><span class='colXLtRed'>c</span><span class='colwheat'><b>k</b></span><span class='colXLtGreen'>i</span><span class='colaquamarine'>n</span><span class='colNoobBlue'>&rsquo; </span><span class='colsalmon'><b>P</b></span><span class='colXLtRed'><i>e</i></span><span class='colXLtGreen'><b>t</b></span><span class='colXLtYellow'><b>#</b></span><span class='colLtBrown'>T</span><span class='coltan'><i>e</i></span><span class='coldarkkhaki'><b>a</b></span><span class='colNewWhite'>; </span><span class='colNoobBlue'><b>R</b></span><span class='colaquamarine'><i>e</i></span><span class='colwheat'><b>v</b></span><span class='colXLtRed'>e</span><span class='colsalmon'><b>l</b></span><br>
+<span class='colCitrine'></span><span class='colBurntRaspberry'><b>N</b></span><span class='colDebianRed'><i>e</i></span><span class='colPinkCloud'>e</span><span class='colNewWhite'><i>d</i></span><span class='colDebianRed'><b>l</b></span><span class='colBurntRaspberry'>e </span><span class='colNewWhite'><i>&amp;</i> </span><span class='colBurntRaspberry'><b>T</b></span><span class='colDebianRed'>h</span><span class='colPinkCloud'><i>r</i></span><span class='colNewWhite'>e</span><span class='colDebianRed'><i>a</i></span><span class='colBurntRaspberry'><b>d</b> </span><span class='colBurntRaspberry'><b>T</b></span><span class='colDebianRed'>i</span><span class='colPinkCloud'><i>a</i></span><span class='colNewWhite'>r</span><span class='colDebianRed'><i>y</i></span><span class='colBurntRaspberry'>n</span><br>
+<span class='colCitrine'></span><span class='colBurntRaspberry'><b>I</b></span><span class='colDebianRed'><i>t</i></span><span class='colXLtYellow'>&lsquo;</span><span class='colWatermelon'>s </span><span class='colBurntRaspberry'><b>A</b></span><span class='colDebianRed'>l</span><span class='colWatermelon'><i>w</i></span><span class='colPumpkin'><b>a</b></span><span class='colPumpkinJuice'>y</span><span class='colSunglow'><i>s</i> </span><span class='colXLtYellow'><b>#</b></span><span class='colLtBrown'>T</span><span class='coltan'><i>e</i></span><span class='coldarkkhaki'><b>a</b> </span><span class='colSunglow'><b>T</b></span><span class='colPumpkinJuice'>i</span><span class='colPumpkin'><i>m</i></span><span class='colWatermelon'>e</span><span class='colXLtYellow'>, </span><span class='colBurntRaspberry'><b>A</b></span><span class='colDebianRed'><i>s</i></span><span class='colWatermelon'>t</span><span class='colPumpkin'>r</span><span class='colPumpkinJuice'><i>a</span><span class='colSunglow'>e</i></span><span class='colXLtYellow'><b>a</b></span><br>
+<span class='colCitrine'></span><span class='colNewBlack'><b>F</b></span><span class='colLtBlack'><i>uc</span><span class='colDkWhite'>k</span><span class='colMdGrey'>in</span><span class='colSteelBlue'>g</i> </span><span class='colXLtYellow'><b>#</b></span><span class='colLtBrown'>T</span><span class='coltan'><i>e</i></span><span class='coldarkkhaki'><b>a</b></span><span class='colDkWhite'><i>s</span><span class='colMdGrey'>e</span><span class='colSteelBlue'><b>!</b></i> </span><span class='colNewBlack'><b>L</b><i></span><span class='colLtBlack'>uc</span><span class='colDkWhite'>r</span><span class='colMdGrey'>a</span><span class='colNewWhite'>i</span><span class='colSteelBlue'>s</i></span><br>
+<span class='colCitrine'><b></span><span class='colNewBlack'>H</b><i></span><span class='colCharcoal'>o</i></span><span class='colDkPurple'>r</span><span class='colBurntRaspberry'>r<b><i></span><span class='colForest'>o</b></span><span class='colTurqoiseGreen'>r</i> <b></span><span class='colTurqoiseGreen'>S</b><i></span><span class='colForest'>t</i></span><span class='colBurntRaspberry'>o<b></span><span class='colDkPurple'>r</b><i></span><span class='colNewBlack'>y</i> <b></span><span class='colNewBlack'>O</b></span><span class='colDkPurple'>c</span><span class='colBurntRaspberry'>t<i></span><span class='colForest'>a</span><span class='colTurqoiseGreen'>v</i><b></span><span class='colDkPurple'>i</b><i></span><span class='colNewBlack'>a</i></span><br>
+<br /></span><span class='colBedsheet'><b>Newest Characters (1)</b><br>
+<span class='colCitrine'><b></span><span class='colNewBlack'>B</b></span><span class='colChocolatePudding'>l<i></span><span class='colDriedBlood'>o</span><span class='colDriedBlood'>o</span><span class='colBedsheet'>d</i></span><span class='colNewWhite'>&amp;<b></span><span class='colwheat'>S</b><i></span><span class='colLtBrown'>a</i></span><span class='colburlywood'>n<b><i></span><span class='colwheat'>d</b></i>  <b></span><span class='colBedsheet'>E</b><i></span><span class='colDriedBlood'>li</span><span class='colChocolatePudding'>j</i></span><span class='colLtBlack'>a<b></span><span class='colNewBlack'>h</b></span><br>
+<br /></span><span class='colBedsheet'><b>Characters Online (7)</b><br>
+<span class='colCitrine'></span>Rotny<br>
+<span class='colCitrine'></span><span class='colNewBlack'><b><i></span><span class='colBlueCabbage'>O</span><span class='colaquamarine'>l</span><span class='colwheat'>i</span><span class='colLtBrown'>v</span><span class='collightsalmon'>i</span><span class='colsalmon'>a</i></b> </span><br>
+<span class='colCitrine'><i></span><span class='colSteelBlue'><b>M</b></span><span class='colPaleBlue'>e</span><span class='colBlueCabbage'>s</span><span class='colNoobBlue'><b>m</b>e</span><span class='colBlueCabbage'>ri</span><span class='colPaleBlue'><b>z</b></span><span class='colSteelBlue'>e<b>d</b></i></span> <b><span class='colRoyalAzure'>B</b><i></span><span class='colRoyalAzure'>r</span><span class='colPaleBlue'>a</span><span class='colDeepSkyBlue'>e</span><span class='colPaleBlue'>ly</span><span class='colRoyalAzure'>n</i></span><br>
+<span class='colCitrine'></span><i><span class='colSteelBlue'><b>A</b></span><span class='colPaleBlue'>l</span><span class='colBlueCabbage'>e</span><span class='colNoobBlue'><b>x</b>a</span><span class='colBlueCabbage'>n</span><span class='colPaleBlue'><b>d</b></span><span class='colSteelBlue'>e<b>r</b></i></span><br>
+<span class='colCitrine'></span><span class='colDriedBlood'><i>S</i></span><span class='colDebianRed'>u</span><span class='colBedsheet'>g</span><span class='colDriedBlood'>a</span><span class='colBurntRaspberry'>r </span><span class='colCharcoal'>&amp; </span><span class='colChocolatePudding'>S</span><span class='colCharcoal'><b>p</b></span><span class='colDebianRed'><i>i</i></span><span class='colDriedBlood'><i>c</i></span><span class='colDebianRed'><i>e</i> </span><span class='colDriedBlood'> </span><span class='colDriedBlood'><b>H</b></span><span class='colChocolatePudding'><b>a</b></span><span class='colNewBlack'><i>r</i></span><span class='colCharcoal'>t</span><span class='colBedsheet'>l</span><span class='colBurntRaspberry'>ey</span><br>
+<span class='colCitrine'><b></span><span class='colViolent'>K</b><i></span><span class='colPurpleBlue'>o</i></span><span class='colPaleBlue'>r</span><span class='colNoobBlue'>i <i><b></span><span class='colBedsheet'>no.</i></b> </span><span class='colChocolatePudding'><b>R</b></span><span class='colDriedBlood'><i>o</i></span><span class='colPumpkin'>w</span><span class='colPumpkinJuice'><i>a</i></span><span class='colSunglow'>n</span><br>
+<span class='colCitrine'> <b></span><span class='colCitrine'>S</b><i></span><span class='colSunglow'>u</i></span><span class='colDkOrange'>n</span><span class='colMilkChocolate'>f<b></span><span class='colXDkYellow'>l</b><i></span><span class='colMilkChocolate'>o</i></span><span class='colDkOrange'>w<i></span><span class='colSunglow'>e</i><b></span><span class='colCitrine'>r</b>  <b></span><span class='colViolent'>K</b><i></span><span class='colPurpleBlue'>o</i></span><span class='colPaleBlue'>r</span><span class='colNoobBlue'>i</span><br>
+<br>
+&nbsp;<small></span><span class='colNewWhite'><i>+ 5 Guests</i></span></small><br>
+ <p>&nbsp;</p> <table align="center"><tr><td><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="logd@mightye.org">
+<input type="hidden" name="item_name" value="Inner Sinners RPG Author Donation from ">
+<input type="hidden" name="item_number" value=":www.innersinners.com/list.php?page=1">
+<input type="hidden" name="no_shipping" value="1">
+<input type="hidden" name="notify_url" value="http://lotgd.net/payment.php">
+<input type="hidden" name="cn" value="Your Character Name">
+<input type="hidden" name="cs" value="1">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="tax" value="0">
+<input type="image" src="images/paypal1.png" border="0" name="submit" alt="Donate!">
+</form></td><td><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="derbugmeister@shaw.ca">
+<input type="hidden" name="item_name" value="Inner Sinners RPG DP Donation from ">
+<input type="hidden" name="item_number" value=":www.innersinners.com/list.php?page=1">
+<input type="hidden" name="no_shipping" value="1">
+<input type="hidden" name="notify_url" value="http://dragonprimelogd.net/payment.php">
+<input type="hidden" name="cn" value="Your Character Name">
+<input type="hidden" name="cs" value="1">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="tax" value="0">
+<input type="image" src="images/paypal3.png" border="0" name="submit" alt="Donate!">
+</form></td></tr><tr><td colspan='2' align='center'><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="funds@innersinners.com">
+<input type="hidden" name="item_name" value="Inner Sinners Donation from ">
+<input type="hidden" name="item_number" value=":www.innersinners.com/list.php?page=1">
+<input type="hidden" name="no_shipping" value="1"><input type="hidden" name="notify_url" value="http://www.innersinners.com//payment.php"><input type="hidden" name="cn" value="Your Character Name">
+<input type="hidden" name="cs" value="1">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="lc" value="US">
+<input type="hidden" name="bn" value="PP-DonationsBF">
+<input type="hidden" name="tax" value="0">
+<input type="image" src="images/paypal2.png" border="0" name="submit" alt="Donate!">
+</form></td></tr></table><div align='center'><table align='center' style='border: solid 1px #000000;' bgcolor='#FF0000' cellpadding='0' cellspacing='0' width='150' height='10'><caption align='bottom'>Funds:&nbsp;67%</caption><tr><td width='67%' bgcolor='#FFFF00'></td><td width='33%'></td></tr></table></div></td>
+          <td background='templates/sinisterred/trt.gif'><img name='trt' src='templates/sinisterred/spacer.gif' width='1' height='1' border='0' alt=''></td>
+         </tr>
+         <tr>
+          <td><img name='blc' src='templates/sinisterred/blc.gif' width='10' height='12' border='0' alt=''></td>
+          <td background='templates/sinisterred/btm.gif'><img name='btm' src='templates/sinisterred/spacer.gif' width='1' height='1' border='0' alt=''></td>
+          <td><img name='brc' src='templates/sinisterred/brc.gif' width='10' height='12' border='0' alt=''></td>
+         </tr>
+        </table>
+       </td>
+      </tr>
+     </table>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <table border='0' cellpadding='0' cellspacing='0' width='100%'>
+      <tr>
+       <td><img name='tlc' src='templates/sinisterred/tlc.gif' width='10' height='15' border='0' alt=''></td>
+       <td width='100%' background='templates/sinisterred/tm.gif'><img name='tm' src='templates/sinisterred/spacer.gif' width='1' height='1' border='0' alt=''></td>
+       <td><img name='trc' src='templates/sinisterred/trc.gif' width='10' height='15' border='0' alt=''></td>
+      </tr>
+      <tr>
+       <td background='templates/sinisterred/tlt.gif'><img name='tlt' src='templates/sinisterred/spacer.gif' width='1' height='1' border='0' alt=''></td>
+       <td valign='top' bgcolor='#000000'>
+        <table width='100%'>
+         <tr>
+          <td valign='top'> 
+<!-- Creative Commons License -->
+<a rel='license' href='http://creativecommons.org/licenses/by-nc-sa/2.0/' target='_blank'><img clear='right' align='left' alt='Creative Commons License' border='0' src='images/somerights20.gif' /></a>
+This work is licensed under a <a rel='license' href='http://creativecommons.org/licenses/by-nc-sa/2.0/' target='_blank'>Creative Commons License</a>.<br />
+<!-- /Creative Commons License -->
+<!--
+  <rdf:RDF xmlns='http://web.resource.org/cc/' xmlns:dc='http://purl.org/dc/elements/1.1/' xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+ <Work rdf:about=''>
+     <dc:type rdf:resource='http://purl.org/dc/dcmitype/Interactive' />
+    <license rdf:resource='http://creativecommons.org/licenses/by-nc-sa/2.0/' />
+    </Work>
+   <License rdf:about='http://creativecommons.org/licenses/by-nc-sa/2.0/'>
+     <permits rdf:resource='http://web.resource.org/cc/Reproduction' />
+    <permits rdf:resource='http://web.resource.org/cc/Distribution' />
+    <requires rdf:resource='http://web.resource.org/cc/Notice' />
+     <requires rdf:resource='http://web.resource.org/cc/Attribution' />
+    <prohibits rdf:resource='http://web.resource.org/cc/CommercialUse' />
+     <permits rdf:resource='http://web.resource.org/cc/DerivativeWorks' />
+     <requires rdf:resource='http://web.resource.org/cc/ShareAlike' />
+   </License>
+  </rdf:RDF>
+-->
+Game Design and Code: Copyright &copy; 2002-2005, Eric Stevens & JT Traub, &copy; 2006-2007, Dragonprime Development Team<br />Design: sinisterred Template &copy; Justin (Diego) Holland 2008, Based on Jade template by: Josh Canning</td>
+          <td valign='top' align='right'><a href='source.php?url=/list.php' onclick="window.open('source.php?url=/list.php','sourcephpurllistphp','scrollbars=yes,resizable=yes,width=550,height=300').focus();return false;" target='_blank'>View PHP Source</a><br />Version: 1.1.2 Dragonprime Edition<br />(Page gen: 0.148s / 17 queries (0.011s), Ave: 0.148s - 0.148/1)</td>
+         </tr>
+        </table>
+       </td>
+       <td background='templates/sinisterred/trt.gif'><img name='trt' src='templates/sinisterred/spacer.gif' width='1' height='1' border='0' alt=''></td>
+      </tr>
+      <tr>
+       <td><img name='blc' src='templates/sinisterred/blc.gif' width='10' height='12' border='0' alt=''></td>
+       <td background='templates/sinisterred/btm.gif'><img name='btm' src='templates/sinisterred/spacer.gif' width='1' height='1' border='0' alt=''></td>
+       <td><img name='brc' src='templates/sinisterred/brc.gif' width='10' height='12' border='0' alt=''></td>
+      </tr>
+     </table>
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

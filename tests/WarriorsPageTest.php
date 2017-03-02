@@ -20,7 +20,7 @@ class WarriorsPageTest extends \PHPUnit_Framework_TestCase {
     parent::setUp();
 
     $this->logger = new Logger('test');
-    $this->logger->pushHandler(new Monolog\Handler\StreamHandler('php://stderr', Logger::WARNING));
+    $this->logger->pushHandler(new Monolog\Handler\StreamHandler('php://stderr', Logger::DEBUG));
   }
 
   public function testLotgdNetHtml() {
@@ -102,6 +102,20 @@ class WarriorsPageTest extends \PHPUnit_Framework_TestCase {
     $stats->count = 30;
     $stats->dau = 14;
     $stats->mau = 22;
+
+    $this->assertEquals(WarriorsPageState::$Valid, $wp->state);
+    $this->assertTrue(Stats::isEqual($wp->stats, $stats));
+  }
+
+  public function testInnerSinnersHtml() {
+    $url = __DIR__ . '/html/innersinners.com.html';
+    $contents = file_get_contents($url);
+    $wp = new WarriorsPage($this->logger, $url, $contents);
+
+    $stats = new Stats();
+    $stats->count = 50;
+    $stats->dau = 24;
+    $stats->mau = 48;
 
     $this->assertEquals(WarriorsPageState::$Valid, $wp->state);
     $this->assertTrue(Stats::isEqual($wp->stats, $stats));
