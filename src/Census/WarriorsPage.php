@@ -1,4 +1,4 @@
-<?hh
+<?php
 
 namespace LotGD\Census;
 
@@ -15,28 +15,30 @@ function DOMinnerHTML(\DOMNode $element)
     return $innerHTML;
 }
 
-enum WarriorsPageState: int {
-  Unknown = 0;
-  Valid = 1;
-  End = 2;
-  Error = 3;
+class WarriorsPageState {
+  public static $Unknown = 0;
+  public static $Valid = 1;
+  public static $End = 2;
+  public static $Error = 3;
 }
 
 class WarriorsPage {
-  public ?Stats $stats;
-  public WarriorsPageState $state;
+  public $stats;
+  public $state;
 
-  private \Monolog\Logger $logger;
+  private $logger;
 
   public function __construct(\Monolog\Logger $logger, string $url, string $contents) {
     $this->logger = $logger;
-    $this->state = WarriorsPageState::Unknown;
+    $this->state = WarriorsPageState::$Unknown;
 
     // Some light preprocessing.
     $contents = str_replace('&nbsp;', ' ', $contents);
 
     $doc = new \DOMDocument();
+    $internalErrors = libxml_use_internal_errors(true);
     $doc->loadHTML($contents);
+    libxml_use_internal_errors($internalErrors);
     $this->state = $this->computeStats($doc, $url);
   }
 
@@ -106,31 +108,31 @@ class WarriorsPage {
     return $timeColumnIndex;
   }
 
-  private function computeStats(\DOMDocument $doc, string $url): WarriorsPageState {
+  private function computeStats(\DOMDocument $doc, string $url): int {
     $stats = new Stats();
 
     if ($doc == null) {
-      return WarriorsPageState::Error;
+      return WarriorsPageState::$Error;
     }
 
     $trs = $doc->getElementsByTagName('tr');
     $trhead = $this->findHeader($doc, $trs);
     if ($trhead == null || $trhead->childNodes->length == 0) {
       $this->logger->addWarning("{$url} has no table header or it's empty.");
-      return WarriorsPageState::Error;
+      return WarriorsPageState::$Error;
     }
 
     $timeColumnIndex = $this->findTimeColumnIndex($trhead);
     if ($timeColumnIndex == -1) {
       $this->logger->addWarning("Columns in {$url} header don't contain 'Last' or 'Zuletzt'.");
-      return WarriorsPageState::Error;
+      return WarriorsPageState::$Error;
     }
 
     $tr = $trhead->nextSibling;
     if ($tr == null) {
       // This is the expected end state.
       $this->logger->addDebug("{$url} has an empty table.");
-      return WarriorsPageState::End;
+      return WarriorsPageState::$End;
     }
 
     while ($tr !== null) {
@@ -148,17 +150,17 @@ class WarriorsPage {
           }
         } else {
           $this->logger->addWarning("{$url} could not convert '{$rawTime}' to a time.");
-          return WarriorsPageState::Error;
+          return WarriorsPageState::$Error;
         }
       } else {
         $this->logger->addWarning("{$url} has an empty row.");
-        return WarriorsPageState::Error;
+        return WarriorsPageState::$Error;
       }
 
       $tr = $tr->nextSibling;
     }
 
     $this->stats = $stats;
-    return WarriorsPageState::Valid;
+    return WarriorsPageState::$Valid;
   }
 }

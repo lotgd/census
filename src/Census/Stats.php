@@ -1,11 +1,11 @@
-<?hh
+<?php
 
 namespace LotGD\Census;
 
 class Stats {
-  public int $count = 0;
-  public int $dau = 0;
-  public int $mau = 0;
+  public $count = 0;
+  public $dau = 0;
+  public $mau = 0;
 
   public function add(Stats $s) {
     $this->count += $s->count;

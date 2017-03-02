@@ -1,4 +1,4 @@
-<?hh
+<?php
 
 require './vendor/autoload.php';
 

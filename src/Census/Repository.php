@@ -1,15 +1,15 @@
-<?hh
+<?php
 
 namespace LotGD\Census;
 
 class Repository {
-  private \Monolog\Logger $logger;
-  private \Github\Client $client;
+  private $logger;
+  private $client;
 
-  private string $user = 'lotgd';
-  private string $repo = 'census';
-  private string $branch = 'master';
-  private array $committer = array(
+  private $user = 'lotgd';
+  private $repo = 'census';
+  private $branch = 'master';
+  private $committer = array(
     'name' => 'Census Bot',
     'email' => 'austen.mcdonald@gmail.com');
 
@@ -28,8 +28,8 @@ class Repository {
     $fileInfo = $this->client->api('repo')->contents()->update($this->user, $this->repo, $path, $content, $commitMessage, $oldFile['sha'], $this->branch, $this->committer);
   }
 
-  public function getSites() : Vector<string> {
-    $sites = Vector {};
+  public function getSites() : array {
+    $sites = array();
 
     $sitesFile = null;
     try {

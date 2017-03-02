@@ -1,17 +1,17 @@
-<?hh
+<?php
 
 namespace LotGD\Census;
 
 class CSV {
-  private \Monolog\Logger $logger;
-  private array $data;
-  private string $filename;
+  private $logger;
+  private $data;
+  private $filename;
 
   public function __construct(\Monolog\Logger $logger, string $filename, string $contents) {
     $this->logger = $logger;
     $this->filename = $filename;
     $lines = explode(PHP_EOL, $contents);
-    $this->data = array_map(fun('str_getcsv'), $lines);
+    $this->data = array_map('str_getcsv', $lines);
 
     $end = count($this->data) - 1;
     if ($end >= 0 && count($this->data[$end]) == 1 && $this->data[$end][0] == null) {
@@ -27,7 +27,7 @@ class CSV {
     return $contents;
   }
 
-  public function appendToRows(Map<string, int> $map) {
+  public function appendToRows(array $map) {
     $csv = $this->filename;
     $date = date("Y-m-d");
 
@@ -50,10 +50,10 @@ class CSV {
         return;
       }
       $s = $row[0];
-      if ($map->containsKey($s)) {
+      if (array_key_exists($s, $map)) {
         $value = $map[$s];
         array_push($row, $value);
-        $map->remove($s);
+        unset($map[$s]);
       } else {
         array_push($row, '');
       }

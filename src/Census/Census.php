@@ -1,15 +1,15 @@
-<?hh
+<?php
 
 namespace LotGD\Census;
 
 use LotGD\Census\WarriorsPageState;
 
 class Census {
-  public bool $debugFakeData = false;
-  public bool $debugLocalOnly = false;
-  public Repository $repo;
+  public $debugFakeData = false;
+  public $debugLocalOnly = false;
+  public $repo;
 
-  public Logger $logger;
+  public $logger;
 
   public function __construct(\Monolog\Logger $logger) {
     $this->logger = $logger;
@@ -48,10 +48,10 @@ class Census {
     $c = new Census($l);
     $c->readCommandLineArguments($argv, $argc);
 
-    $statsMap = Map {};
+    $statsMap = array();
 
     if ($c->debugFakeData) {
-      $sites = Vector {};
+      $sites = array();
 
       $stats = new Stats();
       $stats->count = 103;
@@ -196,7 +196,7 @@ class Census {
     }));
   }
 
-  private function updateCSV(string $file, Map<string, int> $map) {
+  private function updateCSV(string $file, array $map) {
     $localFilePath = __DIR__ . '/../../' . $file;
     if ($this->debugLocalOnly) {
       $contents = file_get_contents($localFilePath);
@@ -222,7 +222,7 @@ class Census {
     }
   }
 
-  private function updateReadme(Map<string, Stats> $statsMap) {
+  private function updateReadme(array $statsMap) {
     $localTemplateFilePath = __DIR__ . '/../../templates/README.md';
     $localReadmeFilePath = __DIR__ . '/../../README.md';
 

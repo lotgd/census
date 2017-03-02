@@ -2,7 +2,7 @@
   "require" : {
     "monolog/monolog": "~1.17",
     "knplabs/github-api": "~1.4",
-    "hhvm": "~3.5"
+    "php": "^7.1"
   },
   "autoload": {
     "psr-4": {

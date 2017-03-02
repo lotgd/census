@@ -1,4 +1,4 @@
-<?hh
+<?php
 
 use LotGD\Census\CSV;
 
@@ -6,7 +6,7 @@ use Monolog\Logger;
 use Monolog\Handler\NullHandler;
 
 class CSVTest extends \PHPUnit_Framework_TestCase {
-  private Logger $logger;
+  private $logger;
 
   public function __construct() {
     parent::__construct();
@@ -38,10 +38,10 @@ class CSVTest extends \PHPUnit_Framework_TestCase {
 
     $csv = new CSV($this->logger, 'filename', $contents);
 
-    $csv->appendToRows(Map {
+    $csv->appendToRows(array(
       's1' => 1,
       's2' => 2,
-    });
+    ));
 
     $this->assertEquals($expectedContents, $csv->contents());
   }

@@ -1,4 +1,4 @@
-<?hh
+<?php
 
 use LotGD\Census\Stats;
 use LotGD\Census\WarriorsPage;
@@ -8,7 +8,7 @@ use Monolog\Logger;
 use Monolog\Handler\NullHandler;
 
 class WarriorsPageTest extends \PHPUnit_Framework_TestCase {
-  private Logger $logger;
+  private $logger;
 
   public function __construct() {
     parent::__construct();
@@ -33,7 +33,7 @@ class WarriorsPageTest extends \PHPUnit_Framework_TestCase {
     $stats->dau = 21;
     $stats->mau = 40;
 
-    $this->assertEquals(WarriorsPageState::Valid, $wp->state);
+    $this->assertEquals(WarriorsPageState::$Valid, $wp->state);
     $this->assertTrue(Stats::isEqual($wp->stats, $stats));
   }
 
@@ -47,7 +47,7 @@ class WarriorsPageTest extends \PHPUnit_Framework_TestCase {
     $stats->dau = 12;
     $stats->mau = 46;
 
-    $this->assertEquals(WarriorsPageState::Valid, $wp->state);
+    $this->assertEquals(WarriorsPageState::$Valid, $wp->state);
     $this->assertTrue(Stats::isEqual($wp->stats, $stats));
   }
 
@@ -61,7 +61,7 @@ class WarriorsPageTest extends \PHPUnit_Framework_TestCase {
     $stats->dau = 0;
     $stats->mau = 12;
 
-    $this->assertEquals(WarriorsPageState::Valid, $wp->state);
+    $this->assertEquals(WarriorsPageState::$Valid, $wp->state);
     $this->assertTrue(Stats::isEqual($wp->stats, $stats));
   }
 
@@ -75,7 +75,7 @@ class WarriorsPageTest extends \PHPUnit_Framework_TestCase {
     $stats->dau = 9;
     $stats->mau = 28;
 
-    $this->assertEquals(WarriorsPageState::Valid, $wp->state);
+    $this->assertEquals(WarriorsPageState::$Valid, $wp->state);
     $this->assertTrue(Stats::isEqual($wp->stats, $stats));
   }
 
@@ -89,7 +89,7 @@ class WarriorsPageTest extends \PHPUnit_Framework_TestCase {
     $stats->dau = 10;
     $stats->mau = 36;
 
-    $this->assertEquals(WarriorsPageState::Valid, $wp->state);
+    $this->assertEquals(WarriorsPageState::$Valid, $wp->state);
     $this->assertTrue(Stats::isEqual($wp->stats, $stats));
   }
 
@@ -103,7 +103,7 @@ class WarriorsPageTest extends \PHPUnit_Framework_TestCase {
     $stats->dau = 14;
     $stats->mau = 22;
 
-    $this->assertEquals(WarriorsPageState::Valid, $wp->state);
+    $this->assertEquals(WarriorsPageState::$Valid, $wp->state);
     $this->assertTrue(Stats::isEqual($wp->stats, $stats));
   }
 }
