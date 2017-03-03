@@ -8,116 +8,116 @@ use Monolog\Logger;
 use Monolog\Handler\NullHandler;
 
 class WarriorsPageTest extends \PHPUnit_Framework_TestCase {
-  private $logger;
+    private $logger;
 
-  public function __construct() {
-    parent::__construct();
+    public function __construct() {
+        parent::__construct();
 
-    $this->logger = new Logger('test');
-  }
+        $this->logger = new Logger('test');
+    }
 
-  public function setUp() {
-    parent::setUp();
+    public function setUp() {
+        parent::setUp();
 
-    $this->logger = new Logger('test');
-    $this->logger->pushHandler(new Monolog\Handler\StreamHandler('php://stderr', Logger::DEBUG));
-  }
+        $this->logger = new Logger('test');
+        $this->logger->pushHandler(new Monolog\Handler\StreamHandler('php://stderr', Logger::DEBUG));
+    }
 
-  public function testLotgdNetHtml() {
-    $url = __DIR__ . '/html/lotgd.net.html';
-    $contents = file_get_contents($url);
-    $wp = new WarriorsPage($this->logger, $url, $contents);
+    public function testLotgdNetHtml() {
+        $url = __DIR__ . '/html/lotgd.net.html';
+        $contents = file_get_contents($url);
+        $wp = new WarriorsPage($this->logger, $url, $contents);
 
-    $stats = new Stats();
-    $stats->count = 50;
-    $stats->dau = 21;
-    $stats->mau = 40;
+        $stats = new Stats();
+        $stats->count = 50;
+        $stats->dau = 21;
+        $stats->mau = 40;
 
-    $this->assertEquals(WarriorsPageState::$Valid, $wp->state);
-    $this->assertTrue(Stats::isEqual($wp->stats, $stats));
-  }
+        $this->assertEquals(WarriorsPageState::$Valid, $wp->state);
+        $this->assertTrue(Stats::isEqual($wp->stats, $stats));
+    }
 
-  public function testLotgdDeHtml() {
-    $url = __DIR__ . '/html/lotgd.de.html';
-    $contents = file_get_contents($url);
-    $wp = new WarriorsPage($this->logger, $url, $contents);
+    public function testLotgdDeHtml() {
+        $url = __DIR__ . '/html/lotgd.de.html';
+        $contents = file_get_contents($url);
+        $wp = new WarriorsPage($this->logger, $url, $contents);
 
-    $stats = new Stats();
-    $stats->count = 100;
-    $stats->dau = 12;
-    $stats->mau = 46;
+        $stats = new Stats();
+        $stats->count = 100;
+        $stats->dau = 12;
+        $stats->mau = 46;
 
-    $this->assertEquals(WarriorsPageState::$Valid, $wp->state);
-    $this->assertTrue(Stats::isEqual($wp->stats, $stats));
-  }
+        $this->assertEquals(WarriorsPageState::$Valid, $wp->state);
+        $this->assertTrue(Stats::isEqual($wp->stats, $stats));
+    }
 
-  public function testDragonPrimeLotgdNetHtml() {
-    $url = __DIR__ . '/html/dragonprimelogd.net.html';
-    $contents = file_get_contents($url);
-    $wp = new WarriorsPage($this->logger, $url, $contents);
+    public function testDragonPrimeLotgdNetHtml() {
+        $url = __DIR__ . '/html/dragonprimelogd.net.html';
+        $contents = file_get_contents($url);
+        $wp = new WarriorsPage($this->logger, $url, $contents);
 
-    $stats = new Stats();
-    $stats->count = 30;
-    $stats->dau = 0;
-    $stats->mau = 12;
+        $stats = new Stats();
+        $stats->count = 30;
+        $stats->dau = 0;
+        $stats->mau = 12;
 
-    $this->assertEquals(WarriorsPageState::$Valid, $wp->state);
-    $this->assertTrue(Stats::isEqual($wp->stats, $stats));
-  }
+        $this->assertEquals(WarriorsPageState::$Valid, $wp->state);
+        $this->assertTrue(Stats::isEqual($wp->stats, $stats));
+    }
 
-  public function testAtrahorHtml() {
-    $url = __DIR__ . '/html/atrahor.de.html';
-    $contents = file_get_contents($url);
-    $wp = new WarriorsPage($this->logger, $url, $contents);
+    public function testAtrahorHtml() {
+        $url = __DIR__ . '/html/atrahor.de.html';
+        $contents = file_get_contents($url);
+        $wp = new WarriorsPage($this->logger, $url, $contents);
 
-    $stats = new Stats();
-    $stats->count = 40;
-    $stats->dau = 9;
-    $stats->mau = 28;
+        $stats = new Stats();
+        $stats->count = 40;
+        $stats->dau = 9;
+        $stats->mau = 28;
 
-    $this->assertEquals(WarriorsPageState::$Valid, $wp->state);
-    $this->assertTrue(Stats::isEqual($wp->stats, $stats));
-  }
+        $this->assertEquals(WarriorsPageState::$Valid, $wp->state);
+        $this->assertTrue(Stats::isEqual($wp->stats, $stats));
+    }
 
-  public function testEassosHtml() {
-    $url = __DIR__ . '/html/eassos.de.html';
-    $contents = file_get_contents($url);
-    $wp = new WarriorsPage($this->logger, $url, $contents);
+    public function testEassosHtml() {
+        $url = __DIR__ . '/html/eassos.de.html';
+        $contents = file_get_contents($url);
+        $wp = new WarriorsPage($this->logger, $url, $contents);
 
-    $stats = new Stats();
-    $stats->count = 30;
-    $stats->dau = 14;
-    $stats->mau = 22;
+        $stats = new Stats();
+        $stats->count = 30;
+        $stats->dau = 14;
+        $stats->mau = 22;
 
-    $this->assertEquals(WarriorsPageState::$Valid, $wp->state);
-    $this->assertTrue(Stats::isEqual($wp->stats, $stats));
-  }
+        $this->assertEquals(WarriorsPageState::$Valid, $wp->state);
+        $this->assertTrue(Stats::isEqual($wp->stats, $stats));
+    }
 
-  public function testInnerSinnersHtml() {
-    $url = __DIR__ . '/html/innersinners.com.html';
-    $contents = file_get_contents($url);
-    $wp = new WarriorsPage($this->logger, $url, $contents);
+    public function testInnerSinnersHtml() {
+        $url = __DIR__ . '/html/innersinners.com.html';
+        $contents = file_get_contents($url);
+        $wp = new WarriorsPage($this->logger, $url, $contents);
 
-    $stats = new Stats();
-    $stats->count = 50;
-    $stats->dau = 24;
-    $stats->mau = 48;
+        $stats = new Stats();
+        $stats->count = 50;
+        $stats->dau = 24;
+        $stats->mau = 48;
 
-    $this->assertEquals(WarriorsPageState::$Valid, $wp->state);
-    $this->assertTrue(Stats::isEqual($wp->stats, $stats));
-  }
+        $this->assertEquals(WarriorsPageState::$Valid, $wp->state);
+        $this->assertTrue(Stats::isEqual($wp->stats, $stats));
+    }
 
-  public function testAlvionHtml() {
-    $url = __DIR__ . '/html/alvion.de.html';
-    $contents = file_get_contents($url);
-    $wp = new WarriorsPage($this->logger, $url, $contents);
+    public function testAlvionHtml() {
+        $url = __DIR__ . '/html/alvion.de.html';
+        $contents = file_get_contents($url);
+        $wp = new WarriorsPage($this->logger, $url, $contents);
 
-    $stats = new Stats();
-    $stats->count = 50;
-    $stats->dau = 16;
-    $stats->mau = 33;
+        $stats = new Stats();
+        $stats->count = 50;
+        $stats->dau = 16;
+        $stats->mau = 33;
 
-    $this->assertEquals(WarriorsPageState::$Valid, $wp->state);
-    $this->assertTrue(Stats::isEqual($wp->stats, $stats));
-  }
+        $this->assertEquals(WarriorsPageState::$Valid, $wp->state);
+        $this->assertTrue(Stats::isEqual($wp->stats, $stats));
+    }
 }
