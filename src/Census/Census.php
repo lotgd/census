@@ -166,7 +166,7 @@ class Census {
                     if ($wp->stats != null) {
                         $stats->add($wp->stats);
                     }
-                    if ($wp->state == WarriorsPageState::End || $wp->state == WarriorsPageState::Error) {
+                    if ($wp->state == WarriorsPageState::$End || $wp->state == WarriorsPageState::$Error) {
                         break;
                     }
 
@@ -182,17 +182,17 @@ class Census {
 
         $c->updateReadme($statsMap);
 
-        $c->updateCSV('data/total.csv', $statsMap->map(function (Stats $s) : int {
+        $c->updateCSV('data/total.csv', array_map(function (Stats $s) : int {
             return $s->count;
-        }));
+        }, $statsMap));
 
-        $c->updateCSV('data/mau.csv', $statsMap->map(function (Stats $s) : int {
+        $c->updateCSV('data/mau.csv', array_map(function (Stats $s) : int {
             return $s->mau;
-        }));
+        }, $statsMap));
 
-        $c->updateCSV('data/dau.csv', $statsMap->map(function (Stats $s) : int {
+        $c->updateCSV('data/dau.csv', array_map(function (Stats $s) : int {
             return $s->dau;
-        }));
+        }, $statsMap));
     }
 
     private function updateCSV(string $file, array $map) {
@@ -226,8 +226,7 @@ class Census {
         $localReadmeFilePath = __DIR__ . '/../../README.md';
 
         // Sort the map by total user count.
-        $statsArray = $statsMap->toArray();
-        uasort($statsArray, 'Stats::compare');
+        uasort($statsMap, 'Stats::compare');
 
         if ($this->debugLocalOnly) {
             $readme = file_get_contents($localTemplateFilePath);
@@ -242,7 +241,7 @@ class Census {
         $totalMAU = 0;
         $totalDAU = 0;
 
-        foreach ($statsArray as $s => $stats) {
+        foreach ($statsMap as $s => $stats) {
             $count = $stats->count;
             $mau = $stats->mau;
             $dau = $stats->dau;

@@ -130,8 +130,10 @@ class WarriorsPage {
         $trhead = $this->findHeader($trs);
         if ($trhead == null || $trhead->childNodes->length == 0) {
             $shortDoc = $this->extractTableAsDoc();
-            $shortTrs = $shortDoc->getElementsByTagName('tr');
-            $trhead = $shortTrs[0];
+            if ($shortDoc) {
+                $shortTrs = $shortDoc->getElementsByTagName('tr');
+                $trhead = $shortTrs[0];
+            }
 
             if ($trhead == null) {
                 $this->logger->addWarning("{$url} has no table header or it's empty.");

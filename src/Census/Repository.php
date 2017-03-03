@@ -16,7 +16,7 @@ class Repository {
     public function __construct(\Monolog\Logger $logger) {
         $this->logger = $logger;
         $this->client = new \Github\Client();
-        $this->client->authenticate($_ENV['GITHUB_TOKEN'], null, \Github\Client::AUTH_HTTP_TOKEN);
+        $this->client->authenticate(getenv('GITHUB_TOKEN'), null, \Github\Client::AUTH_HTTP_TOKEN);
     }
 
     public function getFile(string $path) : string {
@@ -50,7 +50,7 @@ class Repository {
         while ($line = fgets($fp)) {
             $line = trim($line);
             if (strlen($line) > 0) {
-                $sites->add(trim($line));
+                array_push($sites, trim($line));
             }
         }
         fclose($fp);
