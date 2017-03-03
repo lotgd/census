@@ -27,17 +27,18 @@ class WarriorsPage {
   public $state;
 
   private $logger;
+  private $contents;
 
   public function __construct(\Monolog\Logger $logger, string $url, string $contents) {
     $this->logger = $logger;
     $this->state = WarriorsPageState::$Unknown;
 
     // Some light preprocessing.
-    $contents = str_replace('&nbsp;', ' ', $contents);
+    $this->contents = str_replace('&nbsp;', ' ', $contents);
 
     $doc = new \DOMDocument();
     $internalErrors = libxml_use_internal_errors(true);
-    $doc->loadHTML($contents);
+    $doc->loadHTML($this->contents);
     libxml_use_internal_errors($internalErrors);
     $this->state = $this->computeStats($doc, $url);
   }
@@ -66,23 +67,34 @@ class WarriorsPage {
     return $i;
   }
 
-  private function findHeader(\DOMDocument $doc, \DOMNodeList $trs): ?\DOMElement {
+  private function extractTableAsDoc(): ?\DOMDocument {
+      $headPosition = stripos($this->contents, 'Zuletzt');
+      if ($headPosition !== false) {
+          $until = substr($this->contents, 0, $headPosition);
+          $tablePosition = strripos($until, '<table');
+          if ($tablePosition !== false) {
+              $endTablePosition = stripos($this->contents, '</table>', $tablePosition);
+              if ($endTablePosition !== false) {
+                  $table = substr($this->contents, $tablePosition, $endTablePosition + strlen('</table>') - $tablePosition);
+
+                  $shortDoc = new \DOMDocument();
+                  $internalErrors = libxml_use_internal_errors(true);
+                  $shortDoc->loadHTML($table);
+                  libxml_use_internal_errors($internalErrors);
+
+                  return $shortDoc;
+              }
+          }
+      }
+      return null;
+  }
+
+  private function findHeader(\DOMNodeList $trs): ?\DOMElement {
     $trhead = null;
     foreach ($trs as $tr) {
       if ($tr->getAttribute('class') == 'trhead') {
         $trhead = $tr;
         break;
-      }
-    }
-
-    if ($trhead == null) {
-      // Try to search for the first row and check if it has Last or Zuletzt.
-      foreach ($trs as $tr) {
-        $inner = DOMinnerHTML($tr);
-        if (strpos($inner, 'Last') !== FALSE || strpos($inner, 'Zuletzt') !== FALSE) {
-          $trhead = $tr;
-          break;
-        }
       }
     }
 
@@ -116,10 +128,16 @@ class WarriorsPage {
     }
 
     $trs = $doc->getElementsByTagName('tr');
-    $trhead = $this->findHeader($doc, $trs);
+    $trhead = $this->findHeader($trs);
     if ($trhead == null || $trhead->childNodes->length == 0) {
-      $this->logger->addWarning("{$url} has no table header or it's empty.");
-      return WarriorsPageState::$Error;
+        $shortDoc = $this->extractTableAsDoc();
+        $shortTrs = $shortDoc->getElementsByTagName('tr');
+        $trhead = $shortTrs[0];
+
+        if ($trhead == null) {
+            $this->logger->addWarning("{$url} has no table header or it's empty.");
+            return WarriorsPageState::$Error;
+        }
     }
 
     $timeColumnIndex = $this->findTimeColumnIndex($trhead);

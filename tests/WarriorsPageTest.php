@@ -79,20 +79,6 @@ class WarriorsPageTest extends \PHPUnit_Framework_TestCase {
     $this->assertTrue(Stats::isEqual($wp->stats, $stats));
   }
 
-  public function DISABLEDtestAlvionHtml() {
-    $url = __DIR__ . '/html/alvion.de.html';
-    $contents = file_get_contents($url);
-    $wp = new WarriorsPage($this->logger, $url, $contents);
-
-    $stats = new Stats();
-    $stats->count = 50;
-    $stats->dau = 10;
-    $stats->mau = 36;
-
-    $this->assertEquals(WarriorsPageState::$Valid, $wp->state);
-    $this->assertTrue(Stats::isEqual($wp->stats, $stats));
-  }
-
   public function testEassosHtml() {
     $url = __DIR__ . '/html/eassos.de.html';
     $contents = file_get_contents($url);
@@ -116,6 +102,20 @@ class WarriorsPageTest extends \PHPUnit_Framework_TestCase {
     $stats->count = 50;
     $stats->dau = 24;
     $stats->mau = 48;
+
+    $this->assertEquals(WarriorsPageState::$Valid, $wp->state);
+    $this->assertTrue(Stats::isEqual($wp->stats, $stats));
+  }
+
+  public function testAlvionHtml() {
+    $url = __DIR__ . '/html/alvion.de.html';
+    $contents = file_get_contents($url);
+    $wp = new WarriorsPage($this->logger, $url, $contents);
+
+    $stats = new Stats();
+    $stats->count = 50;
+    $stats->dau = 16;
+    $stats->mau = 33;
 
     $this->assertEquals(WarriorsPageState::$Valid, $wp->state);
     $this->assertTrue(Stats::isEqual($wp->stats, $stats));
