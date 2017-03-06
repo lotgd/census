@@ -10,8 +10,8 @@ class Repository {
     private $repo = 'census';
     private $branch = 'master';
     private $committer = array(
-        'name' => 'Census Bot',
-        'email' => 'austen.mcdonald@gmail.com');
+        'name' => 'Dragon Bot',
+        'email' => 'lotgd.devops@gmail.com');
 
     public function __construct(\Monolog\Logger $logger) {
         $this->logger = $logger;
