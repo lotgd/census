@@ -6,30 +6,30 @@ Want to add your site? Put up a pull request or contact @austenmc on [DragonPrim
 
 Site | Total | MAU | DAU
 --- | ---:| ---:| ---:
-[www.lotgd.net](http://www.lotgd.net)|422|320|121
-[www.dragonsofmyth.com](http://www.dragonsofmyth.com)|547|58|10
-[stormvalley.rpglink.in](http://stormvalley.rpglink.in)|337|27|4
-[dragonprimelogd.net](http://dragonprimelogd.net)|18|0|0
-[forbiddenrealm.rpglink.in](http://forbiddenrealm.rpglink.in)|1221|177|45
-[enchantedland.rpglink.in](http://enchantedland.rpglink.in)|135|4|0
+[www.lotgd.net](http://www.lotgd.net)|431|329|108
+[www.dragonsofmyth.com](http://www.dragonsofmyth.com)|547|58|8
+[stormvalley.rpglink.in](http://stormvalley.rpglink.in)|337|26|5
+[dragonprimelogd.net](http://dragonprimelogd.net)|21|3|1
+[forbiddenrealm.rpglink.in](http://forbiddenrealm.rpglink.in)|1222|178|40
+[enchantedland.rpglink.in](http://enchantedland.rpglink.in)|135|3|1
 [twx.rpglink.in](http://twx.rpglink.in)|10|2|0
 [ess.rpglink.in](http://ess.rpglink.in)|49|2|0
-[lotgd4adults2.com](http://lotgd4adults2.com)|477|220|85
-[deathstar.rpglink.in](http://deathstar.rpglink.in)|138|58|20
+[lotgd4adults2.com](http://lotgd4adults2.com)|476|223|85
+[deathstar.rpglink.in](http://deathstar.rpglink.in)|132|51|12
 [golden-empire.com](http://golden-empire.com)|0|0|0
-[the-complex.net](http://the-complex.net)|617|427|170
+[the-complex.net](http://the-complex.net)|619|432|183
 [tynastera2.com](http://tynastera2.com)|0|0|0
-[www.lotgd.de](http://www.lotgd.de)|1180|584|233
-[www.hogwartslive.com](http://www.hogwartslive.com)|1894|944|215
-[www.atrahor.de](http://www.atrahor.de)|1343|725|220
-[www.eassos.de](http://www.eassos.de)|654|371|88
-[www.innersinners.com](http://www.innersinners.com)|176|117|35
-[www.alvion-logd.de/logd](http://www.alvion-logd.de/logd)|298|212|34
-[reignofdarknessrpg.com](http://reignofdarknessrpg.com)|570|365|121
+[www.lotgd.de](http://www.lotgd.de)|1183|588|184
+[www.hogwartslive.com](http://www.hogwartslive.com)|1822|869|234
+[www.atrahor.de](http://www.atrahor.de)|1343|713|228
+[www.eassos.de](http://www.eassos.de)|654|406|115
+[www.innersinners.com](http://www.innersinners.com)|173|117|35
+[www.alvion-logd.de/logd](http://www.alvion-logd.de/logd)|298|203|15
+[reignofdarknessrpg.com](http://reignofdarknessrpg.com)|567|357|94
 [imladrin.com](http://imladrin.com)|43|43|43
-[nathyrnn.com](http://nathyrnn.com)|106|26|5
-[aljerer-lotgd.com](http://aljerer-lotgd.com)|90|35|4
-[onering.rpglink.in](http://onering.rpglink.in)|99|31|3
-**Total**|**10424**|**4748**|**1456**
+[nathyrnn.com](http://nathyrnn.com)|106|24|2
+[aljerer-lotgd.com](http://aljerer-lotgd.com)|90|36|7
+[onering.rpglink.in](http://onering.rpglink.in)|99|28|3
+**Total**|**10357**|**4691**|**1403**
 
-As of September 8, 2017.
+As of September 10, 2017.
