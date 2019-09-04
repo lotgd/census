@@ -6,30 +6,30 @@ Want to add your site? Put up a pull request or contact @austenmc on [DragonPrim
 
 Site | Total | MAU | DAU
 --- | ---:| ---:| ---:
-[www.lotgd.net](http://www.lotgd.net)|368|264|82
-[www.dragonsofmyth.com](http://www.dragonsofmyth.com)|612|25|8
-[stormvalley.rpglink.in](http://stormvalley.rpglink.in)|382|16|2
-[dragonprimelogd.net](http://dragonprimelogd.net)|29|9|1
+[www.lotgd.net](http://www.lotgd.net)|360|255|99
+[www.dragonsofmyth.com](http://www.dragonsofmyth.com)|613|26|6
+[stormvalley.rpglink.in](http://stormvalley.rpglink.in)|382|15|2
+[dragonprimelogd.net](http://dragonprimelogd.net)|30|10|1
 [forbiddenrealm.rpglink.in](http://forbiddenrealm.rpglink.in)|0|0|0
 [enchantedland.rpglink.in](http://enchantedland.rpglink.in)|0|0|0
 [twx.rpglink.in](http://twx.rpglink.in)|0|0|0
 [ess.rpglink.in](http://ess.rpglink.in)|0|0|0
-[lotgd4adults2.com](http://lotgd4adults2.com)|360|191|56
-[deathstar.rpglink.in](http://deathstar.rpglink.in)|117|56|16
+[lotgd4adults2.com](http://lotgd4adults2.com)|361|190|70
+[deathstar.rpglink.in](http://deathstar.rpglink.in)|116|56|12
 [golden-empire.com](http://golden-empire.com)|0|0|0
-[the-complex.net](http://the-complex.net)|436|221|99
+[the-complex.net](http://the-complex.net)|435|222|94
 [tynastera2.com](http://tynastera2.com)|0|0|0
-[www.lotgd.de](http://www.lotgd.de)|813|380|154
-[www.hogwartslive.com](http://www.hogwartslive.com)|5000|1572|208
-[www.atrahor.de](http://www.atrahor.de)|1623|894|235
-[www.eassos.de](http://www.eassos.de)|538|310|115
+[www.lotgd.de](http://www.lotgd.de)|812|385|129
+[www.hogwartslive.com](http://www.hogwartslive.com)|5000|1857|191
+[www.atrahor.de](http://www.atrahor.de)|1623|889|230
+[www.eassos.de](http://www.eassos.de)|538|311|74
 [www.innersinners.com](http://www.innersinners.com)|0|0|0
-[www.alvion-logd.de/logd](http://www.alvion-logd.de/logd)|243|100|21
-[reignofdarknessrpg.com](http://reignofdarknessrpg.com)|383|279|86
+[www.alvion-logd.de/logd](http://www.alvion-logd.de/logd)|244|99|24
+[reignofdarknessrpg.com](http://reignofdarknessrpg.com)|383|270|72
 [imladrin.com](http://imladrin.com)|0|0|0
-[nathyrnn.com](http://nathyrnn.com)|87|20|1
+[nathyrnn.com](http://nathyrnn.com)|86|19|1
 [aljerer-lotgd.com](http://aljerer-lotgd.com)|0|0|0
 [onering.rpglink.in](http://onering.rpglink.in)|0|0|0
-**Total**|**10991**|**4337**|**1084**
+**Total**|**10983**|**4604**|**1005**
 
-As of September 2, 2019.
+As of September 4, 2019.
