@@ -6,30 +6,30 @@ Want to add your site? Put up a pull request or contact @austenmc on [DragonPrim
 
 Site | Total | MAU | DAU
 --- | ---:| ---:| ---:
-[www.lotgd.net](http://www.lotgd.net)|306|202|83
-[www.dragonsofmyth.com](http://www.dragonsofmyth.com)|673|20|2
+[www.lotgd.net](http://www.lotgd.net)|305|199|84
+[www.dragonsofmyth.com](http://www.dragonsofmyth.com)|674|24|5
 [stormvalley.rpglink.in](http://stormvalley.rpglink.in)|392|12|4
 [dragonprimelogd.net](http://dragonprimelogd.net)|20|0|0
 [forbiddenrealm.rpglink.in](http://forbiddenrealm.rpglink.in)|0|0|0
 [enchantedland.rpglink.in](http://enchantedland.rpglink.in)|0|0|0
 [twx.rpglink.in](http://twx.rpglink.in)|0|0|0
 [ess.rpglink.in](http://ess.rpglink.in)|0|0|0
-[lotgd4adults2.com](http://lotgd4adults2.com)|356|158|55
-[deathstar.rpglink.in](http://deathstar.rpglink.in)|153|68|26
+[lotgd4adults2.com](http://lotgd4adults2.com)|355|158|49
+[deathstar.rpglink.in](http://deathstar.rpglink.in)|154|71|28
 [golden-empire.com](http://golden-empire.com)|0|0|0
-[the-complex.net](http://the-complex.net)|497|284|141
+[the-complex.net](http://the-complex.net)|500|288|161
 [tynastera2.com](http://tynastera2.com)|0|0|0
-[www.lotgd.de](http://www.lotgd.de)|765|346|114
+[www.lotgd.de](http://www.lotgd.de)|764|347|118
 [www.hogwartslive.com](http://www.hogwartslive.com)|0|0|0
-[www.atrahor.de](http://www.atrahor.de)|1612|889|304
-[www.eassos.de](http://www.eassos.de)|365|164|37
+[www.atrahor.de](http://www.atrahor.de)|1614|905|309
+[www.eassos.de](http://www.eassos.de)|345|160|25
 [www.innersinners.com](http://www.innersinners.com)|0|0|0
-[www.alvion-logd.de/logd](http://www.alvion-logd.de/logd)|193|99|18
-[reignofdarknessrpg.com](http://reignofdarknessrpg.com)|383|225|69
+[www.alvion-logd.de/logd](http://www.alvion-logd.de/logd)|192|98|3
+[reignofdarknessrpg.com](http://reignofdarknessrpg.com)|375|225|66
 [imladrin.com](http://imladrin.com)|0|0|0
-[nathyrnn.com](http://nathyrnn.com)|69|8|0
+[nathyrnn.com](http://nathyrnn.com)|69|7|0
 [aljerer-lotgd.com](http://aljerer-lotgd.com)|0|0|0
 [onering.rpglink.in](http://onering.rpglink.in)|0|0|0
-**Total**|**5784**|**2475**|**853**
+**Total**|**5759**|**2494**|**852**
 
-As of July 7, 2020.
+As of July 9, 2020.
