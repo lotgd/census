@@ -6,30 +6,30 @@ Want to add your site? Put up a pull request or contact @austenmc on [DragonPrim
 
 Site | Total | MAU | DAU
 --- | ---:| ---:| ---:
-[www.lotgd.net](http://www.lotgd.net)|291|184|66
-[www.dragonsofmyth.com](http://www.dragonsofmyth.com)|679|15|0
-[stormvalley.rpglink.in](http://stormvalley.rpglink.in)|392|10|2
+[www.lotgd.net](http://www.lotgd.net)|294|186|77
+[www.dragonsofmyth.com](http://www.dragonsofmyth.com)|679|15|2
+[stormvalley.rpglink.in](http://stormvalley.rpglink.in)|392|11|4
 [dragonprimelogd.net](http://dragonprimelogd.net)|20|2|0
 [forbiddenrealm.rpglink.in](http://forbiddenrealm.rpglink.in)|0|0|0
 [enchantedland.rpglink.in](http://enchantedland.rpglink.in)|0|0|0
 [twx.rpglink.in](http://twx.rpglink.in)|0|0|0
 [ess.rpglink.in](http://ess.rpglink.in)|0|0|0
-[lotgd4adults2.com](http://lotgd4adults2.com)|337|145|62
-[deathstar.rpglink.in](http://deathstar.rpglink.in)|150|76|28
+[lotgd4adults2.com](http://lotgd4adults2.com)|337|145|60
+[deathstar.rpglink.in](http://deathstar.rpglink.in)|149|70|25
 [golden-empire.com](http://golden-empire.com)|0|0|0
-[the-complex.net](http://the-complex.net)|513|278|97
+[the-complex.net](http://the-complex.net)|513|285|102
 [tynastera2.com](http://tynastera2.com)|0|0|0
-[www.lotgd.de](http://www.lotgd.de)|740|335|95
+[www.lotgd.de](http://www.lotgd.de)|737|328|92
 [www.hogwartslive.com](http://www.hogwartslive.com)|0|0|0
-[www.atrahor.de](http://www.atrahor.de)|1618|906|305
-[www.eassos.de](http://www.eassos.de)|338|180|33
+[www.atrahor.de](http://www.atrahor.de)|1618|897|320
+[www.eassos.de](http://www.eassos.de)|336|185|32
 [www.innersinners.com](http://www.innersinners.com)|0|0|0
 [www.alvion-logd.de/logd](http://www.alvion-logd.de/logd)|181|78|5
-[reignofdarknessrpg.com](http://reignofdarknessrpg.com)|386|268|115
+[reignofdarknessrpg.com](http://reignofdarknessrpg.com)|391|265|121
 [imladrin.com](http://imladrin.com)|0|0|0
 [nathyrnn.com](http://nathyrnn.com)|65|5|0
 [aljerer-lotgd.com](http://aljerer-lotgd.com)|0|0|0
 [onering.rpglink.in](http://onering.rpglink.in)|0|0|0
-**Total**|**5710**|**2482**|**808**
+**Total**|**5712**|**2472**|**840**
 
-As of August 24, 2020.
+As of August 26, 2020.
